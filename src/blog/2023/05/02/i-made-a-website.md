@@ -1,5 +1,4 @@
 ---
-layout: base.njk
 title: I Made A Website
 subtitle: (or "How I Learned To Love Static Site Generators")
 date: 2023-05-02
