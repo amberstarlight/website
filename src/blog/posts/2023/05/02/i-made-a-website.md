@@ -7,12 +7,12 @@ date: 2023-05-02
 So, I've finally made my own website. And I did it without serving you 50 megs
 of JavaScript.
 
-I'm not a 'web developer'. My job title (at the time of writing) is "DevOps
-Engineer", and surely my colleagues who *do* have job titles like "Frontend
+Snark aside, I'm not a 'web developer'. My job title (at the time of writing) is
+"DevOps Engineer", and surely my colleagues who *do* have job titles like "Frontend
 Developer" would probably hate my decision to forgo the modern web frameworks
 and just write Markdown files rendered using some templating engine. But here
-it is, and as you've probably guessed, it's built using a static site
-generator; [11ty][1], (Eleventy).
+it is, and as you've probably guessed, it's built using a static site generator;
+[11ty][1], (Eleventy).
 
 Ok, but why?
 

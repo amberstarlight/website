@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+<article>
+  <a href="/">back to posts</a>
+  <h1>{{ title }}</h1>
+  <h2>{{ subtitle }}</h2>
+  <h3>{{ page.date.toLocaleDateString("en-GB", { dateStyle: "full" }) }}</h3>
+  {{ content | safe }}
+</article>

@@ -1,12 +1,10 @@
 :root {
-  --code-background: #3d0000;
+  --code-background: #1b1b1b;
   --code-color: white;
+  box-sizing: border-box;
 }
 
 body {
-  width: 800px;
-  max-width: 80ch;
-  margin: auto;
   font-family: system-ui,
                -apple-system,
                BlinkMacSystemFont,
@@ -19,6 +17,17 @@ body {
                'Helvetica Neue',
                sans-serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  max-width: 800px;
+  margin: 2em auto;
+}
+
+p {
+  max-width: 75ch;
 }
 
 /* Code within text */
@@ -31,7 +40,7 @@ td > code {
   word-wrap: break-word;
   box-decoration-break: clone;
   padding: .1rem .3rem .2rem;
-  border-radius: .2rem;
+  border-radius: .25rem;
 }
 
 /* Code blocks */
@@ -45,4 +54,32 @@ pre code {
   max-width: 100%;
   min-width: 100px;
   padding: 10px;
+  border-radius: .25rem;
+}
+
+footer {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid black;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5%;
+  font-size: 80%;
+}
+
+footer div {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+footer div:last-child {
+  text-align: right;
+}
+
+footer img {
+  border-radius: 10%;
 }

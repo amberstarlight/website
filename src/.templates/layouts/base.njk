@@ -4,12 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/bundle.css">
-    <title>{{ title }}</title>
+    <title>{{ title }} | amber.vision</title>
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <h2>{{ subtitle }}</h2>
-    <h3>{{ page.date.toLocaleDateString("en-GB", { dateStyle: "full" }) }}</h3>
+    <div class="main-wrapper">
     {{ content | safe }}
+    <footer>
+      <img src="/assets/me.jpg" width="100"></img>
+      <div>
+        <a href="https://amber.vision">amber.vision</a><br/>
+        <a href="https://github.com/amberstarlight">amberstarlight</a><br/>
+        <a href="https://amber.vision">amber.vision</a>
+      </div>
+      <div>
+        <p>
+          &copy; 2023
+          <br>
+          Source available under
+          <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+            GPL, version 3
+          </a>
+          <br/>
+          (or at your option, any later version).
+        </p>
+      </div>
+    </footer>
+    </div>
   </body>
 </html>

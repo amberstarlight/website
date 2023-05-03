@@ -1,7 +1,9 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addWatchTarget("./src/assets/*.css");
+  eleventyConfig.addWatchTarget("./src/assets/*");
   return {
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "build",
