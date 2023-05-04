@@ -133,3 +133,7 @@ dist
 build
 dist
 _site
+
+# Stupid OS files
+.directory
+._*
