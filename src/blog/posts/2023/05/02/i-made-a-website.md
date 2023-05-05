@@ -73,7 +73,7 @@ parser
 - something that would build out to static files so I could drop them on an S3
 bucket (duh)
 - something that didn't *need* the user to run JavaScript (or download a bundle
-larger than DOOM)
+[larger than DOOM][10])
 
 So I decided I'd use a static site generator. I don't particularly like Ruby,
 don't know Go, and I'm not hosting documentation - which meant that 11ty seemed
@@ -100,3 +100,4 @@ be in control*.
 [7]: https://heckscaper.com/
 [8]: https://nownownow.com/about
 [9]: https://cohost.org/rc/welcome
+[10]: https://www.wired.com/2016/04/average-webpage-now-size-original-doom/
