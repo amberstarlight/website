@@ -33,6 +33,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-plugin-syntaxhighlight@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:5.0.0"
+  dependencies:
+    prismjs: ^1.29.0
+  checksum: fb884f39e6cc1652b02e48d44e48b8fa169953056ee9078d4f56c4adcfd5f286a4dc2079c274b4dfa7758d260bfeda56e066098deda2b4460d87e48720374005
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-utils@npm:^1.0.1":
   version: 1.0.1
   resolution: "@11ty/eleventy-utils@npm:1.0.1"
@@ -1967,6 +1976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prismjs@npm:^1.29.0":
+  version: 1.29.0
+  resolution: "prismjs@npm:1.29.0"
+  checksum: 007a8869d4456ff8049dc59404e32d5666a07d99c3b0e30a18bd3b7676dfa07d1daae9d0f407f20983865fd8da56de91d09cb08e6aa61f5bc420a27c0beeaf93
+  languageName: node
+  linkType: hard
+
 "promise-each@npm:^2.2.0":
   version: 2.2.0
   resolution: "promise-each@npm:2.2.0"
@@ -2553,6 +2569,7 @@ __metadata:
   resolution: "website@workspace:."
   dependencies:
     "@11ty/eleventy": ^2.0.1
+    "@11ty/eleventy-plugin-syntaxhighlight": ^5.0.0
   languageName: unknown
   linkType: soft
 

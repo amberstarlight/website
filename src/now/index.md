@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: now.njk
 title: Now
 date: Last Modified
 ---
@@ -26,8 +26,7 @@ how it gets built and deployed.
 
 Currently, my biggest interest is film photography. I shoot 35mm film with a
 Pentax MX, just like your dad used to. My favourite film stocks are currently
-Ilford HP5 Plus and Kodak Gold 200. *If I could afford Portra, it would displace
-Gold.*
+Ilford HP5 Plus (a black and white staple!) and Kodak Gold 200.
 
 I'm also one half of *Cutie Club*, a project between my partner and I, where we
 do small-scale electronic engineering, PCB design, and other open source hardware

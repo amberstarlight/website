@@ -56,13 +56,18 @@ module.exports = function (eleventyConfig) {
 };
 ```
 
-And lastly (for now), let's just add an `assets/` folder that we copy into the
-build folder, and watch for any changes (to force a rebuild):
+We really need some CSS. Let's add an `assets/` folder that we copy into the build
+folder, and watch for any changes (to force a rebuild):
 
 ```js
 eleventyConfig.addPassthroughCopy("src/assets");
 eleventyConfig.addWatchTarget("./src/assets/*");
 ```
+
+Cool, now I can drop stuff in `src/assets` and it'll get included at build time.
+This is where I have my main `bundle.css`, alongside webfont files and images -
+although those aren't committed to the repository. Binary files can get copied
+to the S3 bucket in a separate operation.
 
 [1]: https://www.11ty.dev
 [2]: https://github.com/mozilla/nunjucks
