@@ -25,11 +25,21 @@ platforms owned by [billionaires with horrible opinions][4] is probably not a
 very good idea, actually. If you've been on the internet for as long as I have,
 you probably remember how browsing the web has gone from visiting many hundreds
 of small websites, often written by young people from their bedrooms - an
-experimental and democratising period in the history of the web - to today's
+experimental and democratising period in the history of the web - to *today's*
 web that consists of six websites, each consisting of screenshots of the other
-five. All six of which now prioritise *~shareholder value~* ahead of user
-experience, making horrible decisions (often called '[enshittification][5]')
-that eventually topple their reign (see: Twitter).
+five. All of which now prioritise *~shareholder value~* ahead of user experience,
+making horrible decisions (often called '[enshittification][5]') that eventually
+topple their reign (see: Twitter).
+
+There's a real beauty in web browsing that has been lost. Things are a lot more
+ephemeral than before; link rot is getting worse and will only continue to do so,
+especially as centralised sites die. It's only due to efforts like that of Jason
+Scott's Archive Team that much of GeoCities was able to be preserved. Today, I'd
+wager that most people are just writing posts on social media instead of their
+own sites (or using sites like GeoCities). The look-and-feel and identity that
+the personal web had has been all but stripped bare; so sites like [cohost][9]
+stand alone in the *Alternative Social Media* landscape as the most customisable
+social media.
 
 At the same time, I've been wanting to craft a nicer web presence. As a *Woman
 In Tech*, having a place that I can direct people to in order to show them my
@@ -76,11 +86,10 @@ the more popular options anyway, because that's not my style.
 So what's next then?
 
 The plan for this site is fairly straightforward. It'll have a blog (so you can
-read my ~~diatribe~~ musings), links to my photography, Git(Hub/Lab) profiles,
-and a [Now page][8] so that the curious can see what I'm up to. I'll be writing
-more about things that interest me, curating my personal space on the web, and
-most importantly - I'll be in control.
-
+read my ~~diatribe~~ musings), links to my photography, and a [Now page][8] so
+that the curious can see what I'm up to. I'll be writing more about things that
+interest me, curating my personal space on the web, and most importantly - *I'll
+be in control*.
 
 [1]: https://www.11ty.dev/
 [2]: https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk
@@ -90,3 +99,4 @@ most importantly - I'll be in control.
 [6]: https://indieweb.org/
 [7]: https://heckscaper.com/
 [8]: https://nownownow.com/about
+[9]: https://cohost.org/rc/welcome
