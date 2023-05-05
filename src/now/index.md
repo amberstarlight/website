@@ -36,8 +36,14 @@ I've been detaching myself from technology in my spare time (partly why I'm
 specifically an *analogue* photographer) and I've found my mental health improved.
 [Touch some grass today][2].
 
-I don't use social media. If you want to contact me, you can do so via [email][3].
+### Reading
+
+In no particular order, the last few books I've read:
+
+- *The Design of Everyday Things* by Donald Norman
+- *The Transgender Issue* by Shon Faye
+- *Uncomfortable Labels* by Laura Kate Dale
+- *Trans Britain* by Christine Burns
 
 [1]: https://nownownow.com/about
 [2]: https://mashable.com/article/log-off-touch-grass
-[3]: mailto:hello@amber.vision
