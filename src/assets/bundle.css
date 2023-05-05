@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'Lilex Medium';
-  src: url('/assets/webfonts/lilex-meduim-webfont.woff2') format('woff2'),
-       url('/assets/webfonts/lilex-meduim-webfont.woff') format('woff');
+  src: url('/assets/lilex-medium-webfont.woff2') format('woff2'),
+       url('/assets/lilex-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -15,8 +15,8 @@
 
 @font-face {
   font-family: 'Lilex Regular';
-  src: url('/assets/webfonts/lilex-regular-webfont.woff2') format('woff2'),
-       url('/assets/webfonts/lilex-regular-webfont.woff') format('woff');
+  src: url('/assets/lilex-regular-webfont.woff2') format('woff2'),
+       url('/assets/lilex-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
