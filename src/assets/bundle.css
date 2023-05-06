@@ -88,6 +88,7 @@ footer {
   gap: 5%;
   font-size: 90%;
   font-family: "Lilex Medium";
+  flex-direction: row;
 }
 
 footer div {
@@ -101,4 +102,17 @@ footer div:last-child {
 
 footer img {
   border-radius: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+  }
+
+  footer div:last-child {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }
