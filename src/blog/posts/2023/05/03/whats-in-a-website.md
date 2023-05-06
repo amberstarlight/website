@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
 ```
 
 We really need some CSS. If you're following along at home, let's add an
-`assets/` folder that gets copied into the build folder, and watch for any 
+`assets/` folder that gets copied into the build folder, and watch for any
 changes (to force rebuilds):
 
 ```js
