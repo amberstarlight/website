@@ -2,6 +2,7 @@
   --dark-text: black;
   --lite-text: white;
   --accent: #CC2851;
+  --background: #F5F9E9;
   box-sizing: border-box;
 }
 
@@ -35,7 +36,7 @@ body {
   flex-direction: column;
   min-height: 100vb;
   color: var(--dark-text);
-  background-color: #F5F9E9;
+  background-color: var(--background);
 }
 
 .main-wrapper {
