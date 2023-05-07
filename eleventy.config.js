@@ -3,6 +3,8 @@ const htmlmin = require("html-minifier");
 const csso = require("csso");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addTemplateFormats("css");
