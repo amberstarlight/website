@@ -1,11 +1,22 @@
+{%- set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% endset -%}
+{%- set pageDescription %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="/assets/bundle.css">
     <link href="/assets/prism-tomorrow.min.css" rel="stylesheet">
-    <title>{{ title }} | amber.vision</title>
+    {# meta info #}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <meta name="twitter:title" content="{{pageTitle}}"/>
+    <meta name="twitter:description" content="{{pageDescription}}"/>
+    <meta name="og:title" content="{{pageTitle}}"/>
+    <meta name="og:description" content="{{pageDescription}}"/>
+    <meta property="og:date" content={{ page.date.toISOString() }}/>
   </head>
   <body>
     <div class="main-wrapper">
