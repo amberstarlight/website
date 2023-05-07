@@ -1,8 +1,8 @@
 :root {
   --dark-text: black;
   --lite-text: white;
-  --accent: #CC2851;
-  --background: #F5F9E9;
+  --accent: #cc2851;
+  --background: #f5f9e9;
   box-sizing: border-box;
 }
 
@@ -12,17 +12,17 @@ a {
 }
 
 @font-face {
-  font-family: 'Lilex Medium';
-  src: url('/assets/fonts/lilex-medium-webfont.woff2') format('woff2'),
-       url('/assets/fonts/lilex-medium-webfont.woff') format('woff');
+  font-family: "Lilex Medium";
+  src: url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
+    url("/assets/fonts/lilex-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lilex Regular';
-  src: url('/assets/fonts/lilex-regular-webfont.woff2') format('woff2'),
-       url('/assets/fonts/lilex-regular-webfont.woff') format('woff');
+  font-family: "Lilex Regular";
+  src: url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
+    url("/assets/fonts/lilex-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -53,8 +53,12 @@ body {
   }
 }
 
-.minimal-button::before { content: "[ "; }
-.minimal-button::after { content: " ]"; }
+.minimal-button::before {
+  content: "[ ";
+}
+.minimal-button::after {
+  content: " ]";
+}
 
 article p {
   max-width: 80ch;
@@ -74,7 +78,7 @@ td > code {
   color: var(--lite-text);
   word-wrap: break-word;
   box-decoration-break: clone;
-  padding: .2rem .3rem;
+  padding: 0.2rem 0.3rem;
 }
 
 footer {

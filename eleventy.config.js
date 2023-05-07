@@ -12,16 +12,16 @@ module.exports = function (eleventyConfig) {
       let result = csso.minify(content);
       return async (data) => {
         return result.css;
-      }
-    }
-  })
+      };
+    },
+  });
 
   eleventyConfig.addTransform("htmlmin", function (content) {
     if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }
@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
       output: "build",
       includes: "../templates/includes",
       layouts: "../templates/layouts",
-      data: "../data"
-    }
-  }
+      data: "../data",
+    },
+  };
 };

@@ -5,8 +5,8 @@ date: 2023-05-03
 ---
 
 If you read my first post, "[I Made A Website][0]", you'll know that this site
-uses [11ty][1]. *"That's fantastic"*, you might think, *"but **how** does it use
-11ty?"* Maybe you want to know where the site is hosted? How is it built?
+uses [11ty][1]. _"That's fantastic"_, you might think, _"but **how** does it use
+11ty?"_ Maybe you want to know where the site is hosted? How is it built?
 
 I'm glad you asked.
 
@@ -31,13 +31,13 @@ nunjucks in `eleventy.config.js`:
 module.exports = function (eleventyConfig) {
   return {
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
-  }
+    htmlTemplateEngine: "njk",
+  };
 };
 ```
 
 Next, I really had to do something about the default directories. Something just
-feels *wrong* about building out to `_site/`, and including from directories
+feels _wrong_ about building out to `_site/`, and including from directories
 prefixed with underscores. We need to note here that the `includes` and `layouts`
 directories are expecting to be subfolders of `input`:
 
@@ -51,9 +51,9 @@ module.exports = function (eleventyConfig) {
       output: "build",
       includes: "../templates/includes",
       layouts: "../templates/layouts",
-      data: "../data"
-    }
-  }
+      data: "../data",
+    },
+  };
 };
 ```
 
@@ -71,10 +71,10 @@ This is where I have my main `bundle.css`, alongside webfont files and images -
 although those aren't committed to the repository. Binary files can get copied
 out to the host in a separate operation.
 
-Oh, but I need *content*! The magic part, really. That's either HTML or Markdown
+Oh, but I need _content_! The magic part, really. That's either HTML or Markdown
 files, in a neat directory structure under `src/`. For posts (like this), I'll
 write Markdown files. For more specific pages, I'll write HTML. If you've used
-other SSGs (static site generators), you may have heard of *front-matter*, and
+other SSGs (static site generators), you may have heard of _front-matter_, and
 that's still a thing with 11ty. For example, this page has the following front
 matter:
 
@@ -105,7 +105,7 @@ There were a number of ways I could have gone about doing this, and everyone
 has an opinion on which way is the best! The 11ty documentation has a lot of
 [suggestions][4], but as a DevOps Engineer I had an idea in mind: AWS. Yes, I
 know that AWS isn't really in the spirit of the free and open web, and that I
-could have used GitHub Pages for free, but CloudFront's free tier is now *very*
+could have used GitHub Pages for free, but CloudFront's free tier is now _very_
 generous (at the time of writing):
 
 - 1TB of data transfer out, per month
