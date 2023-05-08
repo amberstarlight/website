@@ -120,3 +120,16 @@ footer img {
     text-align: center;
   }
 }
+
+h1 {
+  font-size: 1.75em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
