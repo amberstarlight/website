@@ -1,6 +1,7 @@
 ---
 layout: now.njk
 title: About
+tags: rootLink
 ---
 
 ## About

@@ -1,28 +1,22 @@
 ---
 layout: now.njk
 title: Now
-date: Last Modified
+date: 2023-05-08
+tags: rootLink
 ---
 
-## Now Now Now
+Last update: {% niceDate page.date %}
 
 This is a [now page][1], which I'll update to give you an overview of what I'm
 doing _Now_. Inspired by [Derek Sivers](https://sive.rs/nowff)!
 
-_Last update: {{
-page.date.toLocaleDateString(
-    "en-GB",
-    { dateStyle: "full" }
-  )
-}}_
-
-### Work
+## Work
 
 I'm a DevOps Engineer at <https://transformuk.com/>. That means I make the stuff
 that websites, applications, and other software runs on in _~the cloud~_, and
 how it gets built and deployed.
 
-### Interests
+## Interests
 
 Currently, my biggest interest is film photography. I shoot 35mm film with a
 Pentax MX, just like your dad used to. My favourite film stocks are currently
@@ -36,7 +30,7 @@ I've been detaching myself from technology in my spare time (partly why I'm
 specifically an _analogue_ photographer) and I've found my mental health improved.
 [Touch some grass today][2].
 
-### Reading
+## Reading
 
 In no particular order, the last few books I've read:
 

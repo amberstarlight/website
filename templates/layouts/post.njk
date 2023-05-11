@@ -5,6 +5,6 @@ layout: base.njk
   <a href="/blog" class="minimal-button">back to posts</a>
   <h1>{{ title }}</h1>
   <h2>{{ subtitle }}</h2>
-  <h3>{{ page.date.toLocaleDateString("en-GB", { dateStyle: "full" }) }}</h3>
+  <h3>{% niceDate page.date %}</h3>
   {{ content | safe }}
 </article>

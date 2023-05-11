@@ -4,6 +4,11 @@ const csso = require("csso");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode(
+    "niceDate",
+    (date) =>
+      `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`
+  );
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -33,6 +38,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addWatchTarget("./src/assets/*");
+
+  eleventyConfig.addFilter("alphabeticSort", (arr) => {
+    arr.sort((a, b) => (a.data.title > b.data.title ? 1 : -1));
+    return arr;
+  });
 
   return {
     markdownTemplateEngine: "njk",
