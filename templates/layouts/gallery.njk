@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+
+<article>
+  <a href="/" class="minimal-button">back home</a>
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+
+  <div class="gallery">
+    {%- for photo in photos -%}
+    <div
+      class="image-box"
+      style="background-image: url({{ photo.objectKey }});"
+      role="img"
+      alt="{{ photo.description }}"
+    >
+      <div class="image-info">
+        <p>
+          {{ photo.description }} <br>
+          {{ photo.film }} <br>
+          {{ photo.lens }} <br>
+          &copy; {% year %} Amber Cronin
+        </p>
+      </div>
+    </div>
+    {%- endfor -%}
+  </div>
+
+</article>
