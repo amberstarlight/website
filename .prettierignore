@@ -2,3 +2,4 @@ build
 .yarn
 .pnp*
 *.min.*
+*.njk

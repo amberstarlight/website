@@ -1,45 +1,51 @@
-{%- set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% endset -%}
-{%- set pageDescription %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
+{%- set pageTitle %}
+  {% if title %} {{ title }} | {% endif %}
+  {{ meta.siteName }}
+{% endset -%}
 
-<!doctype html>
+{%- set pageDescription %}
+  {% if description %}
+    {{ description }}
+  {% else %}
+    {{ meta.siteDescription }}
+  {% endif %}
+{% endset -%}
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <base href="/">
+    <meta charset="utf-8" />
+    <base href="/" />
     <title>{{ pageTitle | safe }}</title>
-    <link rel="stylesheet" href="/assets/bundle.css">
-    <link href="/assets/prism-tomorrow.min.css" rel="stylesheet">
-    {# meta info #}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/bundle.css" />
+    <link href="/assets/prism-tomorrow.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="{{ eleventy.generator }}" />
-    <meta name="twitter:title" content="{{pageTitle}}"/>
-    <meta name="twitter:description" content="{{pageDescription}}"/>
-    <meta name="og:title" content="{{pageTitle}}"/>
-    <meta name="og:description" content="{{pageDescription}}"/>
-    <meta property="og:date" content={{ page.date.toISOString() }}/>
+    <meta name="twitter:title" content="{{ pageTitle }}" />
+    <meta name="twitter:description" content="{{ pageDescription }}" />
+    <meta name="og:title" content="{{ pageTitle }}" />
+    <meta name="og:description" content="{{ pageDescription }}" />
+    <meta property="og:date" content="{{ page.date.toISOString() }}" />
   </head>
   <body>
     <div class="main-wrapper">
-    {{ content | safe }}
-    <footer>
-      <img src="/assets/img/me.jpg" width="100"></img>
-      <div>
-        Me: <a href="https://amber.vision" rel="me">amber.vision</a><br/>
-        GH: <a href="https://github.com/amberstarlight" rel="me">amberstarlight</a><br/>
-        {# <a href="https://amber.vision" rel="me">amber.vision</a> #}
-      </div>
-      <div>
-        <p>
-          &copy; {% year %}
-          <br>
-          Code available under
-          <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0-or-later</a>.
-          <br/>
-          Article text available under
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>.
-        </p>
-      </div>
-    </footer>
+      {{ content | safe }}
+      <footer>
+        <img src="/assets/img/me.jpg" width="100" />
+        <div>
+          Me: <a href="https://amber.vision" rel="me">amber.vision</a><br />
+          GH: <a href="https://github.com/amberstarlight" rel="me">amberstarlight</a><br />
+        </div>
+        <div>
+          <p>
+            &copy; {% year %}
+            <br />
+            Code available under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0-or-later</a>.
+            <br />
+            Article text available under <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>.
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
