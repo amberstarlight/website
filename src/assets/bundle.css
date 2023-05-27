@@ -176,6 +176,7 @@ h3 {
 }
 
 .image-box {
+  background-color: #cdcdcd; /* incase we don't load an image */
   background-size: cover;
   background-position: center;
   width: calc((100% / var(--photos-per-row)) - var(--flex-gap));
