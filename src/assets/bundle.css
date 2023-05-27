@@ -53,9 +53,16 @@ body {
   }
 }
 
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0;
+}
+
 .minimal-button::before {
   content: "[ ";
 }
+
 .minimal-button::after {
   content: " ]";
 }
@@ -63,6 +70,16 @@ body {
 article p {
   max-width: 80ch;
   margin: 2em 0em;
+}
+
+blockquote {
+  max-width: 80ch;
+  border-left: 5px solid var(--accent);
+  text-emphasis: italics;
+}
+
+blockquote p {
+  padding-left: 1em;
 }
 
 code {
@@ -73,12 +90,13 @@ code {
 p > code,
 li > code,
 dd > code,
-td > code {
+td > code,
+s > code {
   background: var(--accent);
   color: var(--lite-text);
   word-wrap: break-word;
   box-decoration-break: clone;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2em 0.3em;
 }
 
 footer {
@@ -116,7 +134,7 @@ footer img {
   }
 
   footer div:last-child {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     text-align: center;
   }
 }
