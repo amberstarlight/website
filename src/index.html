@@ -22,7 +22,7 @@ title: Hi!
 <p>Why not read my latest post?</p>
 {% set latestPost = collections.post | reverse | first %}
 <h2>
-  <a href="{{ post.url }}">{{ latestPost.data.title }}</a>
+  <a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a>
 </h2>
 <p>{{ latestPost.data.subtitle }}</p>
 <small>{% niceDate latestPost.date %}</small>
