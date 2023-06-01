@@ -109,7 +109,7 @@ footer {
   align-items: center;
   gap: 5%;
   font-size: 90%;
-  font-family: "Lilex Medium";
+  font-family: "Lilex Medium", monospace;
   flex-direction: row;
 }
 
