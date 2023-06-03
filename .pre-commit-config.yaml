@@ -13,3 +13,6 @@ repos:
     rev: v0.34.0
     hooks:
       - id: markdownlint
+        args:
+          - --config=.markdownlint.yaml
+          - --fix
