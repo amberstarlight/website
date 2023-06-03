@@ -124,7 +124,7 @@ Cost and Usage alerts, and keep my AWS knowledge sharp.
 
 ### Building & Deploying
 
-Building the site is really simple. Infact, it's one command:
+Building the site is really simple. In fact, it's one command:
 
 ```sh
 > npx @11ty/eleventy
