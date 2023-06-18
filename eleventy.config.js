@@ -1,6 +1,10 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const csso = require("csso");
+const gitSha = require("node:child_process")
+  .execSync("git rev-parse HEAD")
+  .toString()
+  .trim();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
@@ -9,6 +13,8 @@ module.exports = function (eleventyConfig) {
     (date) =>
       `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`
   );
+  eleventyConfig.addNunjucksGlobal("gitSha", gitSha);
+  eleventyConfig.addNunjucksGlobal("gitShortSha", gitSha.slice(0, 7));
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
