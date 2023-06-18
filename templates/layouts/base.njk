@@ -15,6 +15,14 @@
   {% endif %}
 {% endset -%}
 
+{% 
+  set commitURL = [
+    meta.gitURL,
+    "/commit/",
+    gitSha
+  ] | join
+%}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,9 +60,11 @@
           <p>
             &copy; {% year %}
             <br />
-            Code available under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0-or-later</a>.
+            Code available under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL-3.0-or-later</a>
             <br />
-            Article text available under <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>.
+            Article text available under <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC-BY-SA-4.0</a>
+            <br />
+            Short SHA-1: <a href={{commitURL}}>{{ gitShortSha }}</a>
           </p>
         </div>
       </footer>
