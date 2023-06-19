@@ -8,8 +8,5 @@ tags: rootLink
 
 <h1>Articles</h1>
 
-{% for post in collections.post | reverse %}
-<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-<p>{{ post.data.subtitle }}</p>
-<small>{% niceDate post.date %}</small>
-{% endfor %}
+{%- from "components/postInfo/macro.njk" import postInfo -%} {% for post in
+collections.post | reverse %} {{ postInfo(post) }} {% endfor %}

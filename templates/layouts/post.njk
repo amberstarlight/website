@@ -2,10 +2,16 @@
 layout: base.njk
 ---
 
+{% set regExpCode = r/<pre class=(.|\n)*?<\/pre>/gm %}
+{% set fixedContent = content | replace(regExpCode, "") | striptags %}
+{% set wordCount = fixedContent | wordcount %}
+
 <article>
+  <a href="/" class="minimal-button">back home</a>
+  /
   <a href="/blog" class="minimal-button">back to posts</a>
   <h1>{{ title }}</h1>
   <h2>{{ subtitle }}</h2>
-  <h3>{% niceDate page.date %}</h3>
+  <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
   {{ content | safe }}
 </article>

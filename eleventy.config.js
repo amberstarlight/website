@@ -50,6 +50,8 @@ module.exports = function (eleventyConfig) {
     return arr;
   });
 
+  eleventyConfig.addFilter("numCommas", (value) => value.toLocaleString());
+
   eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
     return (data) => {
       if (data.draft && !process.env.BUILD_DRAFTS) return false;

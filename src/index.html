@@ -4,10 +4,10 @@ title: Hi!
 ---
 
 <h1>amber.vision</h1>
-<p>Hi! I'm Amber, sometimes <i>Sierra</i>, always she/her.</p>
+<p>Hi! I'm Amber, sometimes <i>amberstarlight</i>, always she/her.</p>
 <p>
-  Software engineer by day and everything hobbyist by night, this is my personal
-  web zone.
+  Software engineer by day and 'everything hobbyist' by night, this is my
+  personal web zone.
 </p>
 <p>Go ahead and click around.</p>
 
@@ -20,9 +20,6 @@ title: Hi!
 </nav>
 
 <p>Why not read my latest post?</p>
-{% set latestPost = collections.post | reverse | first %}
-<h2>
-  <a href="{{ latestPost.url }}">{{ latestPost.data.title }}</a>
-</h2>
-<p>{{ latestPost.data.subtitle }}</p>
-<small>{% niceDate latestPost.date %}</small>
+
+{% set latestPost = collections.post | reverse | first %} {%- from
+"components/postInfo/macro.njk" import postInfo -%} {{ postInfo(latestPost) }}
