@@ -1,7 +1,7 @@
 ---
 layout: now.njk
 title: Now
-date: 2023-05-08
+date: 2023-06-19
 tags: rootLink
 ---
 
@@ -9,12 +9,6 @@ Last update: {% niceDate page.date %}
 
 This is a [now page][1], which I'll update to give you an overview of what I'm
 doing _Now_. Inspired by [Derek Sivers](https://sive.rs/nowff)!
-
-## Work
-
-I'm a DevOps Engineer at <https://transformuk.com/>. That means I make the stuff
-that websites, applications, and other software runs on in _~the cloud~_, and
-how it gets built and deployed.
 
 ## Interests
 
@@ -34,10 +28,17 @@ specifically an _analogue_ photographer) and I've found my mental health improve
 
 In no particular order, the last few books I've read:
 
+- _A Brief History of Time_, by the late Stephen Hawking
 - _The Design of Everyday Things_ by Donald Norman
 - _The Transgender Issue_ by Shon Faye
 - _Uncomfortable Labels_ by Laura Kate Dale
 - _Trans Britain_ by Christine Burns
+
+## Work
+
+I'm a DevOps Engineer at <https://transformuk.com/>. That means I make the stuff
+that websites, applications, and other software runs on in _~the cloud~_, and
+how it gets built and deployed.
 
 [1]: https://nownownow.com/about
 [2]: https://mashable.com/article/log-off-touch-grass
