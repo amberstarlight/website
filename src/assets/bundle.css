@@ -101,6 +101,7 @@ s > code {
   word-wrap: break-word;
   box-decoration-break: clone;
   padding: 0.2em 0.3em;
+  font-size: 0.9em;
 }
 
 footer {
