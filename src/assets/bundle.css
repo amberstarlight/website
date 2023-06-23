@@ -96,6 +96,11 @@ article ul {
   margin: 2em 0em;
 }
 
+/* don't add any additional margin to indented lists */
+li ul {
+  margin: 0;
+}
+
 .subtitle {
   margin: 1em 0;
 }
