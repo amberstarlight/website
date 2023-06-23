@@ -1,14 +1,13 @@
 :root {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --dark-text: #151515;
-    --lite-text: #f5f9e9;
-    --accent: #cc2851;
-    --background: #f5f9e9;
-  }
+  /* 
+    'prefers-color-scheme: no-preference' isn't a standard property, so set the
+    default light colours by default.
+  */
+  --dark-text: #151515;
+  --lite-text: #f5f9e9;
+  --accent: #cc2851;
+  --background: #f5f9e9;
 }
 
 @media (prefers-color-scheme: dark) {
