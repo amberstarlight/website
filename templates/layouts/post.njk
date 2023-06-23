@@ -14,9 +14,11 @@ layout: base.njk
     / {{ page.fileSlug }}
   </nav>
 
-  <h1>{{ title }}</h1>
-  <h2>{{ subtitle }}</h2>
-  <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
+  <header>
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+    <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
+  </header>
   
   {{ content | safe }}
 </article>

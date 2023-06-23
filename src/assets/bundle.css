@@ -76,11 +76,9 @@ body {
   content: " ]";
 }
 
-article {
-  max-width: 800px;
-}
-
-article p {
+article p,
+article pre,
+article ul {
   max-width: 80ch;
   margin: 2em 0em;
 }
