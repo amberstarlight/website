@@ -11,7 +11,7 @@ title: Hi!
 </p>
 <p>Go ahead and click around.</p>
 
-<nav>
+<nav class="home">
   {%- for post in collections.rootLink | alphabeticSort -%}
   <a href="{{ post.url }}" class="minimal-button"
     >{{ post.data.title | lower }}</a

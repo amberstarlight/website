@@ -1,5 +1,5 @@
 ---
-layout: now.njk
+layout: page.njk
 title: Now
 date: 2023-06-19
 tags: rootLink

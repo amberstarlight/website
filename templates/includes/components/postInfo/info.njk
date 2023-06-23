@@ -2,6 +2,8 @@
 {% set fixedContent = post.content | replace(regExpCode, "") | striptags %}
 {% set wordCount = fixedContent | wordcount %}
 
-<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-<p>{{ post.data.subtitle }}</p>
-<small>{% niceDate post.date %} &bullet; {{ wordCount | numCommas }} words</small>
+<section class="post-info">
+  <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+  <p class="subtitle">{{ post.data.subtitle }}</p>
+  <small>{% niceDate post.date %} &bullet; {{ wordCount | numCommas }} words</small>
+</section>

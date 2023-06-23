@@ -1,5 +1,5 @@
 ---
-layout: now.njk
+layout: page.njk
 title: About
 tags: rootLink
 ---
