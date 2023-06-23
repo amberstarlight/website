@@ -14,7 +14,7 @@ title: Hi!
 <nav class="home">
   {%- for post in collections.rootLink | alphabeticSort -%}
   <a href="{{ post.url }}" class="minimal-button"
-    >{{ post.data.title | lower }}</a
+    >{{ post.fileSlug | lower }}</a
   >
   {%- endfor -%}
 </nav>
