@@ -37,6 +37,7 @@ body {
   min-height: 100vb;
   color: var(--dark-text);
   background-color: var(--background);
+  max-width: 1280px;
 }
 
 .main-wrapper {
