@@ -22,5 +22,6 @@ repos:
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
+        exclude: \S+(.min.)[a-z]+
       - id: trailing-whitespace
         args: ["--markdown-linebreak-ext=md,markdown"]
