@@ -19,6 +19,6 @@ layout: base.njk
     <h2>{{ subtitle }}</h2>
     <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
   </header>
-  
+
   {{ content | safe }}
 </article>

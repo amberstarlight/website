@@ -1,6 +1,6 @@
 :root {
   box-sizing: border-box;
-  /* 
+  /*
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
   */
