@@ -1,6 +1,7 @@
 ---
 title: Switching To Helix
 subtitle: Bye bye, electron text editors
+date: 2023-07-01
 ---
 
 The hardest thing to do is reprogram your muscle memory. Not only are you
@@ -64,7 +65,7 @@ And as applies to Vi(m), using the keyboard for all actions is straight up much
 faster than having to take a hand away to use the mouse. I agree with Gravis
 (Cathode Ray Dude on YouTube and Cohost), who wrote in a thread of Tweets I can
 no longer find (because Captain Divorce has, at the time of writing, [prevented
-you from viewing Tweets without logging in][a]) wrote about how the mouse makes
+you from viewing Tweets without logging in][5]) wrote about how the mouse makes
 you slower at using computers. Having to move the mouse cursor around to find
 something you want is _just slower_ than hitting some keys. This is the main
 part of the speed improvement, for me. Of course, you have to _learn what the
@@ -84,15 +85,15 @@ the line your cursor is on, and set `bufferline` to `always`, so that the open
 buffers are always displayed on the top.
 
 For things that don't have a language server, you can add language-specific
-config in `languages.toml`. I'm not currently running [marksman][5], mostly
+config in `languages.toml`. I'm not currently running [marksman][6], mostly
 because the Arch package wants to also install dotnet runtimes and I'd rather
 hack up a quick script to install it from the pre-built binary, so I'm using
 a `languages.toml` in the `.helix` directory in this project with the basics.
 
-I updated my [dotfiles][6] to add my Helix config and completely switched
+I updated my [dotfiles][7] to add my Helix config and completely switched
 from VS Code to Helix after only four days of using it. I'll have to rework my
 dotfile linking script, though, as Helix maintainers [aren't going to be adding
-any more CLI flags][7], so I can't pass `languages.toml` as an argument. I'll
+any more CLI flags][8], so I can't pass `languages.toml` as an argument. I'll
 have to do something like:
 
 ```sh
@@ -116,7 +117,7 @@ it's time to give a modal text editor a try?
 [2]: https://github.com/hakluke/how-to-exit-vim/blob/master/README.md
 [3]: https://github.com/typescript-language-server/typescript-language-server
 [4]: https://github.com/hashicorp/terraform-ls
-[5]: https://github.com/artempyanykh/marksman
-[6]: https://github.com/amberstarlight/.dotfiles
-[7]: https://github.com/helix-editor/helix/issues/7102#issuecomment-1563907532
-[a]: https://www.theverge.com/2023/6/30/23779764/twitter-blocks-unregistered-users-account-tweets
+[5]: https://www.theverge.com/2023/6/30/23779764/twitter-blocks-unregistered-users-account-tweets
+[6]: https://github.com/artempyanykh/marksman
+[7]: https://github.com/amberstarlight/.dotfiles
+[8]: https://github.com/helix-editor/helix/issues/7102#issuecomment-1563907532
