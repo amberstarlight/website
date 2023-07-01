@@ -4,12 +4,14 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "canvas": "^2.11.2",
     "csso": "^5.0.5",
     "html-minifier": "^4.0.0",
     "prettier": "^2.8.8"
   },
   "scripts": {
     "serve": "rm -rf build/ && npx @11ty/eleventy --serve",
-    "build": "rm -rf build/ && npx @11ty/eleventy"
+    "build": "rm -rf build/ && npx @11ty/eleventy",
+    "draw": "node util/draw.js"
   }
 }
