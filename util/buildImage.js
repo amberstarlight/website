@@ -115,9 +115,9 @@ function buildOpenGraphImage(
     colours.accent
   );
 
-  titleText.draw(context, true);
-  subtitleText.draw(context, true);
-  bylineText.draw(context, true);
+  titleText.draw(context);
+  subtitleText.draw(context);
+  bylineText.draw(context);
 
   const buffer = canvas.toBuffer("image/png");
   fs.writeFileSync(filePath, buffer);
