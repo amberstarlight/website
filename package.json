@@ -12,6 +12,6 @@
   "scripts": {
     "serve": "rm -rf build/ && npx @11ty/eleventy --serve",
     "build": "rm -rf build/ && npx @11ty/eleventy",
-    "draw": "node util/draw.js"
+    "draw": "node util/buildImage.js"
   }
 }
