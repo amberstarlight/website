@@ -2882,6 +2882,7 @@ __metadata:
     "@11ty/eleventy-plugin-syntaxhighlight": ^5.0.0
     canvas: ^2.11.2
     csso: ^5.0.5
+    gray-matter: ^4.0.3
     html-minifier: ^4.0.0
     prettier: ^2.8.8
   languageName: unknown

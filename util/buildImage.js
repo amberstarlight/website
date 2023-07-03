@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-const { createCanvas } = require("canvas");
 const fs = require("fs");
+const path = require("node:path");
+const { createCanvas } = require("canvas");
 const { BoundingBox, DrawableText } = require("./drawingHelpers");
 
 const img = {
@@ -120,7 +121,14 @@ function buildOpenGraphImage(
   bylineText.draw(context);
 
   const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync(filePath, buffer);
+  const fileDir = path.dirname(filePath);
+
+  if (fs.existsSync(fileDir)) {
+    fs.writeFileSync(filePath, buffer);
+  } else {
+    fs.mkdirSync(fileDir, { recursive: true });
+    fs.writeFileSync(filePath, buffer);
+  }
 }
 
 module.exports = {

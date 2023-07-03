@@ -8,6 +8,10 @@ const gitSha = require("node:child_process")
   .toString()
   .trim();
 
+const matter = require("gray-matter");
+const fs = require("fs");
+const { buildOpenGraphImage } = require("./util/buildImage");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addShortcode(
@@ -75,6 +79,27 @@ module.exports = function (eleventyConfig) {
     if (runMode === "serve" || runMode === "watch")
       process.env.BUILD_DRAFTS = true;
   });
+
+  eleventyConfig.on(
+    "eleventy.after",
+    ({ dir, results, runMode, outputMode }) => {
+      for (const builtPage of results) {
+        if (builtPage.url.startsWith("/blog/") && builtPage.url.length >= 7) {
+          const slug = builtPage.url.split("/")[2];
+
+          fs.readFile(`./${builtPage.inputPath}`, "utf-8", (err, data) => {
+            const frontMatter = matter(data);
+            buildOpenGraphImage(
+              frontMatter.data.title,
+              frontMatter.data.subtitle,
+              "amber.vision/blog",
+              `build/assets/img/og/${slug}.png`
+            );
+          });
+        }
+      }
+    }
+  );
 
   return {
     markdownTemplateEngine: "njk",
