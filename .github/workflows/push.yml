@@ -32,7 +32,7 @@ jobs:
         run: |
           wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
           unzip Lilex.zip -d Lilex
-          cp Lilex/ttf/* /usr/local/share/fonts
+          sudo cp Lilex/ttf/* /usr/local/share/fonts
 
       - name: Build Site
         run: |
