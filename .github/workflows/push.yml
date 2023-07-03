@@ -20,6 +20,23 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
 
+      - name: Install dependencies
+        run: |
+          apt-get update -y
+          apt-get install -y \
+            build-essential  \
+            libcairo2-dev    \
+            libpango1.0-dev  \
+            libjpeg-dev      \
+            libgif-dev       \
+            librsvg2-dev
+
+      - name: Download font package
+        run: |
+          wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
+          unzip Lilex.zip -d Lilex
+          cp Lilex/ttf/* /usr/local/share/fonts
+
       - name: Build Site
         run: |
           yarn install
