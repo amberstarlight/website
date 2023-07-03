@@ -44,6 +44,7 @@
     {% set post = page.url.split("/blog/")[1] %}
     {% if post | length > 2 %}
     <meta property="og:image" content="/assets/img/og/{{ page.fileSlug }}.png"/>
+    <meta name="twitter:card" content="summary_large_image">
     {% endif %}
 
     {# twitter #}
