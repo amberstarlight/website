@@ -3,8 +3,15 @@ layout: base.njk
 ---
 
 <article>
-  <a href="/" class="minimal-button">back home</a>
-  <h1>{{ title }}</h1>
+  <nav class="sticky">
+    <a href="/">home</a>
+    / {{ page.fileSlug }}
+  </nav>
+
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
   {{ content | safe }}
 
   <div class="gallery">
