@@ -3,3 +3,38 @@ repos:
     rev: v2.7.1
     hooks:
       - id: prettier
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.5
+    hooks:
+      - id: codespell
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.35.0
+    hooks:
+      - id: markdownlint
+        args:
+          - --config=.markdownlint.yaml
+          - --fix
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+        exclude: \S+(.min.)[a-z]+
+      - id: trailing-whitespace
+        args: ["--markdown-linebreak-ext=md,markdown"]
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.1
+    hooks:
+      - id: insert-license
+        name: Insert code license (js)
+        files: \.js$
+        args:
+          - --license-filepath
+          - gpl_header.txt
+          - --use-current-year
+          - --comment-style
+          - //

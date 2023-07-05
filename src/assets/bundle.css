@@ -1,11 +1,25 @@
 :root {
-  --dark-text: black;
-  --lite-text: white;
+  box-sizing: border-box;
+  /*
+    'prefers-color-scheme: no-preference' isn't a standard property, so set the
+    default light colours by default.
+  */
+  --dark-text: #151515;
+  --lite-text: #f5f9e9;
   --accent: #cc2851;
   --background: #f5f9e9;
   --flex-gap: 5px;
   --photos-per-row: 3;
   box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-text: #d0d0d0;
+    --lite-text: #151515;
+    --accent: #8b72ee;
+    --background: #151515;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -44,7 +58,7 @@ a {
 body {
   font-family: "Lilex Regular", monospace;
   line-height: 2;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -53,6 +67,7 @@ body {
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1280px;
 }
 
 .main-wrapper {
@@ -69,10 +84,18 @@ body {
   }
 }
 
-nav {
+.home {
   display: flex;
   justify-content: space-evenly;
   padding: 1em 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--accent);
 }
 
 .minimal-button::before {
@@ -83,9 +106,24 @@ nav {
   content: " ]";
 }
 
-article p {
+article p,
+article pre,
+article ul {
   max-width: 80ch;
   margin: 2em 0em;
+}
+
+/* don't add any additional margin to indented lists */
+li ul {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 1em 0;
+}
+
+.post-info {
+  margin: 2em 0;
 }
 
 blockquote {
@@ -113,6 +151,7 @@ s > code {
   word-wrap: break-word;
   box-decoration-break: clone;
   padding: 0.2em 0.3em;
+  font-size: 0.9em;
 }
 
 footer {
@@ -130,7 +169,6 @@ footer {
 }
 
 footer div {
-  flex-basis: 0;
   flex-grow: 1;
 }
 
@@ -176,7 +214,7 @@ h3 {
 }
 
 .image-box {
-  background-color: #cdcdcd; /* incase we don't load an image */
+  background-color: #cdcdcd; /* in case we don't load an image */
   background-size: cover;
   background-position: center;
   width: calc((100% / var(--photos-per-row)) - var(--flex-gap));

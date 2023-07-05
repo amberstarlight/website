@@ -2,10 +2,23 @@
 layout: base.njk
 ---
 
-<article>
-  <a href="/blog" class="minimal-button">back to posts</a>
-  <h1>{{ title }}</h1>
-  <h2>{{ subtitle }}</h2>
-  <h3>{% niceDate page.date %}</h3>
+{% set regExpCode = r/<pre class=(.|\n)*?<\/pre>/gm %}
+{% set fixedContent = content | replace(regExpCode, "") | striptags %}
+{% set wordCount = fixedContent | wordcount %}
+
+<article class="post">
+  <nav class="sticky">
+    <a href="/">home</a>
+    /
+    <a href="/blog">blog</a>
+    / {{ page.fileSlug }}
+  </nav>
+
+  <header>
+    <h1>{{ title }}</h1>
+    <h2>{{ subtitle }}</h2>
+    <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
+  </header>
+
   {{ content | safe }}
 </article>
