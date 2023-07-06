@@ -49,7 +49,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/img");
-  eleventyConfig.addWatchTarget("./src/assets/*");
+  eleventyConfig.addWatchTarget("./src/assets");
+  eleventyConfig.addWatchTarget("./util");
 
   eleventyConfig.addFilter("alphabeticSort", (arr) => {
     arr.sort((a, b) => (a.data.title > b.data.title ? 1 : -1));
