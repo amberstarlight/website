@@ -8,7 +8,7 @@ function getLines(text, lineLength) {
   words.shift();
 
   for (const word of words) {
-    if (currentLine.length + word.length <= lineLength) {
+    if (currentLine.length + word.length < lineLength) {
       currentLine += " " + word;
       continue;
     }
@@ -21,7 +21,7 @@ function getLines(text, lineLength) {
         word.slice(splitIndex + 1),
       ];
 
-      if (currentLine.length + splitWord[0].length <= lineLength) {
+      if (currentLine.length + splitWord[0].length < lineLength) {
         currentLine += " " + splitWord[0];
         lines.push(currentLine);
         currentLine = splitWord[1];
