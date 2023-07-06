@@ -34,6 +34,7 @@ function getLines(text, lineLength) {
       continue;
     }
 
+    // if we aren't at least halfway through, break the word at the boundary
     if (currentLine.length < lineLength / 2) {
       const difference = lineLength - currentLine.length - 2; // we need a space and a hyphen
       const splitWord = [word.slice(0, difference), word.slice(difference)];
