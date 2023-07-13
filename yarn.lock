@@ -1677,6 +1677,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"markdown-it-image-figures@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "markdown-it-image-figures@npm:2.1.1"
+  peerDependencies:
+    markdown-it: "*"
+  checksum: 6a4e71df79881272353d60d630e18aadf6b661798d5581c3487205b23b976737b0733d8e8c3f4ab9b6022a656bcfdc8208cf08e08e564579f6cc69bb0193fd80
+  languageName: node
+  linkType: hard
+
 "markdown-it@npm:^13.0.1":
   version: 13.0.1
   resolution: "markdown-it@npm:13.0.1"
@@ -2884,6 +2893,8 @@ __metadata:
     csso: ^5.0.5
     gray-matter: ^4.0.3
     html-minifier: ^4.0.0
+    markdown-it: ^13.0.1
+    markdown-it-image-figures: ^2.1.1
     prettier: ^2.8.8
   languageName: unknown
   linkType: soft

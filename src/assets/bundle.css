@@ -147,7 +147,7 @@ footer {
   align-items: center;
   gap: 5%;
   font-size: 90%;
-  font-family: "Lilex Medium";
+  font-family: "Lilex Medium", monospace;
   flex-direction: row;
 }
 
@@ -187,4 +187,26 @@ h2 {
 h3 {
   font-size: 1em;
   font-weight: bold;
+}
+
+figure {
+  border: 1px solid var(--accent);
+  padding: 1em;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  max-width: 90%;
+}
+
+figure > img {
+  border-radius: 4px;
+  width: 100%;
+  min-height: 100%;
+}
+
+figure figcaption {
+  margin-top: 1em;
 }
