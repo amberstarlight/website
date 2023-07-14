@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) =>
     mdLib.use(implicitFigures, {
       figcaption: "title",
+      link: true,
       lazy: true,
       async: true,
     })
