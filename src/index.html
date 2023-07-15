@@ -1,22 +1,24 @@
 ---
-layout: base.njk
+layout: 404.njk
 title: Hi!
 ---
 
-<h1>amber.vision</h1>
-<p>Hi! I'm Amber, sometimes <i>amberstarlight</i>, always she/her.</p>
+<hr class="accent" />
 <p>
-  Software engineer by day and 'everything hobbyist' by night, this is my
+  I'm Amber, sometimes <i>amberstarlight</i>, always she/her; a software and
+  operations engineer by day and 'everything hobbyist' by night, this is my
   personal web zone.
 </p>
 <p>Go ahead and click around.</p>
 
 <nav class="home">
-  {%- for post in collections.rootLink | alphabeticSort -%}
-  <a href="{{ post.url }}" class="minimal-button"
-    >{{ post.fileSlug | lower }}</a
-  >
-  {%- endfor -%}
+  <ul>
+    {%- for post in collections.rootLink | alphabeticSort -%}
+    <li>
+      <a href="{{ post.url }}">{{ post.fileSlug | lower }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
 </nav>
 
 <p>Why not read my latest post?</p>
