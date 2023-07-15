@@ -4,23 +4,21 @@
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
   */
-  --dark-text: #151515;
-  --lite-text: #f5f9e9;
-  --accent: #cc2851;
-  --background: #f5f9e9;
+  --text: 21, 21, 21;
+  --background: 245, 249, 233;
+  --accent: 204, 40, 81;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --dark-text: #d0d0d0;
-    --lite-text: #151515;
-    --accent: #8b72ee;
-    --background: #151515;
+    --text: 208, 208, 208;
+    --background: 21, 21, 21;
+    --accent: 139, 114, 238;
   }
 }
 
 a {
-  color: var(--accent);
+  color: rgb(var(--accent));
   font-weight: bold;
 }
 
@@ -48,14 +46,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vb;
-  color: var(--dark-text);
-  background-color: var(--background);
-  max-width: 1280px;
+  color: rgb(var(--text));
+  background-color: rgb(var(--background));
+  max-width: 64em;
 }
 
 .main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
-  border: 1px solid var(--dark-text);
+  border: 1px solid rgb(var(--text));
   margin: 1em;
   padding: 1em;
 }
@@ -64,29 +65,17 @@ body {
   .main-wrapper {
     margin: 3em;
     padding: 3em;
+    box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
   }
-}
-
-.home {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1em 0;
 }
 
 .sticky {
   position: sticky;
   top: 0;
-  background-color: var(--background);
+  background-color: rgb(var(--background));
   padding: 1em 0;
-  border-bottom: 1px solid var(--accent);
-}
-
-.minimal-button::before {
-  content: "[ ";
-}
-
-.minimal-button::after {
-  content: " ]";
+  border-bottom: 1px solid rgb(var(--accent));
+  margin-bottom: 4em;
 }
 
 article p,
@@ -94,6 +83,10 @@ article pre,
 article ul {
   max-width: 80ch;
   margin: 2em 0em;
+}
+
+ul {
+  list-style-type: square;
 }
 
 /* don't add any additional margin to indented lists */
@@ -111,7 +104,7 @@ li ul {
 
 blockquote {
   max-width: 80ch;
-  border-left: 5px solid var(--accent);
+  border-left: 0.375em solid rgb(var(--accent));
   text-emphasis: italics;
 }
 
@@ -129,8 +122,8 @@ li > code,
 dd > code,
 td > code,
 s > code {
-  background: var(--accent);
-  color: var(--lite-text);
+  background: rgb(var(--accent));
+  color: rgb(var(--background));
   word-wrap: break-word;
   box-decoration-break: clone;
   padding: 0.2em 0.3em;
@@ -140,7 +133,7 @@ s > code {
 footer {
   margin-top: 8em;
   padding-top: 2em;
-  border-top: 1px solid var(--dark-text);
+  border-top: 1px solid rgb(var(--text));
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +167,10 @@ footer img {
     font-size: 0.8em;
     text-align: center;
   }
+}
+
+.title {
+  margin-bottom: 0;
 }
 
 h1 {
@@ -213,4 +210,10 @@ figure img {
 
 figure figcaption {
   margin-top: 0.5em;
+}
+
+hr.accent {
+  border: none;
+  border-bottom: 1px solid rgb(var(--accent));
+  margin-bottom: 3em;
 }
