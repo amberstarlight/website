@@ -187,7 +187,7 @@ h3 {
 }
 
 figure {
-  border: 1px solid var(--accent);
+  border: 1px solid rgb(var(--accent));
   padding: 1em;
   width: fit-content;
   display: flex;
