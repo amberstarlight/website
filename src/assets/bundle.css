@@ -194,7 +194,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1em;
+  margin: 1em auto;
   max-width: 90%;
 }
 
@@ -210,6 +210,16 @@ figure img {
 
 figure figcaption {
   margin-top: 0.5em;
+}
+
+p img {
+  max-width: 30%;
+  border-radius: 4px;
+}
+
+p img {
+  float: right;
+  margin: 1em 0 1em 1em;
 }
 
 hr.accent {
