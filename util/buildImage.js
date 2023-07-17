@@ -129,6 +129,8 @@ function buildOpenGraphImage(
     fs.mkdirSync(fileDir, { recursive: true });
     fs.writeFileSync(filePath, buffer);
   }
+
+  console.log(`[og:image] Wrote ${filePath}`);
 }
 
 module.exports = {
