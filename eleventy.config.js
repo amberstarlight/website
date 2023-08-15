@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const implicitFigures = require("markdown-it-image-figures");
 const htmlmin = require("html-minifier");
 const csso = require("csso");
 const gitSha = require("node:child_process")
@@ -13,6 +14,15 @@ const fs = require("fs");
 const { buildOpenGraphImage } = require("./util/buildImage");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    mdLib.use(implicitFigures, {
+      figcaption: "title",
+      link: true,
+      lazy: true,
+      async: true,
+    })
+  );
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addShortcode(
     "niceDate",
@@ -49,7 +59,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/img");
-  eleventyConfig.addWatchTarget("./src/assets/*");
+  eleventyConfig.addWatchTarget("./src/assets");
+  eleventyConfig.addWatchTarget("./util");
 
   eleventyConfig.addFilter("alphabeticSort", (arr) => {
     arr.sort((a, b) => (a.data.title > b.data.title ? 1 : -1));

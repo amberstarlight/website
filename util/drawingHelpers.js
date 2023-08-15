@@ -8,12 +8,46 @@ function getLines(text, lineLength) {
   words.shift();
 
   for (const word of words) {
-    if (currentLine.length + word.length > lineLength) {
-      lines.push(currentLine);
-      currentLine = word;
-    } else {
+    if (currentLine.length + word.length < lineLength) {
       currentLine += " " + word;
+      continue;
     }
+
+    // check if we can break at hyphen easily
+    if (word.includes("-")) {
+      const splitIndex = word.indexOf("-");
+      const splitWord = [
+        word.slice(0, splitIndex + 1),
+        word.slice(splitIndex + 1),
+      ];
+
+      if (currentLine.length + splitWord[0].length < lineLength) {
+        currentLine += " " + splitWord[0];
+        lines.push(currentLine);
+        currentLine = splitWord[1];
+      } else {
+        // we don't need to split it because it won't fit, so just use the word
+        lines.push(currentLine);
+        currentLine = word;
+      }
+
+      continue;
+    }
+
+    // if we aren't at least halfway through, break the word at the boundary
+    if (currentLine.length < lineLength / 2) {
+      const difference = lineLength - currentLine.length - 2; // we need a space and a hyphen
+      const splitWord = [word.slice(0, difference), word.slice(difference)];
+
+      currentLine += " " + splitWord[0] + "-";
+      lines.push(currentLine);
+      currentLine = splitWord[1];
+
+      continue;
+    }
+
+    lines.push(currentLine);
+    currentLine = word;
   }
 
   lines.push(currentLine);
