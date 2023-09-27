@@ -63,11 +63,15 @@ body {
   padding: 1em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   .main-wrapper {
     margin: 3em;
     padding: 3em;
     box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
+  }
+
+  footer div:last-child {
+    margin-left: auto;
   }
 }
 
@@ -179,14 +183,13 @@ footer div {
 
 footer div:last-child {
   text-align: right;
-  margin-left: auto;
 }
 
 footer img {
   border-radius: 10%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 799px) {
   footer {
     flex-direction: column;
     row-gap: 10px;
