@@ -4,6 +4,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const implicitFigures = require("markdown-it-image-figures");
 const htmlmin = require("html-minifier");
 const csso = require("csso");
+const { minify } = require("terser");
 const gitSha = require("node:child_process")
   .execSync("git rev-parse HEAD")
   .toString()
@@ -20,14 +21,14 @@ module.exports = function (eleventyConfig) {
       link: true,
       lazy: true,
       async: true,
-    })
+    }),
   );
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addShortcode(
     "niceDate",
     (date) =>
-      `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`
+      `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`,
   );
   eleventyConfig.addNunjucksGlobal("gitSha", gitSha);
   eleventyConfig.addNunjucksGlobal("gitShortSha", gitSha.slice(0, 7));
@@ -39,9 +40,18 @@ module.exports = function (eleventyConfig) {
     outputFileExtension: "css",
     compile: async function (content) {
       let result = csso.minify(content);
-      return async (data) => {
+      return async () => {
         return result.css;
       };
+    },
+  });
+
+  eleventyConfig.addTemplateFormats("js");
+  eleventyConfig.addExtension("js", {
+    outputFileExtension: "js",
+    compile: async function (content) {
+      let result = await minify(content);
+      return async () => result.code;
     },
   });
 
@@ -83,7 +93,7 @@ module.exports = function (eleventyConfig) {
         if (data.draft && !process.env.BUILD_DRAFTS) return true;
         return data.eleventyExcludeFromCollections;
       };
-    }
+    },
   );
 
   eleventyConfig.on("eleventy.before", ({ runMode }) => {
@@ -104,12 +114,12 @@ module.exports = function (eleventyConfig) {
               frontMatter.data.title,
               frontMatter.data.subtitle,
               "amber.vision/blog",
-              `build/assets/img/og/${slug}.png`
+              `build/assets/img/og/${slug}.png`,
             );
           });
         }
       }
-    }
+    },
   );
 
   return {

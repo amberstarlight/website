@@ -24,7 +24,8 @@ a {
 
 @font-face {
   font-family: "Lilex Medium";
-  src: url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
     url("/assets/fonts/lilex-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -32,7 +33,8 @@ a {
 
 @font-face {
   font-family: "Lilex Regular";
-  src: url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
     url("/assets/fonts/lilex-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -76,6 +78,32 @@ body {
   padding: 1em 0;
   border-bottom: 1px solid rgb(var(--accent));
   margin-bottom: 4em;
+  display: flex;
+}
+
+.crumbs > span::after {
+  content: " / ";
+}
+
+.minimal-button {
+  font-family: "Lilex Medium", monospace;
+  border: none;
+  margin-left: auto;
+  padding: 0 1em;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s,
+    opacity 0.3s linear;
+  border: 1px solid rgb(var(--accent));
+  background: none;
+  color: rgb(var(--accent));
+}
+
+.minimal-button:hover {
+  cursor: pointer;
+  background-color: rgb(var(--accent));
+  color: rgb(var(--background));
 }
 
 article p,
@@ -143,6 +171,7 @@ footer {
   font-family: "Lilex Medium", monospace;
   flex-direction: row;
 }
+float: right;
 
 footer div {
   flex-grow: 1;
@@ -150,6 +179,7 @@ footer div {
 
 footer div:last-child {
   text-align: right;
+  margin-left: auto;
 }
 
 footer img {

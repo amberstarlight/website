@@ -4,9 +4,12 @@ layout: base.njk
 
 <article>
   <nav class="sticky">
-    <a href="/">home</a>
-    / {{ page.fileSlug }}
+    <div class="crumbs">
+      <a href="/">home</a><span></span>{{ page.fileSlug }}
+    </div>
+    <button class="minimal-button" onclick="backToTop()" id="top-button">top 🠅</button>
   </nav>
+
   <h1 class="title">{{ title }}</h1>
   {{ content | safe }}
 </article>
