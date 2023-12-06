@@ -88,7 +88,7 @@ class DrawableText {
       x: Math.floor(this.boundingBox.widthInPx / this.fontProperties.widthInPx),
       y: Math.floor(
         this.boundingBox.heightInPx /
-          (this.fontProperties.heightInPx * this.fontProperties.lineHeight)
+          (this.fontProperties.heightInPx * this.fontProperties.lineHeight),
       ),
     };
   }
@@ -121,7 +121,7 @@ class DrawableText {
         this.boundingBox.x,
         this.boundingBox.y,
         this.boundingBox.widthInPx,
-        this.boundingBox.heightInPx
+        this.boundingBox.heightInPx,
       );
     }
 
