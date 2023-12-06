@@ -59,13 +59,13 @@ body {
   justify-content: space-between;
   flex-grow: 1;
   border: 1px solid rgb(var(--text));
-  margin: 1em;
+  margin: 1em 1em 2em 1em;
   padding: 1em;
 }
 
 @media only screen and (min-width: 800px) {
   .main-wrapper {
-    margin: 3em;
+    margin: 3em 3em 6em 3em;
     padding: 3em;
     box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
   }
