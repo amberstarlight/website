@@ -1,32 +1,34 @@
-[
-  {
-    "objectKey": "assets/img/photos/0029-4cefd.jpg",
-    "description": "Steel and glass.",
-    "film": "Ilford HP5 Plus 400",
-    "lens": "SMC Pentax-M 1:1.7 50mm"
-  },
-  {
-    "objectKey": "assets/img/photos/0033-a02ea.jpg",
-    "description": "The Moon, rich with black and white film grain.",
-    "film": "Ilford Delta 3200",
-    "lens": "Makinon MC Reflex 1:8 500mm, with matched Makinon MC 2x teleconverter"
-  },
-  {
-    "objectKey": "assets/img/photos/0020-2710c.jpg",
-    "description": "Second generation Mazda RX-7 in champagne gold.",
-    "film": "Kodak Ultramax 400",
-    "lens": "SMC Pentax-M 1:1.7 50mm"
-  },
-  {
-    "objectKey": "assets/img/photos/0016-99756.jpg",
-    "description": "Swan by the river.",
-    "film": "Kodak Ultramax 400",
-    "lens": "SMC Pentax-M 1:1.7 50mm"
-  },
-  {
-    "objectKey": "assets/img/photos/008-62ade.jpg",
-    "description": "Rich greens.",
-    "film": "Kodak Ultramax 400",
-    "lens": "SMC Pentax-M 1:1.7 50mm"
-  }
-]
+{
+  "photos": [
+    {
+      "objectKey": "assets/img/photos/0029-4cefd.jpg",
+      "description": "Steel and glass.",
+      "film": "Ilford HP5 Plus 400",
+      "lens": "SMC Pentax-M 1:1.7 50mm"
+    },
+    {
+      "objectKey": "assets/img/photos/0033-a02ea.jpg",
+      "description": "The Moon, rich with black and white film grain.",
+      "film": "Ilford Delta 3200",
+      "lens": "Makinon MC Reflex 1:8 500mm, with matched Makinon MC 2x teleconverter"
+    },
+    {
+      "objectKey": "assets/img/photos/0020-2710c.jpg",
+      "description": "Second generation Mazda RX-7 in champagne gold.",
+      "film": "Kodak Ultramax 400",
+      "lens": "SMC Pentax-M 1:1.7 50mm"
+    },
+    {
+      "objectKey": "assets/img/photos/0016-99756.jpg",
+      "description": "Swan by the river.",
+      "film": "Kodak Ultramax 400",
+      "lens": "SMC Pentax-M 1:1.7 50mm"
+    },
+    {
+      "objectKey": "assets/img/photos/008-62ade.jpg",
+      "description": "Rich greens.",
+      "film": "Kodak Ultramax 400",
+      "lens": "SMC Pentax-M 1:1.7 50mm"
+    }
+  ]
+}

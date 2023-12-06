@@ -29,7 +29,7 @@ function buildOpenGraphImage(
   titleString,
   subtitleString,
   bylineString,
-  filePath
+  filePath,
 ) {
   const canvas = createCanvas(img.width, img.height);
   const context = canvas.getContext("2d");
@@ -74,28 +74,28 @@ function buildOpenGraphImage(
     margin.left,
     margin.top,
     img.width - (margin.left + margin.right),
-    img.height - (margin.top + margin.bottom)
+    img.height - (margin.top + margin.bottom),
   );
 
   const titleText = new DrawableText(
     title.text,
     title.fontProperties,
     titleBounds,
-    colours.dark
+    colours.dark,
   );
 
   const subtitleBounds = new BoundingBox(
     margin.left,
     margin.top + titleText.calcHeight() + fontMargin,
     titleBounds.widthInPx,
-    titleBounds.heightInPx - (titleText.calcHeight() + fontMargin)
+    titleBounds.heightInPx - (titleText.calcHeight() + fontMargin),
   );
 
   const subtitleText = new DrawableText(
     subtitle.text,
     subtitle.fontProperties,
     subtitleBounds,
-    colours.dark
+    colours.dark,
   );
 
   const bylineBounds = new BoundingBox(
@@ -106,14 +106,14 @@ function buildOpenGraphImage(
       fontMargin * 2,
     titleBounds.widthInPx,
     titleBounds.heightInPx -
-      (titleText.calcHeight() + subtitleText.calcHeight() + fontMargin * 2)
+      (titleText.calcHeight() + subtitleText.calcHeight() + fontMargin * 2),
   );
 
   const bylineText = new DrawableText(
     byline.text,
     byline.fontProperties,
     bylineBounds,
-    colours.accent
+    colours.accent,
   );
 
   titleText.draw(context);

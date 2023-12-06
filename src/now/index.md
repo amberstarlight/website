@@ -1,44 +1,51 @@
 ---
 layout: page.njk
 title: Now
-date: 2023-06-19
+date: 2023-11-29
 tags: rootLink
 ---
 
 Last update: {% niceDate page.date %}
 
 This is a [now page][1], which I'll update to give you an overview of what I'm
-doing _Now_. Inspired by [Derek Sivers](https://sive.rs/nowff)!
+doing _now_. Inspired by [Derek Sivers][2]!
 
 ## Interests
 
-Currently, my biggest interest is film photography. I shoot 35mm film with a
-Pentax MX, just like your dad used to. My favourite film stocks are currently
-Ilford HP5 Plus (a black and white staple!) and Kodak Gold 200.
+### Photography
 
-I'm also one half of _Cutie Club_, a project between my partner and I, where we
-do small-scale electronic engineering, PCB design, and other open source hardware
-projects.
+I've recently picked up a medium format camera: a _Zenza Bronica
+ETRSi_. It's a 6x4.5 (645) camera, taking 15 frames on a roll of 120 film. I
+have the AE-III Prism Finder E and the Speed Grip E accessories, which makes
+it feel a lot like using a big 35mm SLR with an autowinder. I haven't worked
+out when my particular camera was made, but it has to be somewhen between 1988
+and 2004.
 
-I've been detaching myself from technology in my spare time (partly why I'm
-specifically an _analogue_ photographer) and I've found my mental health improved.
-[Touch some grass today][2].
+I still have my Pentax MX (two of them, in fact), but they really could do with
+a service. The X-sync isn't working right on either of them, and some of the
+slower shutter speeds are hit and miss on the black MX.
 
-## Reading
+### Media
 
-In no particular order, the last few books I've read:
+I've been on a big movie kick recently. As it happens, big tech have decided
+that they're going to make all the streaming services worse and split all the
+content that used to just be on the biggest one (Netflix) across many different
+ones. So take my advice and buy yourself Blu-Rays. Learn how to rip them.
+Install [Jellyfin](https://jellyfin.org/) on your home server.
 
-- _A Brief History of Time_, by the late Stephen Hawking
-- _The Design of Everyday Things_ by Donald Norman
-- _The Transgender Issue_ by Shon Faye
-- _Uncomfortable Labels_ by Laura Kate Dale
-- _Trans Britain_ by Christine Burns
+Films I've really loved recently:
+
+- **Heathers (1988)**
+  - Christian Slater _and_ Winona Ryder in the _same film_!
+- **The Usual Suspects (1995)**
+  - I've seen it several times but I'll never tire of this one.
+- **But I'm A Cheerleader (2000)**
+  - A very beautiful film looking through the femme lesbian lens.
 
 ## Work
 
-I'm a DevOps Engineer at <https://transformuk.com/>. That means I make the stuff
-that websites, applications, and other software runs on in _~the cloud~_, and
-how it gets built and deployed.
+Still a _DevOps Engineer_ (my job title). If you have an opportunity, do send
+me an email.
 
 [1]: https://nownownow.com/about
-[2]: https://mashable.com/article/log-off-touch-grass
+[2]: https://sive.rs/nowff

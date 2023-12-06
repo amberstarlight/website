@@ -4,8 +4,10 @@ layout: base.njk
 
 <article>
   <nav class="sticky">
-    <a href="/">home</a>
-    / {{ page.fileSlug }}
+    <div class="crumbs">
+      <a href="/">home</a><span></span>{{ page.fileSlug }}
+    </div>
+    <button class="minimal-button" onclick="backToTop()" id="top-button">top &ShortUpArrow;</button>
   </nav>
 
   <header>
@@ -15,7 +17,7 @@ layout: base.njk
   {{ content | safe }}
 
   <div class="gallery">
-    {%- for photo in photos -%}
+    {%- for photo in photos.photos -%}
     <div
       class="image-box"
       style="background-image: url({{ photo.objectKey }});"

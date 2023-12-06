@@ -38,7 +38,8 @@ a {
 
 @font-face {
   font-family: "Lilex Medium";
-  src: url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
     url("/assets/fonts/lilex-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -46,7 +47,8 @@ a {
 
 @font-face {
   font-family: "Lilex Regular";
-  src: url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
     url("/assets/fonts/lilex-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -77,11 +79,15 @@ body {
   padding: 1em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   .main-wrapper {
     margin: 3em;
     padding: 3em;
     box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
+  }
+
+  footer div:last-child {
+    margin-left: auto;
   }
 }
 
@@ -93,6 +99,32 @@ body {
   border-bottom: 1px solid rgb(var(--accent));
   margin-bottom: 4em;
   z-index: 10;
+  display: flex;
+}
+
+.crumbs > span::after {
+  content: " / ";
+}
+
+.minimal-button {
+  font-family: "Lilex Medium", monospace;
+  border: none;
+  margin-left: auto;
+  padding: 0 1em;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s,
+    opacity 0.3s linear;
+  border: 1px solid rgb(var(--accent));
+  background: none;
+  color: rgb(var(--accent));
+}
+
+.minimal-button:hover {
+  cursor: pointer;
+  background-color: rgb(var(--accent));
+  color: rgb(var(--background));
 }
 
 article p,
@@ -160,6 +192,7 @@ footer {
   font-family: "Lilex Medium", monospace;
   flex-direction: row;
 }
+float: right;
 
 footer div {
   flex-grow: 1;
@@ -173,7 +206,7 @@ footer img {
   border-radius: 10%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 799px) {
   footer {
     flex-direction: column;
     row-gap: 10px;
