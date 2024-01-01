@@ -137,6 +137,7 @@ _site
 # Stupid OS files
 .directory
 ._*
+.DS_Store
 
 # DRAFTS
 **/drafts
