@@ -4,7 +4,7 @@ title: About
 tags: rootLink
 ---
 
-Hey. I'm Amber, I'm 26, and I'm a software & operations engineer.
+Hey. I'm Amber, I'm {{ meta.authorAge }}, and I'm a software & operations engineer.
 
 My pronouns are [she/her](https://en.pronouns.page/she).
 
