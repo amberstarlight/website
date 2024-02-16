@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
 
 jobs:
@@ -13,39 +13,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y \
-            build-essential  \
-            libcairo2-dev    \
-            libpango1.0-dev
-
-      - name: Download font package
-        run: |
-          wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
-          unzip Lilex.zip -d Lilex
-          sudo cp Lilex/ttf/* /usr/local/share/fonts
-
-      - name: Build Site
-        run: |
-          yarn install
-          yarn build
-
-      - name: Copy files to S3
-        run: |
-          cd build/
-          aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET_NAME }}
-
-      - name: Invalidate CloudFront Cache
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
-            --paths "/*"
+      - name: Build site
+        uses: ./.github/build-site

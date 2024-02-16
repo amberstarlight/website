@@ -1,0 +1,27 @@
+name: Build
+description: Build site
+
+runs:
+  using: composite
+  steps:
+    - name: Install dependencies
+      shell: bash
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y \
+          build-essential  \
+          libcairo2-dev    \
+          libpango1.0-dev
+
+    - name: Download font package
+      shell: bash
+      run: |
+        wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
+        unzip Lilex.zip -d Lilex
+        sudo cp Lilex/ttf/* /usr/local/share/fonts
+
+    - name: Build Site
+      shell: bash
+      run: |
+        yarn install
+        yarn build
