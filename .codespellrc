@@ -1,5 +1,5 @@
 [codespell]
 skip = ./.yarn*,.yarn/*,./.git/*,*.lock
 quiet-level = 3
-ignore-words-list = sive
+ignore-words-list = sive, Hove
 write-changes =

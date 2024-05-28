@@ -1,7 +1,7 @@
 ---
 layout: page.njk
 title: Now
-date: 2023-11-29
+date: 2024-05-28
 tags: rootLink
 ---
 
@@ -10,42 +10,67 @@ Last update: {% niceDate page.date %}
 This is a [now page][1], which I'll update to give you an overview of what I'm
 doing _now_. Inspired by [Derek Sivers][2]!
 
-## Interests
-
-### Photography
-
-I've recently picked up a medium format camera: a _Zenza Bronica
-ETRSi_. It's a 6x4.5 (645) camera, taking 15 frames on a roll of 120 film. I
-have the AE-III Prism Finder E and the Speed Grip E accessories, which makes
-it feel a lot like using a big 35mm SLR with an autowinder. I haven't worked
-out when my particular camera was made, but it has to be somewhen between 1988
-and 2004.
-
-I still have my Pentax MX (two of them, in fact), but they really could do with
-a service. The X-sync isn't working right on either of them, and some of the
-slower shutter speeds are hit and miss on the black MX.
-
-### Media
-
-I've been on a big movie kick recently. As it happens, big tech have decided
-that they're going to make all the streaming services worse and split all the
-content that used to just be on the biggest one (Netflix) across many different
-ones. So take my advice and buy yourself Blu-Rays. Learn how to rip them.
-Install [Jellyfin](https://jellyfin.org/) on your home server.
-
-Films I've really loved recently:
-
-- **Heathers (1988)**
-  - Christian Slater _and_ Winona Ryder in the _same film_!
-- **The Usual Suspects (1995)**
-  - I've seen it several times but I'll never tire of this one.
-- **But I'm A Cheerleader (2000)**
-  - A very beautiful film looking through the femme lesbian lens.
-
-## Work
-
-Still a _DevOps Engineer_ (my job title). If you have an opportunity, do send
-me an email.
-
 [1]: https://nownownow.com/about
 [2]: https://sive.rs/nowff
+
+## What?
+
+It's been _months_ since I've updated this page. Right now, it says I last wrote
+an update on the 29th of November 2023. A lot has happened since then!
+
+### Moving House
+
+After 24 years living in the same house, and 27 years of living with my parents
+in the deepest darkest doldrums of North Dorset, I've made the leap to living
+in Brighton. This is a town that has an incredibly unique set of properties; not
+least that it's the LGBT capital of the observable universe, but also that it
+feels alive in a way that nowhere else really has to me before. Perhaps it's not
+so much the _city_ that feels alive, but _me_, after living in the shadows for
+so long I now feel like I'm truly living and thriving.
+
+### This Website
+
+I've been mulling over changing this site away from 11ty, mostly because I want
+to build a photo gallery for my film photography and I'm sort of hitting the
+limits of 11ty in weird ways that I'm quite tired of debugging. I'd like to use
+something new and fresh, so it might be [Astro](https://astro.build/). As long
+as I can write in Markdown as I do now and it'll auto build out pages, I'm
+happy! I do not want to do SSR as I don't want to run a container to serve my
+website. Static pages dumped into an S3 bucket is perfect the way it is.
+
+I would also like to write out some more general personal blog updates, but
+separate to my technical articles. Perhaps I should keep personal things under
+`/blog`, and have my other things under `/writing`? Or `/articles`? Answers on
+the back of a postcard. I'm not going to be as prolific as my friend Adam, who
+very frequently writes ['weeknotes'](https://adamenglebright.com/weeknotes/),
+but I feel there's enough separation here to warrant it for my own website.
+
+I also want to make a tagging system for posts, and pagination on the blog and
+article roots, so that'll come soon.
+
+### Becoming a Photographer
+
+I've decided that I want to focus more on photography in my spare time. I really
+like the instagram page [Mildly Interesting Cars of London][micol], and after
+spotting some undeniably interesting motors where I live I've decided I'll start
+a project for _Mildly Interesting Cars of Brighton (and Hove)_. I love the blend
+of photography, writing, and history that MICOL produces and I hope the boys
+don't mind me tapping into their space.
+
+[micol]: https://www.instagram.com/mildlyinterestingcarsoflondon/?hl=en
+
+### I Like Sports Now, I Think?
+
+Recently a friend invited the Group along to watch some baseball. My entire
+knowledge of baseball up to this point was watching (for some reason that I
+can't remember) [MLB on Fox](https://www.youtube.com/watch?v=GU1o2blfeO0) - but
+as we sat on the grass next to the fences at Brighton v Brighton (more on that
+another time), the head coach approaches us. He's a fascinating man, and he
+instilled in me that day not only a baseball nickname (_Hotsauce_) but
+enthusiasm for sport in a way I've never had before.
+
+I went to the British Baseball Federation website for this update to try and
+find some information and it turns out that they are running a
+[photography competition][bbf] this year, so I might enter!
+
+[bbf]: https://www.britishbaseball.org.uk/news/capturing-the-best-of-british-baseball
