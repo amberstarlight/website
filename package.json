@@ -1,8 +1,8 @@
 {
   "name": "website",
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@4.5.1",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "v3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "canvas": "^2.11.2",
     "csso": "^5.0.5",
