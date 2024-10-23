@@ -2,7 +2,7 @@
   "name": "website",
   "packageManager": "yarn@4.5.1",
   "devDependencies": {
-    "@11ty/eleventy": "v3",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "canvas": "^2.11.2",
     "csso": "^5.0.5",
