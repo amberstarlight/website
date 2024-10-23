@@ -10,6 +10,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      actions: read
+
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
@@ -27,6 +30,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: release
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
