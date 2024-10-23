@@ -1,17 +1,44 @@
-name: ci
+name: build
 
-on:
-  push:
-    branches-ignore:
-      - main
+on: push
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build site
-        uses: ./.github/build-site
+      - name: Install dependencies
+        shell: bash
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            build-essential  \
+            libcairo2-dev    \
+            libpango1.0-dev
+
+      - name: Download font package
+        shell: bash
+        run: |
+          wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
+          unzip Lilex.zip -d Lilex
+          sudo cp Lilex/ttf/* /usr/local/share/fonts
+
+      - name: Build Site
+        shell: bash
+        run: |
+          yarn install
+          yarn build
+
+      - name: Zip artifact for deployment
+        shell: bash
+        run: |
+          zip release.zip ./build -r
+
+      - name: Upload artifact for deployment
+        uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: release.zip
