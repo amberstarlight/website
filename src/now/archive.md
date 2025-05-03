@@ -1,0 +1,13 @@
+---
+layout: page.njk
+title: Now Archive
+eleventyExcludeFromCollections: true
+---
+
+<ul>
+{% for post in collections.now | reverse %}
+  <li><a href="{{post.url}}">{{ post.filePathStem }}</a></li>
+{% endfor %}
+</ul>
+
+<h2>hello</h2>
