@@ -2,14 +2,9 @@
 layout: base.njk
 ---
 
-<article>
-  <nav class="sticky">
-    <div class="crumbs">
-      <a href="/">home</a><span></span>{{ page.fileSlug }}
-    </div>
-    <button class="minimal-button" onclick="backToTop()" id="top-button">top &ShortUpArrow;</button>
-  </nav>
+{% include "components/breadcrumbs/breadcrumbs.njk" %}
 
+<article>
   <h1 class="title">{{ title }}</h1>
   {{ content | safe }}
 </article>

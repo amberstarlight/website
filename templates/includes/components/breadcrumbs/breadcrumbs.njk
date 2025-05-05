@@ -1,0 +1,12 @@
+<nav class="sticky">
+  <ul class="crumbs">
+    {% for crumb in breadcrumbs %}
+      {% if loop.last %}
+        <li class="crumb crumb-last">{{ crumb.name }}</li>
+      {% else %}
+        <li class="crumb"><a class="crumb-link" href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <button class="minimal-button" onclick="backToTop()" id="top-button">top &uarr;</button>
+</nav>

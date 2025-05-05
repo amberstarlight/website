@@ -63,7 +63,7 @@ body {
   padding: 1em;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
   .main-wrapper {
     margin: 3em 3em 6em 3em;
     padding: 3em;
@@ -79,13 +79,27 @@ body {
   position: sticky;
   top: 0;
   background-color: rgb(var(--background));
-  padding: 1em 0;
+  padding: 0;
   border-bottom: 1px solid rgb(var(--accent));
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   display: flex;
+  align-items: center;
 }
 
-.crumbs > span::after {
+.crumbs {
+  list-style-type: none;
+  padding: 0;
+}
+
+.crumb {
+  display: inline;
+}
+
+.crumb-last {
+  font-weight: bold;
+}
+
+.crumbs > li:not(:last-child)::after {
   content: " / ";
 }
 
@@ -93,7 +107,7 @@ body {
   font-family: "Lilex Medium", monospace;
   border: none;
   margin-left: auto;
-  padding: 0 1em;
+  padding: 0.5em 1em;
   visibility: hidden;
   opacity: 0;
   transition:
@@ -204,6 +218,15 @@ footer img {
 
 .title {
   margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em auto;
 }
 
 h1 {
