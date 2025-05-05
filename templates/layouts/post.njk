@@ -5,15 +5,9 @@ layout: base.njk
 {% set regExpCode = r/<pre class=(.|\n)*?<\/pre>/gm %}
 {% set fixedContent = content | replace(regExpCode, "") | striptags %}
 {% set wordCount = fixedContent | wordcount %}
+{% include "components/breadcrumbs/breadcrumbs.njk" %}
 
 <article class="post">
-  <nav class="sticky">
-    <div class="crumbs">
-      <a href="/">home</a><span></span><a href="/blog">blog</a><span></span>{{ page.fileSlug }}
-    </div>
-    <button class="minimal-button" onclick="backToTop()" id="top-button">top &ShortUpArrow;</button>
-  </nav>
-
   <header>
     <h1 class="title">{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
