@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 module.exports = {
-  breadcrumbs: ({ page, title = "" }) => {
+  breadcrumbs: ({ page }) => {
     const pageUrl = page.url;
     if (!pageUrl) return;
 
