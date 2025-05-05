@@ -2,11 +2,10 @@
 
 module.exports = {
   breadcrumbs: ({ page, title = "" }) => {
-    const asdf = page.url;
-    if (!asdf) return;
+    const pageUrl = page.url;
+    if (!pageUrl) return;
 
-    const segments = asdf.split("/").filter((path) => !!path);
-
+    const segments = pageUrl.split("/").filter((path) => !!path);
     const breadcrumb = [{ url: "/", name: "home" }];
 
     let index = 1;
