@@ -1,0 +1,27 @@
+---
+layout: page.njk
+tags: rootLink
+pagination:
+  data: collections.post
+  size: 5
+  alias: posts
+  reverse: true
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+eleventyComputed:
+  title: "Blog {% if pagination.pageNumber > 0 %} page {{ pagination.pageNumber + 1}}{% endif %}"
+---
+
+{% for post in posts  %}
+{%- from "components/postInfo/macro.njk" import postInfo -%}
+{{ postInfo(post) }}
+{% endfor %}
+
+<nav class="pagination">
+  <ul class="pagination-list">
+    <li><a href="{{ pagination.href.previous }}"{% if pagination.pageNumber == 0 %}class="disabled"{% endif %}>&lt;</a></li>
+    {%- for pageEntry in pagination.pages %}
+    <li {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+    {%- endfor %}
+    <li><a href="{{ pagination.href.next }}"{% if not pagination.href.next %}class="disabled"{% endif %}>&gt;</a></li>
+  </ul>
+</nav>
