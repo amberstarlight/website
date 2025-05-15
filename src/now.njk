@@ -1,0 +1,17 @@
+---
+layout: is_now.njk
+title: Now
+tags: rootLink
+---
+
+{% set page = collections.now | reverse | first %}
+
+<section>
+  <h3>Updated: {% niceDate page.date %}</h3>
+  <blockquote>
+    <p>This is a <a href="https://nownownow.com/about">now page</a>, which I'll update to give you an overview of what I'm
+  doing <i>now</i>. Inspired by <a href="https://sive.rs/nowff">Derek Sivers</a>!</p>
+</blockquote>
+</section>
+
+{{ page.templateContent | safe }}
