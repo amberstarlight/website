@@ -28,6 +28,11 @@ jobs:
           unzip Lilex.zip -d Lilex
           sudo cp Lilex/ttf/* /usr/local/share/fonts
 
+      - name: Install Node LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/iron"
+
       - name: Build Site
         shell: bash
         run: |
