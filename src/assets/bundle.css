@@ -298,11 +298,30 @@ ol {
 }
 
 .pagination-list > li {
-  width: 2em;
+  min-width: 2em;
   height: 2em;
   margin: 0.5em;
   text-align: center;
   border: 1px solid rgb(var(--accent));
+}
+
+.pagination-list > li > a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.pagination-list > li:hover {
+  background-color: rgb(var(--accent));
+}
+
+.pagination-list > li:hover > a {
+  color: rgb(var(--background));
+}
+
+.pagination-list .text {
+  width: 5em;
 }
 
 [aria-current="page"] {

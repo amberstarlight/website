@@ -16,12 +16,16 @@ eleventyComputed:
 {{ postInfo(post) }}
 {% endfor %}
 
+{#
+TODO: when we have a larger number of pages, we don't want to show all of
+them. Over this number of pages, display a [...] list item.
+#}
 <nav class="pagination">
   <ul class="pagination-list">
-    <li><a href="{{ pagination.href.previous }}"{% if pagination.pageNumber == 0 %}class="disabled"{% endif %}>&lt;</a></li>
+    <li class="text"><a href="{{ pagination.href.previous }}"{% if pagination.pageNumber == 0 %}class="disabled"{% endif %}><span aria-hidden="true">&lt;</span> prev</a></li>
     {%- for pageEntry in pagination.pages %}
     <li {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
     {%- endfor %}
-    <li><a href="{{ pagination.href.next }}"{% if not pagination.href.next %}class="disabled"{% endif %}>&gt;</a></li>
+    <li class="text"><a href="{{ pagination.href.next }}"{% if not pagination.href.next %}class="disabled"{% endif %}>next <span aria-hidden="true">&gt;</span></a></li>
   </ul>
 </nav>
