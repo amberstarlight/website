@@ -31,6 +31,10 @@ function buildOpenGraphImage(
   bylineString,
   filePath,
 ) {
+  if (!titleString) return;
+  if (!subtitleString) return;
+  if (!bylineString) return;
+
   const canvas = createCanvas(img.width, img.height);
   const context = canvas.getContext("2d");
 
