@@ -288,8 +288,7 @@ hr.accent {
   align-content: center;
 }
 
-.pagination ul,
-ol {
+.pagination-list {
   list-style-type: none;
   display: flex;
   justify-content: center;
