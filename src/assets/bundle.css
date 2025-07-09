@@ -320,10 +320,6 @@ ol {
   color: rgb(var(--background));
 }
 
-.pagination-list .text {
-  width: 5em;
-}
-
 [aria-current="page"] {
   background-color: rgb(var(--accent));
 }
