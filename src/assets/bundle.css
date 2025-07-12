@@ -26,8 +26,8 @@ a {
 @font-face {
   font-family: "Lilex Medium";
   src:
-    url("/assets/fonts/lilex-medium-webfont.woff2") format("woff2"),
-    url("/assets/fonts/lilex-medium-webfont.woff") format("woff");
+    url("/assets/fonts/Lilex-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Lilex-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -35,8 +35,8 @@ a {
 @font-face {
   font-family: "Lilex Regular";
   src:
-    url("/assets/fonts/lilex-regular-webfont.woff2") format("woff2"),
-    url("/assets/fonts/lilex-regular-webfont.woff") format("woff");
+    url("/assets/fonts/Lilex-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Lilex-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -227,6 +227,7 @@ h4,
 h5,
 h6 {
   margin: 0.5em auto;
+  font-family: "Lilex Medium", monospace;
 }
 
 h1 {

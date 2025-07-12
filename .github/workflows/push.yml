@@ -19,9 +19,7 @@ jobs:
       - name: Download font package
         shell: bash
         run: |
-          wget https://github.com/mishamyrt/Lilex/releases/download/2.200/Lilex.zip
-          unzip Lilex.zip -d Lilex
-          sudo cp Lilex/ttf/* /usr/local/share/fonts
+          make webfonts
 
       - name: Build Site
         shell: bash
