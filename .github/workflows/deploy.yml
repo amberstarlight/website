@@ -34,6 +34,7 @@ jobs:
           name: release
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ github.token }}
+          path: build
 
       - name: Copy files to S3
         run: |
