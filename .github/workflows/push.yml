@@ -1,8 +1,6 @@
 name: build
 
-on:
-  - push
-  - workflow_dispatch
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -12,7 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install Nodejs LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "yarn"
+
+      - name: Install Canvas dependencies
         shell: bash
         run: |
           sudo apt-get update -y
@@ -28,15 +32,10 @@ jobs:
           unzip Lilex.zip -d Lilex
           sudo cp Lilex/ttf/* /usr/local/share/fonts
 
-      - name: Install Node LTS
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/iron"
-
       - name: Build Site
         shell: bash
         run: |
-          yarn install
+          yarn install --frozen-lockfile
           yarn build
 
       - name: Zip artifact for deployment
