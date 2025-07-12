@@ -14,7 +14,8 @@ webfonts: $(BUILD)/Lilex.zip
 	unzip -o $(BUILD)/Lilex.zip -d $(BUILD)
 	mkdir -p "${FONT_DIR}"
 	python3 -m venv venv
-	source venv/bin/activate; pip install fonttools brotli
+	source venv/bin/activate
+	python3 -m pip install fonttools brotli
 
 	fonttools ttLib "$(BUILD)/ttf/Lilex-Medium.ttf" --flavor woff2 -o "${FONT_DIR}/Lilex-Medium.woff2"
 	fonttools ttLib "$(BUILD)/ttf/Lilex-Medium.ttf" --flavor woff -o "${FONT_DIR}/Lilex-Medium.woff"
