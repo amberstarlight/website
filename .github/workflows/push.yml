@@ -27,13 +27,8 @@ jobs:
           yarn install --immutable --immutable-cache
           yarn build
 
-      - name: Zip artifact for deployment
-        shell: bash
-        run: |
-          zip release.zip ./build -r
-
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: release
-          path: release.zip
+          path: build/
