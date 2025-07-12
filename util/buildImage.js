@@ -2,8 +2,11 @@
 
 const fs = require("fs");
 const path = require("node:path");
-const { createCanvas } = require("canvas");
+const { registerFont, createCanvas } = require("canvas");
 const { BoundingBox, DrawableText } = require("./drawingHelpers");
+
+registerFont("tmp/ttf/Lilex-Medium.ttf", { family: "Lilex Medium" });
+registerFont("tmp/ttf/Lilex-Regular.ttf", { family: "Lilex Regular" });
 
 const img = {
   width: 1200,
@@ -47,7 +50,7 @@ function buildOpenGraphImage(
   const title = {
     text: titleString,
     fontProperties: {
-      family: "Lilex Meduim", // TODO: fix name when Lilex updates
+      family: "Lilex Medium",
       heightInPx: 72,
       widthInPx: 72 * 0.6,
       lineHeight: 1.4,
@@ -57,7 +60,7 @@ function buildOpenGraphImage(
   const subtitle = {
     text: subtitleString,
     fontProperties: {
-      family: "Lilex",
+      family: "Lilex Regular",
       heightInPx: 48,
       widthInPx: 48 * 0.6,
       lineHeight: 1.6,
@@ -67,7 +70,7 @@ function buildOpenGraphImage(
   const byline = {
     text: bylineString,
     fontProperties: {
-      family: "Lilex",
+      family: "Lilex Regular",
       heightInPx: 36,
       widthInPx: 36 * 0.6,
       lineHeight: 1.2,

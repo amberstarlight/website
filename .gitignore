@@ -141,3 +141,7 @@ _site
 
 # DRAFTS
 **/drafts
+
+*.zip
+venv
+tmp
