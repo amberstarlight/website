@@ -5,8 +5,8 @@ const path = require("node:path");
 const { registerFont, createCanvas } = require("canvas");
 const { BoundingBox, DrawableText } = require("./drawingHelpers");
 
-registerFont("tmp/ttf/Lilex-Medium.ttf", { family: "Lilex Medium" });
-registerFont("tmp/ttf/Lilex-Regular.ttf", { family: "Lilex Regular" });
+registerFont(".tmp/ttf/Lilex-Medium.ttf", { family: "Lilex Medium" });
+registerFont(".tmp/ttf/Lilex-Regular.ttf", { family: "Lilex Regular" });
 
 const img = {
   width: 1200,

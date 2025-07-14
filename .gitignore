@@ -143,5 +143,5 @@ _site
 **/drafts
 
 *.zip
-venv
-tmp
+.venv
+.tmp
