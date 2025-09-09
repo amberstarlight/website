@@ -1,0 +1,10 @@
+---
+layout: page.njk
+title: Tags
+---
+
+<ul>
+{% for tag in collections | getKeys | filterTagList | alphabeticSort  %}
+	<li><a href="/blog/tags/{{ tag}}">{{ tag }}</a></li>
+{% endfor %}
+</ul>

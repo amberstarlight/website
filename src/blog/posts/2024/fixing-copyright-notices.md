@@ -2,6 +2,9 @@
 title: Fixing Copyright Notices
 subtitle: SPDX licence standards applied in 15 lines of bash
 date: 2024-03-02
+tags:
+  - linux
+  - programming
 ---
 
 Recently, I've been working on [_starlight_][5] - a project that I've had in my

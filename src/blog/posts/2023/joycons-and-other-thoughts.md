@@ -2,6 +2,9 @@
 title: The Nintendo Switch Should Have Had A D-Pad
 subtitle: (Somewhat) unstructured thoughts about hardware and gaming
 date: 2023-06-18
+tags:
+  - hardware
+  - gaming
 ---
 
 I own a Switch, but I don't have Joy-Con drift. Probably because mine hasn't been
@@ -69,7 +72,7 @@ don't even know if games support diagonals on the Switch (but surely they must?)
 but the d-pad makes this vastly easier. And to add to that; it just looks _right_
 on the Switch. It's like it was _always meant to be there_!
 
-> **A Plea:**  
+> **A Plea:**
 > Avoid the 'soft-touch' material eXtremeRate sells.
 > That stuff is _disgusting_ and in a few years it'll start reverting to it's
 > original form again: _oil_.

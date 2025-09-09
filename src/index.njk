@@ -12,11 +12,9 @@ title: amber.vision
 
 <nav class="home">
   <ul>
-    {%- for post in collections.rootLink | alphabeticSort -%}
-    <li>
-      <a href="{{ post.url }}">{{ post.fileSlug | lower }}</a>
-    </li>
-    {%- endfor -%}
+    <li><a href="/about">about</a></li>
+    <li><a href="/blog">blog</a></li>
+    <li><a href="/now">now</a></li>
   </ul>
 </nav>
 

@@ -30,3 +30,7 @@ $(VENV_PYTHON):
 .PHONY: clean
 clean:
 	rm -rf $(VENV) $(FONT_DIR) $(BUILD)
+
+.PHONY: serve
+serve:
+	GIT_SHA=$$(git rev-parse HEAD) yarn serve

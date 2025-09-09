@@ -1,20 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const implicitFigures = require("markdown-it-image-figures");
-const htmlmin = require("html-minifier");
-const csso = require("csso");
-const { minify } = require("terser");
-const gitSha = require("node:child_process")
-  .execSync("git rev-parse HEAD")
-  .toString()
-  .trim();
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import implicitFigures from "markdown-it-image-figures";
+import { minify as htmlMinify } from "html-minifier";
+import { minify as cssoMinify } from "csso";
+import { minify as terserMinify } from "terser";
 
-const matter = require("gray-matter");
-const fs = require("fs");
-const { buildOpenGraphImage } = require("./util/buildImage");
+import matter from "gray-matter";
+import fs from "fs";
+import { buildOpenGraphImage } from "./util/buildImage.js";
 
-module.exports = function (eleventyConfig) {
+import filters from "./util/filters.js";
+import shortcodes from "./util/shortcodes.js";
+
+const gitSha = process.env.GIT_SHA;
+
+export default function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) =>
     mdLib.use(implicitFigures, {
       figcaption: "title",
@@ -24,22 +25,18 @@ module.exports = function (eleventyConfig) {
     }),
   );
 
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addShortcode(
-    "niceDate",
-    (date) =>
-      `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`,
-  );
+  eleventyConfig.addPlugin(filters);
+  eleventyConfig.addPlugin(shortcodes);
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   eleventyConfig.addNunjucksGlobal("gitSha", gitSha);
   eleventyConfig.addNunjucksGlobal("gitShortSha", gitSha.slice(0, 7));
-
-  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
     compile: async function (content) {
-      let result = csso.minify(content);
+      let result = cssoMinify(content);
       return async () => {
         return result.css;
       };
@@ -50,14 +47,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addExtension("js", {
     outputFileExtension: "js",
     compile: async function (content) {
-      let result = await minify(content);
+      let result = await terserMinify(content);
       return async () => result.code;
     },
   });
 
   eleventyConfig.addTransform("htmlmin", function (content) {
     if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
+      let minified = htmlMinify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
@@ -71,13 +68,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addWatchTarget("./src/assets");
   eleventyConfig.addWatchTarget("./util");
-
-  eleventyConfig.addFilter("alphabeticSort", (arr) => {
-    arr.sort((a, b) => (a.data.title > b.data.title ? 1 : -1));
-    return arr;
-  });
-
-  eleventyConfig.addFilter("numCommas", (value) => value.toLocaleString());
 
   eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
     return (data) => {
@@ -133,4 +123,4 @@ module.exports = function (eleventyConfig) {
       data: "../data",
     },
   };
-};
+}

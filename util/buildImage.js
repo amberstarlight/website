@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-const fs = require("fs");
-const path = require("node:path");
-const { registerFont, createCanvas } = require("canvas");
-const { BoundingBox, DrawableText } = require("./drawingHelpers");
+import fs from "fs";
+import path from "path";
+import { registerFont, createCanvas } from "canvas";
+import { BoundingBox, DrawableText } from "./drawingHelpers.js";
 
 registerFont(".tmp/ttf/Lilex-Medium.ttf", { family: "Lilex Medium" });
 registerFont(".tmp/ttf/Lilex-Regular.ttf", { family: "Lilex Regular" });
@@ -28,7 +28,7 @@ const colours = {
 
 const fontMargin = 20;
 
-function buildOpenGraphImage(
+export function buildOpenGraphImage(
   titleString,
   subtitleString,
   bylineString,
@@ -139,7 +139,3 @@ function buildOpenGraphImage(
 
   console.log(`[og:image] Wrote ${filePath}`);
 }
-
-module.exports = {
-  buildOpenGraphImage,
-};
