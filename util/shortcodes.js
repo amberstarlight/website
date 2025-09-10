@@ -5,7 +5,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addShortcode(
     "iso8601",
-    (date) => `${new Date(date).toLocaleDateString()}`,
+    (date) => `${new Date(date).toLocaleDateString("en-GB")}`,
   );
 
   eleventyConfig.addShortcode(
