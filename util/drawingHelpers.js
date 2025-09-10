@@ -65,7 +65,7 @@ function formatText(string, lineLength, maxLines) {
   return lines;
 }
 
-class BoundingBox {
+export class BoundingBox {
   constructor(x, y, widthInPx, heightInPx) {
     this.x = x;
     this.y = y;
@@ -74,7 +74,7 @@ class BoundingBox {
   }
 }
 
-class DrawableText {
+export class DrawableText {
   constructor(string, fontProperties, boundingBox, colour) {
     this.string = string;
     this.fontProperties = fontProperties;
@@ -140,8 +140,3 @@ class DrawableText {
     }
   }
 }
-
-module.exports = {
-  DrawableText,
-  BoundingBox,
-};

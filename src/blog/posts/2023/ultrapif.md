@@ -2,6 +2,8 @@
 title: Reviving the UltraPIF
 subtitle: Blowing the dust off the Nintendo 64's best mod
 date: 2023-08-14
+tags:
+  - hardware
 ---
 
 If you, like me, are a fan of retro gaming, you may have a Nintendo 64. Chances

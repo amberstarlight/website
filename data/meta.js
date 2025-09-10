@@ -5,7 +5,7 @@ const getAge = (birthDate) => {
   return Math.floor((Date.now() - new Date(birthDate).getTime()) / yearMs);
 };
 
-module.exports = {
+export const data = {
   siteName: "amber.vision",
   siteDescription: "My personal web zone",
   authorName: "Amber Cronin",

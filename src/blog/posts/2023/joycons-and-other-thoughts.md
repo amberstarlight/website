@@ -2,6 +2,10 @@
 title: The Nintendo Switch Should Have Had A D-Pad
 subtitle: (Somewhat) unstructured thoughts about hardware and gaming
 date: 2023-06-18
+tags:
+  - hardware
+  - gaming
+  - thoughts
 ---
 
 I own a Switch, but I don't have Joy-Con drift. Probably because mine hasn't been

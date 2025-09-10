@@ -337,3 +337,14 @@ li:has(> a.disabled) {
   border-color: rgb(var(--disabled));
   pointer-events: none;
 }
+
+.tagslist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tagslist li {
+  display: inline-block;
+  padding-right: 0.75em;
+}

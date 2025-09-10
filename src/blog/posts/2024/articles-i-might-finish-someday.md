@@ -2,6 +2,8 @@
 title: Articles I Might Finish Some Day
 subtitle: A roundup of things I would like to write about
 date: 2024-10-22
+tags:
+  - thoughts
 ---
 
 The last article I wrote on this blog was on the 6th of March. I hadn't updated

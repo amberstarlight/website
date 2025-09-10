@@ -2,6 +2,9 @@
 title: Refactoring Nunjucks Templates
 subtitle: (or "Components Before It Was Cool")
 date: 2023-06-21
+tags:
+  - website
+  - eleventy
 ---
 
 _This is the third article in the "I Made A Website" series. If you haven't read

@@ -2,6 +2,9 @@
 title: I Made A Website
 subtitle: (or "How I Learned To Love Static Site Generators")
 date: 2023-05-02
+tags:
+  - website
+  - eleventy
 ---
 
 So, I've finally made my own website. And I did it without serving you 50 megs

@@ -1,14 +1,13 @@
 ---
 layout: page.njk
 title: About
-tags: rootLink
 ---
 
 Hi! I'm Amber ([she/her](https://en.pronouns.page/she)), I'm
-{{ meta.authorAge }}, and I'm a software & operations engineer by trade. You
-may know this as the practice of DevOps. In my spare time, I'm an _everything
-hobbyist_, weaving in and out of many different interests, including but not
-limited to:
+{{ meta.data.authorAge }}, and I'm a software & operations engineer by trade.
+You may know this as the practice of DevOps. In my spare time, I'm an
+_everything hobbyist_, weaving in and out of many different interests, including
+but not limited to:
 
 - cars (incl. sportscar racing, the modified scene, etc)
 - computers, namely SFF Linux machines (I use Arch BTW)

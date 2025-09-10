@@ -2,6 +2,9 @@
 title: Film Photography On Linux
 subtitle: My (mostly) open source workflow for negatives
 date: 2023-12-06
+tags:
+  - linux
+  - photography
 ---
 
 "On Linux" is a phrase that just about every Linux user has tacked into the end

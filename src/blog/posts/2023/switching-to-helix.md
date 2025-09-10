@@ -2,6 +2,9 @@
 title: Switching To Helix
 subtitle: Bye bye, electron text editors
 date: 2023-07-01
+tags:
+  - linux
+  - programming
 ---
 
 The hardest thing to do is reprogram your muscle memory. Not only are you

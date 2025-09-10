@@ -24,7 +24,7 @@ jobs:
         shell: bash
         run: |
           yarn install --immutable
-          yarn build
+          GIT_SHA=$(git rev-parse HEAD) yarn build
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4

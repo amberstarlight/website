@@ -2,6 +2,9 @@
 title: What's In A Website?
 subtitle: (or "I've Made A Website, Part 2")
 date: 2023-05-03
+tags:
+  - eleventy
+  - website
 ---
 
 If you read my first post, "[I Made A Website][0]", you'll know that this site
