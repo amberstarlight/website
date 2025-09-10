@@ -9,6 +9,18 @@ VENV = .venv
 VENV_PYTHON = $(VENV)/bin/python
 SYSTEM_PYTHON= $(or $(shell which python3), $(shell which python))
 
+.PHONY: build
+build: deps
+	GIT_SHA=$$(git rev-parse HEAD) yarn build
+
+.PHONY: deps
+deps: webfonts
+	yarn install
+
+.PHONY: serve
+serve: webfonts
+	GIT_SHA=$$(git rev-parse HEAD) yarn serve
+
 .PHONY: webfonts
 webfonts: $(BUILD)/Lilex.zip $(VENV_PYTHON)
 	unzip -o $(BUILD)/Lilex.zip -d $(BUILD)
@@ -30,7 +42,3 @@ $(VENV_PYTHON):
 .PHONY: clean
 clean:
 	rm -rf $(VENV) $(FONT_DIR) $(BUILD)
-
-.PHONY: serve
-serve:
-	GIT_SHA=$$(git rev-parse HEAD) yarn serve

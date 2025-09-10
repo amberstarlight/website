@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-const tagFilter = ["all", "now", "post", "rootLink"];
+const tagFilter = ["all", "now", "post"];
 
 export default function (eleventyConfig) {
   eleventyConfig.addFilter("alphabeticSort", (arr) =>

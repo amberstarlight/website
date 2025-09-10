@@ -1,7 +1,6 @@
 ---
 layout: page.njk
 title: About
-tags: rootLink
 ---
 
 Hi! I'm Amber ([she/her](https://en.pronouns.page/she)), I'm

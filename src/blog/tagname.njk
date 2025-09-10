@@ -5,11 +5,12 @@ pagination:
   size: 1
   alias: tag
   filter:
-    - rootLink
+    - all
+    - now
+eleventyComputed:
+  title: "Tagged '{{ tag }}'"
 permalink: /blog/tags/{{ tag }}/
 ---
-
-<h1>Tagged “{{ tag }}”</h1>
 
 {% set taglist = collections[ tag ] %}
 <ul>
@@ -20,3 +21,5 @@ permalink: /blog/tags/{{ tag }}/
   </li>
 {% endfor %}
 </ul>
+
+<p>Go to <a href="/blog/tags">tag list</a>.</p>
