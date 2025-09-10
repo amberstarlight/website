@@ -1,8 +1,8 @@
 {%- set pageTitle %}
   {% if title %}
-    {{ title }} | {{ meta.siteName }}
+    {{ title }} | {{ meta.data.siteName }}
   {% else %}
-    {{ meta.siteName }}
+    {{ meta.data.siteName }}
   {% endif %}
 {% endset -%}
 
@@ -10,13 +10,13 @@
   {% if subtitle %}
     {{ subtitle }}
   {% else %}
-    {{ meta.siteDescription }}
+    {{ meta.data.siteDescription }}
   {% endif %}
 {% endset -%}
 
 {%
   set commitURL = [
-    meta.gitURL,
+    meta.data.gitURL,
     "/commit/",
     gitSha
   ] | join

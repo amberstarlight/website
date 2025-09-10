@@ -5,8 +5,10 @@ const getAge = (birthDate) => {
   return Math.floor((Date.now() - new Date(birthDate).getTime()) / yearMs);
 };
 
-export const siteName = "amber.vision";
-export const siteDescription = "My personal web zone";
-export const authorName = "Amber Cronin";
-export const authorAge = getAge("1997-01-15");
-export const gitURL = "https://github.com/amberstarlight/website";
+export const data = {
+  siteName: "amber.vision",
+  siteDescription: "My personal web zone",
+  authorName: "Amber Cronin",
+  authorAge: getAge("1997-01-15"),
+  gitURL: "https://github.com/amberstarlight/website",
+};
