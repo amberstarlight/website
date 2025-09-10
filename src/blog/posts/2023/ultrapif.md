@@ -50,7 +50,7 @@ and another for the FPGA's VHDL {that is, the _Very High Speed Integrated
 Circuit Hardware Description Language_, or the code that programs the FPGA}) you
 will stumble upon the following warning:
 
-> The firmware/software repositories are still incomplete.
+> The firmware/software repositories are still incomplete.  
 > So you cannot bring a self-made UltraPIF to life at the moment.
 
 This wasn't going to stop me; in fact saying that I can't build one of these
@@ -148,9 +148,9 @@ Raspberry Pi Foundation's RP2040 IC - a fast dual-core microcontroller IC with
 unique Programmable IO subsystem. That's the same chip found at the heart of the
 Raspberry Pi Pico.
 
-> 26 May 2023, 08:14
-> ...
-> _Small side note because I hardly post anything:_
+> 26 May 2023, 08:14  
+> ...  
+> _Small side note because I hardly post anything:_  
 > Over the winter I had started with some attempts to implement the
 > UltraPIF with a RP2040 (Raspberry Pi Pico). With the RP2040 the HW would
 > be significantly cheaper. My prototype was also ready. Unfortunately, I

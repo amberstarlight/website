@@ -52,7 +52,7 @@ One of my favourites is `reflow`, which uses the rulers you have set in your
 it to write this article in Markdown without having to worry about reflowing as
 I write.
 
-> helix day 3
+> helix day 3  
 > just used `:reflow` for the first time and it wrapped a commit message
 > perfectly without any special config
 
