@@ -254,6 +254,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@traptitech/markdown-it-spoiler@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "@traptitech/markdown-it-spoiler@npm:1.1.6"
+  checksum: 10/dc206423884dd8fbbe572880fbd6a10cbd221e16b987dfaef0ed0efa94518b65b13ad84d36d9d5e94a6e7b793858f862c5a407bec10ea714b347a449785409d2
+  languageName: node
+  linkType: hard
+
 "a-sync-waterfall@npm:^1.0.0":
   version: 1.0.1
   resolution: "a-sync-waterfall@npm:1.0.1"
@@ -2595,6 +2602,7 @@ __metadata:
   dependencies:
     "@11ty/eleventy": "npm:^3.1.2"
     "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.0"
+    "@traptitech/markdown-it-spoiler": "npm:^1.1.6"
     canvas: "npm:^3.1.2"
     csso: "npm:^5.0.5"
     gray-matter: "npm:^4.0.3"

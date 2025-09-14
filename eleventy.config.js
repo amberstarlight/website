@@ -2,6 +2,7 @@
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import implicitFigures from "markdown-it-image-figures";
+import spoiler from "@traptitech/markdown-it-spoiler";
 import { minify as htmlMinify } from "html-minifier";
 import { minify as cssoMinify } from "csso";
 import { minify as terserMinify } from "terser";
@@ -17,12 +18,14 @@ const gitSha = process.env.GIT_SHA;
 
 export default function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) =>
-    mdLib.use(implicitFigures, {
-      figcaption: "title",
-      link: true,
-      lazy: true,
-      async: true,
-    }),
+    mdLib
+      .use(implicitFigures, {
+        figcaption: "title",
+        link: true,
+        lazy: true,
+        async: true,
+      })
+      .use(spoiler),
   );
 
   eleventyConfig.addPlugin(filters);

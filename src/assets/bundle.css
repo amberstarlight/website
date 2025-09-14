@@ -348,3 +348,15 @@ li:has(> a.disabled) {
   display: inline-block;
   padding-right: 0.75em;
 }
+
+.spoiler {
+  color: rgb(var(--text));
+  background-color: rgb(var(--text));
+  transition: all 0.3s linear;
+}
+
+.spoiler:hover,
+.spoiler:focus {
+  color: rgb(var(--text));
+  background: inherit;
+}
