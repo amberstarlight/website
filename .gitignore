@@ -139,9 +139,7 @@ _site
 ._*
 .DS_Store
 
-# DRAFTS
-**/drafts
-
+# Font
 *.zip
 .venv
 .tmp
