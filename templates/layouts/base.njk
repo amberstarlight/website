@@ -55,7 +55,7 @@
   </head>
   <body>
     <div class="main-wrapper">
-      {{ content | safe }}
+      {{ content | parseFootnotes | safe }}
       <footer>
         <img src="/assets/img/me.webp" width="100" />
         <div>
