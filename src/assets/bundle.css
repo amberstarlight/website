@@ -1,5 +1,6 @@
 :root {
   box-sizing: border-box;
+  scroll-padding-top: 12em;
   /*
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
@@ -21,6 +22,12 @@
 a {
   color: rgb(var(--accent));
   font-weight: bold;
+}
+
+:focus {
+  outline: none;
+  outline: 2px dashed rgb(var(--accent));
+  outline-offset: 2px;
 }
 
 @font-face {
@@ -123,6 +130,10 @@ body {
   cursor: pointer;
   background-color: rgb(var(--accent));
   color: rgb(var(--background));
+}
+
+.minimal-button:focus {
+  opacity: 100%;
 }
 
 article p,
@@ -359,4 +370,11 @@ li:has(> a.disabled) {
 .spoiler:focus {
   color: rgb(var(--text));
   background: inherit;
+}
+
+article.post > hr {
+  border: none;
+  border-bottom: 1px solid rgb(var(--text));
+  width: 50%;
+  margin: 4em auto;
 }
