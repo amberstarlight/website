@@ -1,6 +1,4 @@
 :root {
-  box-sizing: border-box;
-  scroll-padding-top: 12em;
   /*
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
@@ -19,9 +17,14 @@
   }
 }
 
+[id] {
+  scroll-margin-top: 10em;
+}
+
 a {
   color: rgb(var(--accent));
   font-weight: bold;
+  text-underline-offset: 0.25em;
 }
 
 :focus {
