@@ -17,6 +17,14 @@ function parseFootnotes(htmlString) {
   return htmlString;
 }
 
+function parseSpoilers(htmlString) {
+  const spoilerRegex = /\|\|.+\|\|/g;
+  return htmlString.replace(spoilerRegex, (match, p1) => {
+    const strippedSpoiler = match.replace(/\|\|/g, "");
+    return `<span class="spoiler">${strippedSpoiler}</span>`;
+  });
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.addFilter("alphabeticSort", (arr) =>
     arr.sort((a, b) => (a > b ? 1 : -1)),
@@ -36,4 +44,5 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("parseFootnotes", parseFootnotes);
+  eleventyConfig.addFilter("parseSpoilers", parseSpoilers);
 }
