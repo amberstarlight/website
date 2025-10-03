@@ -15,7 +15,7 @@ build: deps
 
 .PHONY: deps
 deps: webfonts
-	yarn install
+	yarn install --immutable
 
 .PHONY: serve
 serve: webfonts

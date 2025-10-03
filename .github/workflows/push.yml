@@ -15,16 +15,10 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Download font package
-        shell: bash
-        run: |
-          make webfonts
-
       - name: Build Site
         shell: bash
         run: |
-          yarn install --immutable
-          GIT_SHA=$(git rev-parse HEAD) yarn build
+          GIT_SHA=$(git rev-parse HEAD) make build
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
