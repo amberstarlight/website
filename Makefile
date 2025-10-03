@@ -1,5 +1,3 @@
-#!/usr/bin/make
-
 SHELL = /bin/bash
 FONT_DIR = ./src/assets/fonts
 BUILD = .tmp
@@ -10,19 +8,18 @@ VENV_PYTHON = $(VENV)/bin/python
 SYSTEM_PYTHON= $(or $(shell which python3), $(shell which python))
 
 .PHONY: build
-build: deps
+build: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn build
 
 .PHONY: deps
-deps: webfonts
+deps:
 	yarn install --immutable
 
 .PHONY: serve
-serve: webfonts
+serve: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn serve
 
-.PHONY: webfonts
-webfonts: $(BUILD)/Lilex.zip $(VENV_PYTHON)
+$(FONT_DIR)/Lilex-*.woff* &: $(BUILD)/Lilex.zip $(VENV_PYTHON)
 	unzip -o $(BUILD)/Lilex.zip -d $(BUILD)
 	mkdir -p "${FONT_DIR}"
 
@@ -33,12 +30,13 @@ webfonts: $(BUILD)/Lilex.zip $(VENV_PYTHON)
 
 $(BUILD)/Lilex.zip:
 	mkdir -p $(BUILD)
-	wget "https://github.com/mishamyrt/Lilex/releases/latest/download/Lilex.zip" -O $(BUILD)/Lilex.zip
+	wget --quiet "https://github.com/mishamyrt/Lilex/releases/latest/download/Lilex.zip" -O $(BUILD)/Lilex.zip
 
 $(VENV_PYTHON):
 	$(SYSTEM_PYTHON) -m venv $(VENV)
-	$(VENV_PYTHON) -m pip install fonttools brotli
+	$(VENV_PYTHON) -m pip --quiet install fonttools brotli
 
 .PHONY: clean
 clean:
 	rm -rf $(VENV) $(FONT_DIR) $(BUILD)
+	yarn cache clean
