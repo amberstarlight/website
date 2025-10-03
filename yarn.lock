@@ -59,12 +59,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-plugin-syntaxhighlight@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:5.0.0"
+"@11ty/eleventy-plugin-syntaxhighlight@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@11ty/eleventy-plugin-syntaxhighlight@npm:5.0.2"
   dependencies:
-    prismjs: "npm:^1.29.0"
-  checksum: 10/b6d2663a8fc2874e7893ce345e4a231bcdfbff58df79cc8974a39e34bef71bb0dfa8289a8123b7ed5324a4c842ad5f5021111189c0b43ba1a64a21001480b0c9
+    prismjs: "npm:^1.30.0"
+  checksum: 10/e736218561c004d785021df2bc91fb345f19f86007e4db3585a2f02830fab7858d3940b2b013a081627edf6ea02d489a7b242ddf4c4498a5821006170374f9ed
   languageName: node
   linkType: hard
 
@@ -75,7 +75,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy@npm:^3.1.2":
+"@11ty/eleventy@npm:3.1.2":
   version: 3.1.2
   resolution: "@11ty/eleventy@npm:3.1.2"
   dependencies:
@@ -286,21 +286,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.14.0, acorn@npm:^8.14.1":
+"acorn@npm:^8.14.0, acorn@npm:^8.14.1, acorn@npm:^8.15.0":
   version: 8.15.0
   resolution: "acorn@npm:8.15.0"
   bin:
     acorn: bin/acorn
   checksum: 10/77f2de5051a631cf1729c090e5759148459cdb76b5f5c70f890503d629cf5052357b0ce783c0f976dd8a93c5150f59f6d18df1def3f502396a20f81282482fa4
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^8.8.2":
-  version: 8.10.0
-  resolution: "acorn@npm:8.10.0"
-  bin:
-    acorn: bin/acorn
-  checksum: 10/522310c20fdc3c271caed3caf0f06c51d61cb42267279566edd1d58e83dbc12eebdafaab666a0f0be1b7ad04af9c6bc2a6f478690a9e6391c3c8b165ada917dd
   languageName: node
   linkType: hard
 
@@ -562,14 +553,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"canvas@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "canvas@npm:3.1.2"
+"canvas@npm:3.2.0":
+  version: 3.2.0
+  resolution: "canvas@npm:3.2.0"
   dependencies:
     node-addon-api: "npm:^7.0.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.3"
-  checksum: 10/b1a2e6e8c2c49e55e5cd87b895855867315ba453afbfd277a2cc870548fb4cbe760b945a6d69a6f5c541c6a873e4404ee368c7a4173c0bb183605994a00e6c87
+  checksum: 10/d1506b28dce31cb2292c92e827acb41eb6360ebf382d41dffffd056543aa49f083cae44886586a5ce9c5dc3f107f1938750a23381556dd3b6eeffdc0dfd7cdd8
   languageName: node
   linkType: hard
 
@@ -676,7 +667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csso@npm:^5.0.5":
+"csso@npm:5.0.5":
   version: 5.0.5
   resolution: "csso@npm:5.0.5"
   dependencies:
@@ -846,7 +837,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^3.0.1, entities@npm:~3.0.1":
+"entities@npm:^3.0.1":
   version: 3.0.1
   resolution: "entities@npm:3.0.1"
   checksum: 10/3706e0292ea3f3679720b3d3b1ed6290b164aaeb11116691a922a3acea144503871e0de2170b47671c3b735549b8b7f4741d0d3c2987e8f985ccaa0dd3762eba
@@ -1113,7 +1104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gray-matter@npm:^4.0.3":
+"gray-matter@npm:4.0.3, gray-matter@npm:^4.0.3":
   version: 4.0.3
   resolution: "gray-matter@npm:4.0.3"
   dependencies:
@@ -1141,7 +1132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-minifier@npm:^4.0.0":
+"html-minifier@npm:4.0.0":
   version: 4.0.0
   resolution: "html-minifier@npm:4.0.0"
   dependencies:
@@ -1437,15 +1428,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"linkify-it@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "linkify-it@npm:4.0.1"
-  dependencies:
-    uc.micro: "npm:^1.0.1"
-  checksum: 10/d0a786d2e3f02f46b6f4a9b466af9eb936fb68e86b7cd305933d5457b12fdc53a4d0e0b697b02dc2e7d84a51d2425d719598bb7b47af7e01911e492e07a97957
-  languageName: node
-  linkType: hard
-
 "linkify-it@npm:^5.0.0":
   version: 5.0.0
   resolution: "linkify-it@npm:5.0.0"
@@ -1528,7 +1510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-image-figures@npm:^2.1.1":
+"markdown-it-image-figures@npm:2.1.1":
   version: 2.1.1
   resolution: "markdown-it-image-figures@npm:2.1.1"
   peerDependencies:
@@ -1537,22 +1519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:^13.0.1":
-  version: 13.0.1
-  resolution: "markdown-it@npm:13.0.1"
-  dependencies:
-    argparse: "npm:^2.0.1"
-    entities: "npm:~3.0.1"
-    linkify-it: "npm:^4.0.1"
-    mdurl: "npm:^1.0.1"
-    uc.micro: "npm:^1.0.5"
-  bin:
-    markdown-it: bin/markdown-it.js
-  checksum: 10/ebe2cfd515c23d2d88692efac41e4070fcd2e932af15e5455e73e1a47f1f86298a4aacb2de3b5cc647a409bed5951739980c02dbf7d34f78e25554d8742751db
-  languageName: node
-  linkType: hard
-
-"markdown-it@npm:^14.1.0":
+"markdown-it@npm:14.1.0, markdown-it@npm:^14.1.0":
   version: 14.1.0
   resolution: "markdown-it@npm:14.1.0"
   dependencies:
@@ -1584,13 +1551,6 @@ __metadata:
   version: 2.0.28
   resolution: "mdn-data@npm:2.0.28"
   checksum: 10/aec475e0c078af00498ce2f9434d96a1fdebba9814d14b8f72cd6d5475293f4b3972d0538af2d5c5053d35e1b964af08b7d162b98e9846e9343990b75e4baef1
-  languageName: node
-  linkType: hard
-
-"mdurl@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "mdurl@npm:1.0.1"
-  checksum: 10/ada367d01c9e81d07328101f187d5bd8641b71f33eab075df4caed935a24fa679e625f07108801d8250a5e4a99e5cd4be7679957a11424a3aa3e740d2bb2d5cb
   languageName: node
   linkType: hard
 
@@ -2052,19 +2012,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.8":
-  version: 2.8.8
-  resolution: "prettier@npm:2.8.8"
+"prettier@npm:3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
-    prettier: bin-prettier.js
-  checksum: 10/00cdb6ab0281f98306cd1847425c24cbaaa48a5ff03633945ab4c701901b8e96ad558eb0777364ffc312f437af9b5a07d0f45346266e8245beaf6247b9c62b24
+    prettier: bin/prettier.cjs
+  checksum: 10/1213691706bcef1371d16ef72773c8111106c3533b660b1cc8ec158bd109cdf1462804125f87f981f23c4a3dba053b6efafda30ab0114cc5b4a725606bb9ff26
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.29.0":
-  version: 1.29.0
-  resolution: "prismjs@npm:1.29.0"
-  checksum: 10/2080db382c2dde0cfc7693769e89b501ef1bfc8ff4f8d25c07fd4c37ca31bc443f6133d5b7c145a73309dc396e829ddb7cc18560026d862a887ae08864ef6b07
+"prismjs@npm:^1.30.0":
+  version: 1.30.0
+  resolution: "prismjs@npm:1.30.0"
+  checksum: 10/6b48a2439a82e5c6882f48ebc1564c3890e16463ba17ac10c3ad4f62d98dea5b5c915b172b63b83023a70ad4f5d7be3e8a60304420db34a161fae69dd4e3e2da
   languageName: node
   linkType: hard
 
@@ -2471,17 +2431,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.20.0":
-  version: 5.20.0
-  resolution: "terser@npm:5.20.0"
+"terser@npm:5.44.0":
+  version: 5.44.0
+  resolution: "terser@npm:5.44.0"
   dependencies:
     "@jridgewell/source-map": "npm:^0.3.3"
-    acorn: "npm:^8.8.2"
+    acorn: "npm:^8.15.0"
     commander: "npm:^2.20.0"
     source-map-support: "npm:~0.5.20"
   bin:
     terser: bin/terser
-  checksum: 10/5e8bb597bcd26fa8ba4c95f49044155a6dba6e8aa3cfc5d942c2624b58ad1c1011a7bdf91e49acbd7afb80f811b243dde68a11cc085ca5faf0bfa1cde28665f7
+  checksum: 10/e094a905016b00dd665a71f47311826618ea67f2d9f5aec37834114f9d27ed0de47e18a4b3bc2421b274bbf3028ac2b082e2d20f0e3b9f24d912ea126c9da4bf
   languageName: node
   linkType: hard
 
@@ -2517,13 +2477,6 @@ __metadata:
   dependencies:
     safe-buffer: "npm:^5.0.1"
   checksum: 10/7f0d9ed5c22404072b2ae8edc45c071772affd2ed14a74f03b4e71b4dd1a14c3714d85aed64abcaaee5fec2efc79002ba81155c708f4df65821b444abb0cfade
-  languageName: node
-  linkType: hard
-
-"uc.micro@npm:^1.0.1, uc.micro@npm:^1.0.5":
-  version: 1.0.6
-  resolution: "uc.micro@npm:1.0.6"
-  checksum: 10/6898bb556319a38e9cf175e3628689347bd26fec15fc6b29fa38e0045af63075ff3fea4cf1fdba9db46c9f0cbf07f2348cd8844889dd31ebd288c29fe0d27e7a
   languageName: node
   linkType: hard
 
@@ -2593,16 +2546,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
-    "@11ty/eleventy": "npm:^3.1.2"
-    "@11ty/eleventy-plugin-syntaxhighlight": "npm:^5.0.0"
-    canvas: "npm:^3.1.2"
-    csso: "npm:^5.0.5"
-    gray-matter: "npm:^4.0.3"
-    html-minifier: "npm:^4.0.0"
-    markdown-it: "npm:^13.0.1"
-    markdown-it-image-figures: "npm:^2.1.1"
-    prettier: "npm:^2.8.8"
-    terser: "npm:^5.20.0"
+    "@11ty/eleventy": "npm:3.1.2"
+    "@11ty/eleventy-plugin-syntaxhighlight": "npm:5.0.2"
+    canvas: "npm:3.2.0"
+    csso: "npm:5.0.5"
+    gray-matter: "npm:4.0.3"
+    html-minifier: "npm:4.0.0"
+    markdown-it: "npm:14.1.0"
+    markdown-it-image-figures: "npm:2.1.1"
+    prettier: "npm:3.6.2"
+    terser: "npm:5.44.0"
+  dependenciesMeta:
+    canvas:
+      built: true
   languageName: unknown
   linkType: soft
 
