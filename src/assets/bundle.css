@@ -3,7 +3,7 @@
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
   */
-  --text: 21, 21, 21;
+  --text: 48, 54, 47;
   --background: 245, 249, 233;
   --accent: 204, 40, 81;
   --disabled: 164, 164, 164;
@@ -12,8 +12,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 208, 208, 208;
-    --background: 21, 21, 21;
-    --accent: 139, 114, 238;
+    --background: 48, 54, 47;
+    --accent: 249, 220, 92;
   }
 }
 
