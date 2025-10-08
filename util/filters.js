@@ -10,10 +10,11 @@ function parseFootnotes(htmlString) {
   htmlString = htmlString.replace(footnoteRegex, (match, $1) => {
     if (!footnotes.has($1)) {
       footnotes.add($1);
-      return `<sup><a id="backlink-${$1}" href="${pageURL}#footnote-${$1}">[${$1}]</a></sup>`;
+      return `<sup><a id="backlink-${$1}" aria-label="Footnote #${$1}" href="${pageURL}#footnote-${$1}">[${$1}]</a></sup>`;
     }
-    return `<sup><a id="footnote-${$1}" href="${pageURL}#backlink-${$1}">[${$1}]</a></sup>`;
+    return `<sup><a id="footnote-${$1}" aria-label="Back to reference #${$1}" href="${pageURL}#backlink-${$1}">[${$1}]</a></sup>`;
   });
+
   return htmlString;
 }
 
