@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
   }
 
   if (window.scrollY < 350) {
-    button.style.visibility = "invisible";
+    button.style.visibility = "hidden";
     button.style.opacity = 0;
   }
 });
