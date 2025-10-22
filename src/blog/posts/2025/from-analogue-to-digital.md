@@ -18,9 +18,9 @@ This is a particularly broad topic and there are several camps of opinion that
 so-called "retro-gamers" have entrenched themselves into; I have my opinions
 and have curated my setup to fit my needs, but yours will be different and so
 I advise taking the time to research different solutions. There's some further
-reading at the bottom of this post which should serve as some jumping off
-points. Remember - there is no "perfect setup", only the setup that is perfect
-_for you_.
+reading at the bottom of this post which should serve as jumping off points.
+Remember - there is no one "perfect setup", only the setup that is perfect _for
+you_.
 
 ## What are the options?
 
@@ -50,7 +50,7 @@ Analogue FPGA systems) - but for many reasons I dislike emulation:
 
 So my choice for retro gaming is to use original hardware, with modification
 where that improves the quality of life of the system. I currently have
-8 consoles plugged in to my TV setup; the complete collection of both 6th
+8 consoles plugged into my TV setup; the complete collection of both 6th
 generation (Dreamcast, PlayStation 2, Xbox, GameCube), 7th generation (Xbox 360,
 Wii, PlayStation 3) and a Switch. I would like to have a Nintendo 64 in this mix
 too, but I am running out of space as it is, and as a 'toploader' it can't be
@@ -75,7 +75,7 @@ shoved Composite video and stereo audio into a little rectangle and a minimal
 version of SCART came out the other end. However, higher quality video cables
 were available (we were still a few years away from going fully digital). If you
 have exclusively PAL consoles, especially 5th generation and older, you may find
-RGB output/mods are your preference (if not required); adding an N64 to my setup
+RGB output/mods are your preference, if not required; adding an N64 to my setup
 would involve Tim Worthington's RGB mod, for instance.
 
 The odd one out here is the GameCube. Early models (DOL-001) had two video
@@ -85,13 +85,14 @@ analogue YPbPr through a proprietary ASIC. If you have this cable (now worth
 a considerable amount of money), you also need to use the Analog AV cable for
 stereo audio; Nintendo didn't include a DAC for audio in the Component cable.
 The alternative option is to use a GCVideo solution. I'm using the Insurrection
-Industries Carby and pairing it with a HDMI to YPbPr Component converter. This
+Industries Carby and pairing it with an HDMI to YPbPr Component converter. This
 is so that I can upscale and process the output in the same way for all of my
 analogue consoles. (Carby Component Cable please come back!)
 
 The Dreamcast has the ability to output VGA, which bypasses the switch box and
 goes straight to the upscaler; it's native VGA and doesn't need any conversion
-or special cables, the cheap Dreamcast VGA cables on eBay work _perfectly_ here.
+or special cables, so the cheap Dreamcast VGA cables on eBay work _perfectly_
+here.
 
 The video pipeline is as follows:
 
@@ -111,8 +112,9 @@ The video pipeline is as follows:
    OSSC to help get the feel of the original CRT experience back.
 
 3. Digital switching: HDMI comes out of the OSSC and goes into an Extron
-   SW4 HDMI switch box. In the other three inputs are HDMI from the Xbox 360,
-   PlayStation 3, and the Switch.
+   SW4 HDMI switch box. HDMI from the Xbox 360, PlayStation 3, and the Switch
+   come into the other three inputs. The Extron has automatic source switching
+   enabled through jumping a pair of pins on the back of the unit.
 
 4. The final stage: one HDMI cable comes out of the Extron and goes into my
    Philips 4K TV. Audio comes out of the TV through HDMI ARC and goes into an
@@ -135,13 +137,13 @@ and repairs. Let's walk through the proverbial hangar together:
 
 The first home console I owned, the Xbox is perhaps my favourite. _Halo_ and
 _Halo 2_ were pivotal to my ongoing love for Sci-Fi, leading me to all sorts
-of media including Bungie's big inspiration, _Alien_ and _Aliens_. I'll never
+of media including Bungie's big inspirations, _Alien_ and _Aliens_. I'll never
 forget the jaw-dropping wonder I had when stepping out of the crashed lifeboat
 for the first time and looking up at the ringworld in _Halo_. Other games
 I still play from back in the day include _Midnight Club 3: DUB Edition_,
 undoubtedly fuelling my love for the Max Power scene and underground automotive
 culture in an era of _Fast and Furious_, and the _Burnout_ series; _Burnout:
-Revenge_ will always make my top 10 list of games.
+Revenge_ will always make my top 10 games list.
 
 Sadly this Xbox isn't the same unit I owned as a child, but it's become a
 staple of play with only a few mods - an OpenXenium chip and a 1TB SATA HDD.
@@ -149,8 +151,8 @@ The PC-like architecture is a huge boon to the system with hardmodded Xboxes
 (Xboxen?) still reigning supreme as some of the best emulation machines out
 there. In the future I'd like to transplant the guts of this console into
 either a [Crystal Xbox][crystalxbox] shell or one of the seemingly vaporware
-Retro Game Restore shells. There's also the option of dyeing the crystal shell a
-different colour...
+Retro Game Restore shells. There's also the option of dyeing the crystal shell
+a different colour...
 
 - OpenXenium modchip, with EvoX M8+ Titan patched BIOS
 - 1TB SATA HDD (StarTech adapter with 80-wire IDE cable)
@@ -191,14 +193,15 @@ CleanRip and started playing through the _Resident Evil_ remake.
 
 Originally released in 'Indigo' purple (the first GameCube I owned was this
 colour), 'Platinum' silver and 'Jet Black', I picked up a ['Spice' orange][gcn]
-to complement my collection of limited-edition or differently coloured consoles.
-The GameCube is the most kitted-out console in the collection, with some
-rarities like the broadband adapter (DOL-015) that I purchased from CeX (of all
-places!) and a matching 'Spice' orange Game Boy Player; Game Boy games on the
-big screen look absolutely fantastic through the OSSC's upscaler. The original
-miniDVD drive is gone, with a GC Loader sporting a suitably large SD card in its
-place, running SwissGC as a homebrew solution. Save files are dealt with by a
-MemCard PRO GC. In serial port 2 sits an SD2SP2 for configuration backup.
+to complement my collection of limited-edition or non-standard coloured
+consoles. The GameCube is the most kitted-out console in the collection, with
+some rarities like the broadband adapter (DOL-015) that I purchased from CeX
+(of all places!) and a matching 'Spice' orange Game Boy Player; Game Boy games
+on the big screen look absolutely fantastic through the OSSC's upscaler. The
+original miniDVD drive is gone, with a GC Loader sporting a suitably large SD
+card in its place, running SwissGC as a homebrew solution. Save files are dealt
+with by a MemCard PRO GC. In serial port 2 sits an SD2SP2 for configuration
+backup.
 
 - Game Boy Player
 - Broadband Adapter
@@ -221,13 +224,13 @@ unfortunately it's not supported by all games on the system.
 ### Wii
 
 The hacking scene around the Wii is quite interesting, and these days
-softmodding is the way to go for the Wii; the SD card slot makes it so easy.
-You may have even heard of the "Letterbomb" hack, as it's fairly ubiquitous. The
-Homebrew Channel and its theme are fantastic and blend into the console well,
-which is perfect for someone like me who appreciates the "OEM plus" aesthetic.
+softmodding is the way to go; the SD card slot makes it so easy. You may have
+even heard of the "Letterbomb" hack, as it's fairly ubiquitous. The Homebrew
+Channel and its theme are fantastic and blend into the console well, which is
+perfect for someone like me who appreciates the "OEM plus" aesthetic.
 
 There are some interesting games made for the Wii (it would be remiss of
-me not to mention _Super Smash Bros. Brawl_, of which I spent a lot of time
+me not to mention _Super Smash Bros. Brawl_, which I spent a lot of time
 playing with school friends), but I am quite fond of a few lesser-known titles.
 _Pokémon Battle Revolution_, the sort-of-but-not-quite spiritual successor to
 _Pokémon Stadium_, comes to mind as a game that showed a lot of potential but
@@ -262,7 +265,7 @@ an interesting novelty!
 ### PlayStation 3
 
 Let's be honest, the main reason anyone bought a PS3 was because it had a
-Blu-ray player integrated into the console. And that's what mine adds to my
+Blu-ray player integrated into the console, and that's what mine adds to my
 setup; a dedicated 1080p Blu-ray machine, with the added bonus of being a games
 console. The launch price of the system was [fairly steep][ps3] and has gone
 down in history as a meme (599 USD), but again this was primarily due to the
@@ -274,7 +277,7 @@ _Gran Turismo_ series, _Metal Gear Solid 4_, the _Motorstorm_ series, and the
 _Ratchet & Clank_ series.
 
 In terms of modding, I think I'll end up looking at some form of custom firmware
-as then I can have a region-free Blu-ray player. Unfortuna
+as then I can have a region-free Blu-ray player.
 
 ### Switch
 
@@ -323,7 +326,7 @@ upscalers (Retrotink 4K, PixelFX Morph et al.) can upscale 1080p HDMI content
 up to 4K, and they would do a better job at it than any internal scaler in a
 typical television set, alongside the ability to do additional video processing
 on these sources. This would be an attractive proposition for 7th generation
-consoles, and even PCs! I could run all my HDMI sources through a HDMI 4K
+consoles, and even PCs! I could run all my HDMI sources through an HDMI 4K
 switcher and then a single cable into the TV would simplify the digital side of
 my setup.
 
@@ -361,8 +364,8 @@ If you want to start delving into the scene more, some excellent resources are
 available:
 
 - [My Life in Gaming RGB Video Masterclass][mlig] - the MLiG guys are really
-  passionate about their setups and have been very inspirational for me in keeping
-  my passion for retro games alive.
+  passionate about their setups and have been very inspirational for me in
+  keeping my passion for retro games alive.
 
 - The [ConsoleMods.org][consolemods] Wiki, which also has a lot of information
   about each console I've talked about and was incredibly useful in finding out
@@ -378,7 +381,7 @@ on the Master Chief Collection, because the menu 'flythroughs' aren't present;
 in fact, none of the original game menus are present. This greatly dampens the
 experience, especially because the music and menus are meant to settle you into
 a particular mood before playing that the MCC strips away; it almost feels like
-whitewashing the history of the series due to the amount of time we'd spend in
+overwriting the history of the series due to the amount of time we'd spend in
 those menus queueing for multiplayer matches or even leaving the menus on to
 listen to the music. Visit [halome.nu][hmenu] to see what I mean. For a long
 time I wouldn't even recommend playing _Combat Evolved (Anniversary)_ via the
@@ -388,8 +391,8 @@ bugs, and wouldn't let you switch to the original sound effects/music!
 [^2] I do, where possible, rip or dump my games to the console. Neither the
 drive lasers nor the discs themselves will last forever! This does mean I am
 also 'looking through a digital list of games' - but I do have the cases and
-manuals for the majority of my game collection, and frequently have to pull the
-manuals out to remind myself of the control scheme.
+manuals for the majority of my game collection, and frequently have to pull them
+out to remind myself of the control schemes!
 
 [^3] This was true when I started collecting, there may be some cheaper kits now
 especially in the open source space. However, an ElectronAVE for the Wii starts
