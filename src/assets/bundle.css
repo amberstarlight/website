@@ -17,6 +17,17 @@
   }
 }
 
+html {
+  overflow-y: scroll;
+}
+
+@supports (scrollbar-gutter: stable) {
+  html {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+}
+
 [id] {
   scroll-margin-top: 10em;
 }
