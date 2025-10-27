@@ -21,7 +21,7 @@ jobs:
           GIT_SHA=$(git rev-parse HEAD) make build
 
       - name: Upload artifact for deployment
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: release
           path: build/
