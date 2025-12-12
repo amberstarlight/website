@@ -8,7 +8,7 @@ tags:
 ---
 
 When I published my [first blog post](/blog/i-made-a-website) on this
-website, 955 days ago, I eluded to some of the reasons why I chose to do so;
+website, 955 days ago, I alluded to some of the reasons why I chose to do so;
 it had only been a few months since Elon Musk had purchased Twitter ([see
 for yourself how that's going][twt]), Cory Doctorow had coined the term
 '[enshittification][cory]', and (though I didn't mention it at the time) the
