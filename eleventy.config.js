@@ -35,7 +35,7 @@ export default function (eleventyConfig) {
     outputPath: "/feed.xml",
     collection: {
       name: "post",
-      limit: 10,
+      limit: 0,
     },
     metadata: {
       language: "en",
