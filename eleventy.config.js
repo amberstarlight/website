@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import implicitFigures from "markdown-it-image-figures";
 import { minify as htmlMinify } from "html-minifier";
 import { minify as cssoMinify } from "csso";
@@ -28,6 +29,25 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(filters);
   eleventyConfig.addPlugin(shortcodes);
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "post",
+      limit: 10,
+    },
+    metadata: {
+      language: "en",
+      title: "amber.vision",
+      subtitle: "Amber's personal blog",
+      base: "https://amber.vision/",
+      author: {
+        name: "Amber Cronin",
+        email: "hello@amber.vision",
+      },
+    },
+  });
 
   eleventyConfig.addNunjucksGlobal("gitSha", gitSha);
   eleventyConfig.addNunjucksGlobal("gitShortSha", gitSha.slice(0, 7));
