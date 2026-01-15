@@ -10,7 +10,7 @@ repos:
       - id: codespell
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.45.0
+    rev: v0.47.0
     hooks:
       - id: markdownlint
         args:
@@ -27,7 +27,7 @@ repos:
         args: ["--markdown-linebreak-ext=md,markdown"]
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
       - id: insert-license
         name: Insert code license (js)

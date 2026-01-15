@@ -1,6 +1,12 @@
 name: build
 
-on: [push, workflow_dispatch]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    # rebuild when static values need updating
+    - cron: "0 0 1 1 *"
+    - cron: "0 0 15 1 *"
 
 jobs:
   build:
