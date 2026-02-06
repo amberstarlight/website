@@ -2,11 +2,6 @@ SHELL = /bin/bash
 FONT_DIR = ./src/assets/fonts
 BUILD = .tmp
 
-# Python Environment
-VENV = .venv
-VENV_PYTHON = $(VENV)/bin/python
-SYSTEM_PYTHON= $(or $(shell which python3), $(shell which python))
-
 .PHONY: build
 build: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn build
@@ -19,24 +14,19 @@ deps:
 serve: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn serve
 
-$(FONT_DIR)/Lilex-*.woff* &: $(BUILD)/Lilex.zip $(VENV_PYTHON)
+$(FONT_DIR)/Lilex-*.woff* &: $(BUILD)/Lilex.zip
 	unzip -o $(BUILD)/Lilex.zip -d $(BUILD)
 	mkdir -p "${FONT_DIR}"
 
-	$(VENV)/bin/fonttools ttLib "$(BUILD)/ttf/Lilex-Medium.ttf" --flavor woff2 -o "${FONT_DIR}/Lilex-Medium.woff2"
-	$(VENV)/bin/fonttools ttLib "$(BUILD)/ttf/Lilex-Medium.ttf" --flavor woff -o "${FONT_DIR}/Lilex-Medium.woff"
-	$(VENV)/bin/fonttools ttLib "$(BUILD)/ttf/Lilex-Regular.ttf" --flavor woff2 -o "${FONT_DIR}/Lilex-Regular.woff2"
-	$(VENV)/bin/fonttools ttLib "$(BUILD)/ttf/Lilex-Regular.ttf" --flavor woff -o "${FONT_DIR}/Lilex-Regular.woff"
+	cp $(BUILD)/webfonts/Lilex-Medium.woff*  \
+	   $(BUILD)/webfonts/Lilex-Regular.woff* \
+	   --target-directory="${FONT_DIR}/"
 
 $(BUILD)/Lilex.zip:
 	mkdir -p $(BUILD)
 	wget --quiet "https://github.com/mishamyrt/Lilex/releases/latest/download/Lilex.zip" -O $(BUILD)/Lilex.zip
 
-$(VENV_PYTHON):
-	$(SYSTEM_PYTHON) -m venv $(VENV)
-	$(VENV_PYTHON) -m pip --quiet install fonttools brotli
-
 .PHONY: clean
 clean:
-	rm -rf $(VENV) $(FONT_DIR) $(BUILD)
+	rm -rf $(FONT_DIR) $(BUILD)
 	yarn cache clean
