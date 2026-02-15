@@ -91,10 +91,6 @@ body {
     padding: 3em;
     box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
   }
-
-  footer div:last-child {
-    margin-left: auto;
-  }
 }
 
 .sticky {
@@ -166,12 +162,24 @@ li ul {
   margin: 0;
 }
 
-.subtitle {
-  margin: 1em 0;
+.post-info {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 0.5em;
+  width: 100%;
+  margin: 2em 0;
 }
 
-.post-info {
-  margin: 2em 0;
+.post-info .titles > *:first-child {
+  margin-top: 0;
+}
+
+.post-info .metadata > *:first-child {
+  margin-top: 0.25em;
+}
+
+.post-info .subtitle {
+  margin: 0.25em 0;
 }
 
 blockquote {

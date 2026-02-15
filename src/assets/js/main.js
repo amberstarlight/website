@@ -11,6 +11,8 @@ function backToTop() {
 window.addEventListener("scroll", () => {
   const button = document.getElementById("top-button");
 
+  if (button === null || button === undefined) return;
+
   if (window.scrollY > 500) {
     button.style.visibility = "visible";
     button.style.opacity = 100;

@@ -11,7 +11,7 @@ layout: base.njk
   <header>
     <h1 class="title">{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
-    <h3>{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
+    <h3 class="dateline">{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
     <ul class="tagslist">
     {% for tag in tags | filterTagList %}
       <li><a href="/blog/tags/{{ tag }}">#{{ tag }}</a></li>

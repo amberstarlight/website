@@ -10,6 +10,8 @@ eleventyComputed:
   title: "Blog {% if pagination.pageNumber > 0 %} page {{ pagination.pageNumber + 1}}{% endif %}"
 ---
 
+<p>Want something specific? Browse the <a href="/blog/tags">tags list</a>.</p>
+
 {% for post in posts  %}
 {%- from "components/postInfo/macro.njk" import postInfo -%}
 {{ postInfo(post) }}

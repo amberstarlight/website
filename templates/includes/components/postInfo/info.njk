@@ -3,7 +3,17 @@
 {% set wordCount = fixedContent | wordcount %}
 
 <section class="post-info">
-  <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-  <p class="subtitle">{{ post.data.subtitle }}</p>
-  <small>{% niceDate post.date %} &bullet; {{ wordCount | numCommas }} words</small>
+  <div class="metadata">
+    <h4>{% niceDate post.date %}</h4>
+    <h5>{{ wordCount | numCommas }} words</h5>
+  </div>
+  <div class="titles">
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="subtitle">{{ post.data.subtitle }}</p>
+    <ul class="inline-list">
+    {% for tag in post.data.tags | filterTagList | alphabeticSort %}
+      <li><a href="/blog/tags/{{ tag }}">#{{ tag }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
 </section>

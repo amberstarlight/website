@@ -11,6 +11,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addShortcode(
     "niceDate",
     (date) =>
-      `${new Date(date).toLocaleDateString("en-GB", { dateStyle: "full" })}`,
+      `${new Date(date).toLocaleString("default", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })}`,
   );
 }
