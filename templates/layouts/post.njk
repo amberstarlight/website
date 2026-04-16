@@ -12,7 +12,7 @@ layout: base.njk
     <h1 class="title">{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
     <h3 class="dateline">{% niceDate page.date %} &bullet; {{ wordCount | numCommas }} words</h3>
-    <ul class="tagslist">
+    <ul class="inline-list">
     {% for tag in tags | filterTagList %}
       <li><a href="/blog/tags/{{ tag }}">#{{ tag }}</a></li>
     {% endfor %}

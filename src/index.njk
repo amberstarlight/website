@@ -23,7 +23,10 @@ title: amber.vision
   personal web zone - go ahead and click around.
 </p>
 
-<p>Why not read my latest post?</p>
+<p>Latest writings:</p>
 
-{% set latestPost = collections.post | reverse | first %} {%- from
-"components/postInfo/macro.njk" import postInfo -%} {{ postInfo(latestPost) }}
+{%- from "components/postInfo/macro.njk" import postInfo -%}
+{% set latestPosts = collections.post.concat(collections.now) | sort(true, true, 'date') %}
+{% for post in latestPosts.slice(0, 3) %}
+  {{ postInfo(post) }}
+{% endfor %}

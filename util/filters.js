@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-const tagFilter = ["all", "now", "post"];
+const tagFilter = ["all", "now", "post", "note"];
 
 function parseFootnotes(htmlString) {
   const footnoteRegex = /\[\^([1-9])\]/g;

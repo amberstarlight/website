@@ -67,8 +67,8 @@ body {
   line-height: 2;
   margin: 0 auto;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: column;
   min-height: 100vb;
   color: rgb(var(--text));
   background-color: rgb(var(--background));
@@ -76,10 +76,8 @@ body {
 }
 
 .main-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  display: grid;
+  align-content: space-between;
   border: 1px solid rgb(var(--text));
   margin: 1em 1em 2em 1em;
   padding: 1em;
@@ -100,7 +98,9 @@ body {
   padding: 0;
   border-bottom: 1px solid rgb(var(--accent));
   margin-bottom: 3em;
-  display: flex;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 75% min-content;
   align-items: center;
 }
 
@@ -164,13 +164,13 @@ li ul {
 
 .post-info {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
   gap: 0.5em;
   width: 100%;
   margin: 2em 0;
 }
 
-.post-info .titles > *:first-child {
+.post-info .text > *:first-child {
   margin-top: 0;
 }
 
@@ -214,18 +214,11 @@ footer {
   margin-top: 8em;
   padding-top: 2em;
   border-top: 1px solid rgb(var(--text));
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5%;
   font-size: 90%;
   font-family: "Lilex Medium", monospace;
-  flex-direction: row;
-}
-
-footer div {
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  align-items: center;
 }
 
 footer div:last-child {
@@ -238,8 +231,7 @@ footer img {
 
 @media only screen and (max-width: 900px) {
   footer {
-    flex-direction: column;
-    row-gap: 10px;
+    display: block;
     text-align: center;
   }
 
@@ -280,10 +272,6 @@ figure {
   border: 1px solid rgb(var(--accent));
   padding: 1em;
   width: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 1em auto;
   max-width: 90%;
 }
@@ -300,6 +288,7 @@ figure img {
 
 figure figcaption {
   margin-top: 0.5em;
+  text-align: center;
 }
 
 p img {
@@ -324,7 +313,8 @@ hr.accent {
 
 .pagination-list {
   list-style-type: none;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -377,11 +367,6 @@ li:has(> a.disabled) {
   padding: 0;
 }
 
-.tagslist li {
-  display: inline-block;
-  padding-right: 0.75em;
-}
-
 .spoiler {
   color: rgb(var(--text));
   background-color: rgb(var(--text));
@@ -416,15 +401,16 @@ article.post > hr {
 }
 
 .splash {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   align-items: baseline;
+  justify-content: space-between;
+  grid-template-columns: max-content auto;
 }
 
 @media only screen and (max-width: 768px) {
   .splash {
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    text-align: center;
     margin-bottom: 2em;
   }
 }
