@@ -3,6 +3,7 @@ title: Internet Manifesto
 subtitle: It's the principle of the thing
 date: 2025-12-12
 tags:
+  - internet
   - thoughts
   - website
 ---
@@ -70,6 +71,7 @@ my website.
 
    No generative AI is used in the making of this website. I invite you to think
    about the following questions in the context of AI-generated material:
+
    - Why didn't a human want to create this content? If it wasn't worth spending
      time creating it, is it worth spending time consuming it?
 
