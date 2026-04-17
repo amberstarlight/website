@@ -1,0 +1,16 @@
+---
+layout: page.njk
+title: Notes
+pagination:
+  data: collections.note
+  size: 10
+  alias: notes
+  reverse: true
+---
+
+Anything that isn't big enough to get it's own spot in the blog.
+
+{% for note in notes %}
+{%- from "components/note/macro.njk" import formattedNote -%}
+{{ formattedNote(note) }}
+{% endfor %}
