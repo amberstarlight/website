@@ -78,9 +78,15 @@ body {
 .main-wrapper {
   display: grid;
   align-content: space-between;
-  border: 1px solid rgb(var(--text));
-  margin: 1em 1em 2em 1em;
   padding: 1em;
+}
+
+@media only screen and (min-width: 400px) {
+  .main-wrapper {
+    border: 1px solid rgb(var(--text));
+    margin: 1em 1em 2em 1em;
+    padding: 1em;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -180,6 +186,22 @@ li ul {
 
 .post-info .subtitle {
   margin: 0.25em 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .post-info {
+    display: block;
+  }
+
+  .post-info .metadata {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .post-info:not(:first-of-type) {
+    border-top: 1px solid rgb(var(--accent));
+    padding-top: 1em;
+  }
 }
 
 blockquote {
@@ -367,6 +389,13 @@ li:has(> a.disabled) {
   padding: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .tagslist li {
+    display: inline;
+    margin-right: 1em;
+  }
+}
+
 .spoiler {
   color: rgb(var(--text));
   background-color: rgb(var(--text));
@@ -404,7 +433,7 @@ article.post > hr {
   display: grid;
   align-items: baseline;
   justify-content: space-between;
-  grid-template-columns: max-content auto;
+  grid-template-columns: 250px auto;
 }
 
 @media only screen and (max-width: 768px) {
