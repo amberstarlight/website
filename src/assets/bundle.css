@@ -1,4 +1,5 @@
 :root {
+  --gutter: 1em;
   /*
     'prefers-color-scheme: no-preference' isn't a standard property, so set the
     default light colours by default.
@@ -140,6 +141,8 @@ body {
   border: 1px solid rgb(var(--accent));
   background: none;
   color: rgb(var(--accent));
+  width: max-content;
+  aspect-ratio: 3/2;
 }
 
 .minimal-button:hover {
@@ -153,7 +156,6 @@ body {
 }
 
 article p,
-article pre,
 article ul {
   max-width: 80ch;
   margin: 2em 0em;
@@ -316,9 +318,6 @@ figure figcaption {
 p img {
   max-width: 30%;
   border-radius: 4px;
-}
-
-p img {
   float: right;
   margin: 1em 0 1em 1em;
 }
@@ -441,5 +440,21 @@ article.post > hr {
     display: block;
     text-align: center;
     margin-bottom: 2em;
+  }
+}
+
+pre {
+  max-width: calc(100vi - (calc(var(--gutter) * 4)));
+}
+
+@media only screen and (min-width: 400px) {
+  :root {
+    --gutter: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --gutter: 3.5em;
   }
 }
