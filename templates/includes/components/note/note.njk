@@ -1,13 +1,4 @@
-<section class="post-info">
-  <div class="metadata">
-    <a href="{{ note.url }}">{% niceDate note.date %}</a>
-    <ul class="tagslist">
-    {% for tag in post.data.tags | filterTagList | alphabeticSort %}
-      <li><a href="/blog/tags/{{ tag }}">#{{ tag }}</a></li>
-    {% endfor %}
-    </ul>
-  </div>
-  <div class="text">
-    {{ note.content | safe }}
-  </div>
+<section class="note">
+  <a href="{{ note.url }}"><h2>{% postedTime note.date %}</h2></a>
+  {{ note.content | safe }}
 </section>

@@ -458,3 +458,9 @@ pre {
     --gutter: 3.5em;
   }
 }
+
+.note {
+  margin: 2em 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgb(var(--accent));
+}

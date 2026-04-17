@@ -1,0 +1,5 @@
+{
+  "layout": "post.njk",
+  "tags": "note",
+  "permalink": "/notes/{% dateSlug page.date %}/"
+}
