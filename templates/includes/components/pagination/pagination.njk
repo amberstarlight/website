@@ -1,0 +1,24 @@
+{#
+TODO: when we have a larger number of pages, we don't want to show all of
+them. Over this number of pages, display a [...] list item.
+#}
+
+<nav class="pagination">
+  <ul class="pagination-list">
+    <li class="text">
+      <a href="{{ pagination.href.previous }}" aria-label="Previous" {% if pagination.pageNumber == 0 %}class="disabled"{% endif %}>
+        <span aria-hidden="true">&lt;</span>
+      </a>
+    </li>
+    {%- for pageEntry in pagination.pages %}
+    <li {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
+    </li>
+    {%- endfor %}
+    <li class="text">
+      <a href="{{ pagination.href.next }}" aria-label="Next" {% if not pagination.href.next %}class="disabled"{% endif %}>
+        <span aria-hidden="true">&gt;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

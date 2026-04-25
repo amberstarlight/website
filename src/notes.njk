@@ -3,9 +3,12 @@ layout: page.njk
 title: Notes
 pagination:
   data: collections.note
-  size: 10
+  size: 7
   alias: notes
   reverse: true
+permalink: "notes/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+eleventyComputed:
+  title: "Notes {% if pagination.pageNumber > 0 %} page {{ pagination.pageNumber + 1}}{% endif %}"
 ---
 
 Anything that isn't big enough to get it's own spot in the blog.
@@ -14,3 +17,5 @@ Anything that isn't big enough to get it's own spot in the blog.
 {%- from "components/note/macro.njk" import formattedNote -%}
 {{ formattedNote(note) }}
 {% endfor %}
+
+{% include "components/pagination/pagination.njk" %}
