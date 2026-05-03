@@ -2,5 +2,5 @@
   "layout": "post.njk",
   "tags": "note",
   "permalink": "/notes/{% dateSlug page.date %}/",
-  "date": "git Created"
+  "date": "git Last Modified"
 }
