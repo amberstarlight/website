@@ -15,11 +15,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Install Nodejs LTS
         uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          # TODO: update this when https://github.com/yarnpkg/berry/issues/7065
+          # is solved/closed
+          node-version: "24.14.1"
 
       - name: Build Site
         shell: bash
