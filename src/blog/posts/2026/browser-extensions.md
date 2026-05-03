@@ -18,7 +18,7 @@ list:
    use an adblocking tool [(source)][1a]. Make it this one.
 
 2. [User-Agent Switcher][2] by ntninja. Most of the time, if a website doesn't
-   support Linux or Chrome, you can change your User-Agent to pretend you're on
+   support Linux or Firefox, you can change your User-Agent to pretend you're on
    a supported platform. This isn't _always_ going to work, but most websites
    just check the User-Agent string, so spoofing it will bypass these checks.
 
