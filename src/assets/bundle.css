@@ -388,13 +388,6 @@ li:has(> a.disabled) {
   padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .tagslist li {
-    display: inline;
-    margin-right: 1em;
-  }
-}
-
 .spoiler {
   color: rgb(var(--text));
   background-color: rgb(var(--text));
