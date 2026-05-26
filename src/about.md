@@ -21,21 +21,13 @@ weaving in and out of many different interests, including but not limited to:
 - film photography, 35mm and 645 medium format
 
 If you're interested in what I output in a programming sense, I have a profile
-on some Git-as-a-Service platforms, which you can see here:
-
-- [GitHub](https://github.com/amberstarlight)
-- [GitLab](https://gitlab.com/amberstarlight)
-
-As I work for a contractor, sometimes I am required to use VCS accounts that
-are not my own, and this activity is not reflected in any gamification metrics
-you see on these platforms. I have a long-running love/hate relationship with
-those kind of metrics and I may turn off the commit history as it prioritises
-number of commits (and many teams prefer to squash commits so you only get +1
-anyway...)
+on some Git-as-a-Service platforms, such as [GitHub][gh] and [GitLab][gl]. As I
+work for a contractor, sometimes I am required to use VCS accounts that are not
+my own, and this activity is not reflected in any gamification metrics you see
+on these platforms. I may have account activity turned off on these platforms.
 
 If you want to contact me, you can do so via [email][1].
 
-> Author's note: I am NOT on any Internet platforms not listed on this page.
-> Anyone under the username `amberstarlight` on those platforms is an impostor.
-
 [1]: mailto:hello@amber.vision
+[gh]: https://github.com/amberstarlight
+[gl]: https://gitlab.com/amberstarlight
