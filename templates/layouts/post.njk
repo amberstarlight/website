@@ -7,6 +7,10 @@ layout: base.njk
 {% set wordCount = fixedContent | wordcount %}
 {% include "components/breadcrumbs/breadcrumbs.njk" %}
 
+{%- css %}
+  {% include "../../src/assets/prism-tomorrow.min.css" %}
+{% endcss %}
+
 <article class="post">
   <header>
     <h1 class="title">{{ title }}</h1>

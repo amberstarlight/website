@@ -22,14 +22,17 @@
   ] | join
 %}
 
+{%- css %}
+  {% include "../../src/assets/bundle.css"%}
+{% endcss %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <base href="/" />
     <title>{{ pageTitle | safe }}</title>
-    <link rel="stylesheet" href="/assets/bundle.css" />
-    <link href="/assets/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="{{ eleventy.generator }}" />
 
@@ -60,7 +63,6 @@
         <img src="/assets/img/me.webp" width="100" />
         <div>
           Me: <a href="https://amber.vision" rel="me">amber.vision</a><br />
-          GH: <a href="https://github.com/amberstarlight" rel="me">amberstarlight</a><br />
         </div>
         <div>
           <p>
