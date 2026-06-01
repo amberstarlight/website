@@ -1,42 +1,12 @@
-:root {
-  --gutter: 1em;
-  /*
-    'prefers-color-scheme: no-preference' isn't a standard property, so set the
-    default light colours by default.
-  */
-  --text: 48, 54, 47;
-  --background: 245, 249, 233;
-  --accent: 204, 40, 81;
-  --disabled: 164, 164, 164;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: 208, 208, 208;
-    --background: 48, 54, 47;
-    --accent: 249, 220, 92;
-  }
-}
-
 html {
   overflow-y: scroll;
 }
 
 @supports (scrollbar-gutter: stable) {
   html {
-    overflow-y: auto;
     scrollbar-gutter: stable;
+    overflow-y: auto;
   }
-}
-
-[id] {
-  scroll-margin-top: 10em;
-}
-
-a {
-  color: rgb(var(--accent));
-  font-weight: bold;
-  text-underline-offset: 0.25em;
 }
 
 :focus {
@@ -45,75 +15,69 @@ a {
   outline-offset: 2px;
 }
 
-@font-face {
-  font-family: "Lilex Medium";
-  src:
-    url("/assets/fonts/Lilex-Medium.woff2") format("woff2"),
-    url("/assets/fonts/Lilex-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+[id] {
+  scroll-margin-top: 10em;
 }
 
-@font-face {
-  font-family: "Lilex Regular";
-  src:
-    url("/assets/fonts/Lilex-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Lilex-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+a {
+  color: rgb(var(--accent));
+  text-underline-offset: 0.25em;
+  font-weight: bold;
 }
 
 body {
-  font-family: "Lilex Regular", monospace;
-  line-height: 2;
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  grid-auto-flow: column;
   min-height: 100vb;
   color: rgb(var(--text));
   background-color: rgb(var(--background));
+  grid-auto-flow: column;
   max-width: 64em;
+  margin: 0 auto;
+  padding: 0;
+  font-family:
+    Lilex Regular,
+    monospace;
+  line-height: 2;
+  display: grid;
 }
 
 .main-wrapper {
-  display: grid;
   align-content: space-between;
   padding: 1em;
+  display: grid;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (width >= 400px) {
   .main-wrapper {
     border: 1px solid rgb(var(--text));
-    margin: 1em 1em 2em 1em;
+    margin: 1em 1em 2em;
     padding: 1em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (width >= 768px) {
   .main-wrapper {
-    margin: 3em 3em 6em 3em;
-    padding: 3em;
     box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
+    margin: 3em 3em 6em;
+    padding: 3em;
   }
 }
 
 .sticky {
+  background-color: rgb(var(--background));
+  border-bottom: 1px solid rgb(var(--accent));
+  grid-template-columns: 75% min-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+  padding: 0;
+  display: grid;
   position: sticky;
   top: 0;
-  background-color: rgb(var(--background));
-  padding: 0;
-  border-bottom: 1px solid rgb(var(--accent));
-  margin-bottom: 3em;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: 75% min-content;
-  align-items: center;
 }
 
 .crumbs {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 .crumb {
@@ -124,65 +88,64 @@ body {
   font-weight: bold;
 }
 
-.crumbs > li:not(:last-child)::after {
+.crumbs > li:not(:last-child):after {
   content: " / ";
 }
 
-.minimal-button {
-  font-family: "Lilex Medium", monospace;
-  border: none;
-  margin-left: auto;
+button {
+  border: 1px solid rgb(var(--accent));
+  color: rgb(var(--accent));
+  cursor: pointer;
+  background: none;
   padding: 0.5em 1em;
+  font-family:
+    Lilex Medium,
+    monospace;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: rgb(var(--accent));
+    color: rgb(var(--background));
+  }
+}
+
+.minimal-button {
   visibility: hidden;
   opacity: 0;
-  transition:
-    visibility 0s,
-    opacity 0.3s linear;
-  border: 1px solid rgb(var(--accent));
-  background: none;
-  color: rgb(var(--accent));
-  width: max-content;
-  aspect-ratio: 3/2;
-}
+  aspect-ratio: 3 / 2;
 
-.minimal-button:hover {
-  cursor: pointer;
-  background-color: rgb(var(--accent));
-  color: rgb(var(--background));
-}
-
-.minimal-button:focus {
-  opacity: 100%;
+  &:focus {
+    opacity: 1;
+  }
 }
 
 article p,
 article ul {
   max-width: 80ch;
-  margin: 2em 0em;
+  margin: 2em 0;
 }
 
 ul {
   list-style-type: square;
 }
 
-/* don't add any additional margin to indented lists */
 li ul {
   margin: 0;
 }
 
 .post-info {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
   gap: 0.5em;
   width: 100%;
   margin: 2em 0;
+  display: grid;
 }
 
-.post-info .text > *:first-child {
+.post-info .text > :first-child {
   margin-top: 0;
 }
 
-.post-info .metadata > *:first-child {
+.post-info .metadata > :first-child {
   margin-top: 0.25em;
 }
 
@@ -190,14 +153,14 @@ li ul {
   margin: 0.25em 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .post-info {
     display: block;
   }
 
   .post-info .metadata {
-    display: block;
     margin-bottom: 1em;
+    display: block;
   }
 
   .post-info:not(:first-of-type) {
@@ -207,8 +170,8 @@ li ul {
 }
 
 blockquote {
-  max-width: 80ch;
   border-left: 0.375em solid rgb(var(--accent));
+  max-width: 80ch;
   text-emphasis: italics;
 }
 
@@ -217,10 +180,11 @@ blockquote p {
 }
 
 code {
-  font-family: "Lilex Medium", monospace;
+  font-family:
+    Lilex Medium,
+    monospace;
 }
 
-/* Code within text */
 p > code,
 li > code,
 dd > code,
@@ -235,14 +199,16 @@ s > code {
 }
 
 footer {
-  margin-top: 8em;
-  padding-top: 2em;
   border-top: 1px solid rgb(var(--text));
-  font-size: 90%;
-  font-family: "Lilex Medium", monospace;
-  display: grid;
   grid-template-columns: 150px 1fr auto;
   align-items: center;
+  margin-top: 8em;
+  padding-top: 2em;
+  font-family:
+    Lilex Medium,
+    monospace;
+  font-size: 90%;
+  display: grid;
 }
 
 footer div:last-child {
@@ -253,15 +219,15 @@ footer img {
   border-radius: 10%;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (width <= 900px) {
   footer {
-    display: block;
     text-align: center;
+    display: block;
   }
 
   footer div:last-child {
-    font-size: 0.8em;
     text-align: center;
+    font-size: 0.8em;
   }
 }
 
@@ -276,7 +242,9 @@ h4,
 h5,
 h6 {
   margin: 0.5em 0;
-  font-family: "Lilex Medium", monospace;
+  font-family:
+    Lilex Medium,
+    monospace;
 }
 
 h1 {
@@ -294,10 +262,10 @@ h3 {
 
 figure {
   border: 1px solid rgb(var(--accent));
-  padding: 1em;
   width: fit-content;
-  margin: 1em auto;
   max-width: 90%;
+  margin: 1em auto;
+  padding: 1em;
 }
 
 figure a {
@@ -311,14 +279,14 @@ figure img {
 }
 
 figure figcaption {
-  margin-top: 0.5em;
   text-align: center;
+  margin-top: 0.5em;
 }
 
 p img {
-  max-width: 30%;
-  border-radius: 4px;
   float: right;
+  border-radius: 4px;
+  max-width: 30%;
   margin: 1em 0 1em 1em;
 }
 
@@ -333,27 +301,27 @@ hr.accent {
 }
 
 .pagination-list {
-  list-style-type: none;
-  display: grid;
   grid-auto-flow: column;
   justify-content: center;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  display: grid;
 }
 
 .pagination-list > li {
+  text-align: center;
+  border: 1px solid rgb(var(--accent));
   min-width: 2em;
   height: 2em;
   margin: 0.5em;
-  text-align: center;
-  border: 1px solid rgb(var(--accent));
 }
 
 .pagination-list > li > a {
-  display: inline-block;
-  height: 100%;
   width: 100%;
+  height: 100%;
   text-decoration: none;
+  display: inline-block;
 }
 
 .pagination-list > li:hover {
@@ -383,9 +351,9 @@ li:has(> a.disabled) {
 }
 
 .tagslist {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .spoiler {
@@ -408,9 +376,9 @@ article.post > hr {
 }
 
 .inline-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .inline-list > li {
@@ -422,17 +390,17 @@ article.post > hr {
 }
 
 .splash {
-  display: grid;
-  align-items: baseline;
-  justify-content: space-between;
   grid-template-columns: 250px auto;
+  justify-content: space-between;
+  align-items: baseline;
+  display: grid;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
   .splash {
-    display: block;
     text-align: center;
     margin-bottom: 2em;
+    display: block;
   }
 }
 
@@ -440,20 +408,8 @@ pre {
   max-width: calc(100vi - (calc(var(--gutter) * 4)));
 }
 
-@media only screen and (min-width: 400px) {
-  :root {
-    --gutter: 1.5em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  :root {
-    --gutter: 3.5em;
-  }
-}
-
 .note {
+  border-bottom: 1px solid rgb(var(--accent));
   margin: 2em 0;
   padding-bottom: 1em;
-  border-bottom: 1px solid rgb(var(--accent));
 }

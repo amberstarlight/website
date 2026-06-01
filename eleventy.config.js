@@ -53,13 +53,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addNunjucksGlobal("gitShortSha", gitSha.slice(0, 7));
 
   eleventyConfig.addBundle("css", {
-    toFileDirectory: "assets",
-    transforms: [
-      async function (content) {
-        let result = await cssoMinify(content);
-        return result.css;
-      },
-    ],
+    toFileDirectory: "assets/css",
+    // transforms: [
+    //   async function (content) {
+    //     let result = await cssoMinify(content);
+    //     return result.css;
+    //   },
+    // ],
   });
 
   eleventyConfig.addTemplateFormats("js");
