@@ -1,5 +1,6 @@
 html {
   overflow-y: scroll;
+  line-height: 2;
 }
 
 @supports (scrollbar-gutter: stable) {
@@ -36,7 +37,6 @@ body {
   font-family:
     Lilex Regular,
     monospace;
-  line-height: 2;
   display: grid;
 }
 
