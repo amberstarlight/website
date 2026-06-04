@@ -1,0 +1,16 @@
+.splash {
+  grid-template-columns: 250px auto;
+  justify-content: space-between;
+  align-items: baseline;
+  display: grid;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgb(var(--accent));
+}
+
+@media only screen and (width <= 768px) {
+  .splash {
+    text-align: center;
+    display: block;
+  }
+}

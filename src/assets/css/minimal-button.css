@@ -1,0 +1,10 @@
+.minimal-button {
+  font-size: var(--text-xsmall);
+  visibility: hidden;
+  opacity: 0;
+  aspect-ratio: 3 / 2;
+
+  &:focus {
+    opacity: 1;
+  }
+}

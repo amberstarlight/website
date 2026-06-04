@@ -4,8 +4,14 @@
   --text: 48, 54, 47;
   --background: 245, 249, 233;
   --accent: 204, 40, 81;
-
   --disabled: 164, 164, 164;
+
+  --text-xsmall: 0.8em;
+  --text-small: 0.9em;
+  --text-regular: 1em;
+  --text-large: 1.5em;
+  --text-xlarge: 2em;
+  --text-xxlarge: 2.5em;
 }
 
 /* Overrides for dark theme */
@@ -18,14 +24,22 @@
 }
 
 /* Override gutter size on smaller screens */
-@media only screen and (min-width: 400px) {
+@media only screen and (width >= 400px) {
   :root {
     --gutter: 1.5em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (width >= 768px) {
   :root {
     --gutter: 3.5em;
+  }
+}
+
+@media only screen and (width <= 300px) {
+  :root {
+    --text-large: 1.5em;
+    --text-xlarge: 1.75em;
+    --text-xxlarge: 2em;
   }
 }

@@ -1,0 +1,21 @@
+.main-wrapper {
+  align-content: space-between;
+  padding: 1em;
+  display: grid;
+}
+
+@media only screen and (width >= 400px) {
+  .main-wrapper {
+    border: 1px solid rgb(var(--text));
+    margin: 1em 1em 2em;
+    padding: 1em;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .main-wrapper {
+    box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
+    margin: 3em 3em 6em;
+    padding: 3em;
+  }
+}

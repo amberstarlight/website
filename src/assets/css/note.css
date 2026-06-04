@@ -1,0 +1,6 @@
+.note {
+  border-bottom: 1px solid rgb(var(--accent));
+  padding-bottom: 2em;
+  display: grid;
+  gap: 1em;
+}

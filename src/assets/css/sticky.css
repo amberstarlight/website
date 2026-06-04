@@ -1,0 +1,11 @@
+.sticky {
+  background-color: rgb(var(--background));
+  border-bottom: 1px solid rgb(var(--accent));
+  grid-template-columns: 75% max-content;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  display: grid;
+  position: sticky;
+  top: 0;
+}
