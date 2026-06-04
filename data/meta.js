@@ -10,5 +10,5 @@ export const data = {
   siteDescription: "My personal web zone",
   authorName: "Amber Cronin",
   authorAge: getAge("1997-01-15"),
-  gitURL: "https://github.com/amberstarlight/website",
+  gitURL: "https://codeberg.org/amberstarlight/website",
 };
