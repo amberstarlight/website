@@ -24,20 +24,22 @@ a {
   color: rgb(var(--accent));
   text-underline-offset: 0.25em;
   font-weight: bold;
+
+  &:hover {
+    border-bottom: 2px solid rgb(var(--accent));
+  }
 }
 
 body {
   min-height: 100vb;
   color: rgb(var(--text));
   background-color: rgb(var(--background));
-  grid-auto-flow: column;
   max-width: 64em;
   margin: 0 auto;
   padding: 0;
   font-family:
     Lilex Regular,
     monospace;
-  display: grid;
 }
 
 button {
@@ -64,7 +66,6 @@ main {
 }
 
 article {
-  max-width: 80ch;
   gap: 1.5em;
 }
 
@@ -171,8 +172,7 @@ h3 {
 figure {
   border: 1px solid rgb(var(--accent));
   width: fit-content;
-  max-width: 90%;
-  margin: 1em auto;
+  margin: 0 auto 2em;
   padding: 1em;
 }
 
@@ -189,6 +189,7 @@ figure img {
 figure figcaption {
   text-align: center;
   margin-top: 0.5em;
+  font-style: oblique;
 }
 
 p img {
@@ -204,7 +205,8 @@ hr.accent {
 }
 
 pre {
-  max-width: calc(100vi - (calc(var(--gutter) * 4)));
+  max-width: calc(100vmin - (calc(var(--gutter) * 2 + 1rem)));
+  display: block;
 }
 
 article {

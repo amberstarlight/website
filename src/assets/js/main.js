@@ -6,20 +6,6 @@ function backToTop() {
     left: 0,
     behavior: "smooth",
   });
+
+  document.activeElement.blur();
 }
-
-window.addEventListener("scroll", () => {
-  const button = document.getElementById("top-button");
-
-  if (button === null || button === undefined) return;
-
-  if (window.scrollY > 500) {
-    button.style.visibility = "visible";
-    button.style.opacity = 100;
-  }
-
-  if (window.scrollY < 350) {
-    button.style.visibility = "hidden";
-    button.style.opacity = 0;
-  }
-});

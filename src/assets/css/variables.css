@@ -1,5 +1,5 @@
 :root {
-  --gutter: 1em;
+  --gutter: 10vmin;
 
   --text: 48, 54, 47;
   --background: 245, 249, 233;
@@ -20,19 +20,6 @@
     --text: 208, 208, 208;
     --background: 48, 54, 47;
     --accent: 249, 220, 92;
-  }
-}
-
-/* Override gutter size on smaller screens */
-@media only screen and (width >= 400px) {
-  :root {
-    --gutter: 1.5em;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  :root {
-    --gutter: 3.5em;
   }
 }
 

@@ -4,11 +4,4 @@ title: Now
 ---
 
 {% set page = collections.now | reverse | first %}
-
-<blockquote>
-  <p>This is a <a href="https://nownownow.com/about">now page</a>, which I'll update to give you an overview of what I'm
-  doing <i>now</i>. Inspired by <a href="https://sive.rs/nowff">Derek Sivers</a>!</p>
-</blockquote>
-<h3>Updated: {% niceDate page.date %}</h3>
-
 {{ page.templateContent | safe }}
