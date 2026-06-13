@@ -12,7 +12,7 @@ html {
 
 :focus {
   outline: none;
-  outline: 2px dashed rgb(var(--accent));
+  outline: 1px dashed rgb(var(--accent));
   outline-offset: 2px;
 }
 
@@ -22,11 +22,12 @@ html {
 
 a {
   color: rgb(var(--accent));
-  text-underline-offset: 0.25em;
   font-weight: bold;
+  text-decoration: solid underline rgb(var(--accent)) 1px;
+  text-underline-offset: 0.4em;
 
   &:hover {
-    border-bottom: 2px solid rgb(var(--accent));
+    text-decoration: solid underline rgb(var(--accent)) 2px;
   }
 }
 
@@ -40,24 +41,6 @@ body {
   font-family:
     Lilex Regular,
     monospace;
-}
-
-button {
-  border: 1px solid rgb(var(--accent));
-  color: rgb(var(--accent));
-  cursor: pointer;
-  background: none;
-  margin: 1em 0;
-  padding: 0.5em 1em;
-  font-family:
-    Lilex Medium,
-    monospace;
-  transition: all 0.3s linear;
-
-  &:hover {
-    background-color: rgb(var(--accent));
-    color: rgb(var(--background));
-  }
 }
 
 article,
@@ -113,6 +96,7 @@ small {
 footer {
   border-top: 1px solid rgb(var(--text));
   grid-template-columns: 1fr 3fr auto;
+  gap: 1em;
   align-items: center;
   margin-top: 8em;
   padding-top: 2em;
@@ -133,8 +117,9 @@ footer img {
 
 @media only screen and (width <= 900px) {
   footer {
-    text-align: center;
-    display: block;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 
   footer div:last-child {
