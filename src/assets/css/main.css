@@ -1,6 +1,12 @@
 html {
   overflow-y: scroll;
   line-height: 2;
+  scroll-behavior: smooth;
+}
+
+/* don't use smooth scroll if the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  scroll-behavior: auto;
 }
 
 @supports (scrollbar-gutter: stable) {

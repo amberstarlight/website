@@ -1,0 +1,21 @@
+.minimal-button {
+  background: none;
+  border: 1px solid rgb(var(--accent));
+  color: rgb(var(--accent));
+  cursor: pointer;
+  font-family:
+    Lilex Medium,
+    monospace;
+  font-size: var(--text-small);
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: rgb(var(--accent));
+    color: rgb(var(--background));
+    text-decoration:none;
+  }
+
+  text-decoration: none;
+}
