@@ -52,7 +52,7 @@ One of my favourites is `reflow`, which uses the rulers you have set in your
 it to write this article in Markdown without having to worry about reflowing as
 I write.
 
-> helix day 3  
+> helix day 3
 > just used `:reflow` for the first time and it wrapped a commit message
 > perfectly without any special config
 
@@ -122,5 +122,5 @@ it's time to give a modal text editor a try?
 [4]: https://github.com/hashicorp/terraform-ls
 [5]: https://www.theverge.com/2023/6/30/23779764/twitter-blocks-unregistered-users-account-tweets
 [6]: https://github.com/artempyanykh/marksman
-[7]: https://github.com/amberstarlight/.dotfiles
+[7]: https://codeberg.org/amberstarlight/.dotfiles
 [8]: https://github.com/helix-editor/helix/issues/7102#issuecomment-1563907532

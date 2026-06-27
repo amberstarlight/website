@@ -172,4 +172,4 @@ Until next time, keep building for the web!
 [4]: https://www.11ty.dev/docs/deployment/
 [5]: https://calculator.aws/
 [6]: https://www.11ty.dev/docs/
-[7]: https://github.com/amberstarlight/website
+[7]: https://codeberg.org/amberstarlight/website
