@@ -2,6 +2,7 @@ html {
   overflow-y: scroll;
   line-height: 2;
   scroll-behavior: smooth;
+  font-size: var(--text-regular);
 }
 
 /* don't use smooth scroll if the user prefers reduced motion */

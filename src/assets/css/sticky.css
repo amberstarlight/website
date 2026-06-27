@@ -1,11 +1,17 @@
 .sticky {
+  align-items: center;
   background-color: rgb(var(--background));
   border-bottom: 1px solid rgb(var(--accent));
+  display: grid;
   grid-template-columns: 75% max-content;
   justify-content: space-between;
-  align-items: center;
   padding: 0;
-  display: grid;
   position: sticky;
   top: 0;
+}
+
+@media only screen and (width <= 400px) {
+  .sticky {
+    grid-template-columns: 50% max-content;
+  }
 }

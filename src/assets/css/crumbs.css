@@ -15,3 +15,17 @@
 .crumbs > li:not(:last-child):after {
   content: " / ";
 }
+
+.back {
+  display: none;
+}
+
+@media only screen and (width <= 400px) {
+  .crumbs {
+    display: none;
+  }
+
+  .back {
+    display: inline;
+  }
+}
