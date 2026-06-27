@@ -4,8 +4,10 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import implicitFigures from "markdown-it-image-figures";
 import { minify as htmlMinify } from "html-minifier";
-import { minify as cssoMinify } from "csso";
-import { minify as terserMinify } from "terser";
+import postcss from "postcss";
+import postcssNested from "postcss-nested";
+import postcssPresetEnv from "postcss-preset-env";
+import cssnano from "cssnano";
 
 import matter from "gray-matter";
 import fs from "fs";
@@ -54,21 +56,16 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addBundle("css", {
     toFileDirectory: "assets/css",
-    // transforms: [
-    //   async function (content) {
-    //     let result = await cssoMinify(content);
-    //     return result.css;
-    //   },
-    // ],
-  });
-
-  eleventyConfig.addTemplateFormats("js");
-  eleventyConfig.addExtension("js", {
-    outputFileExtension: "js",
-    compile: async function (content) {
-      let result = await terserMinify(content);
-      return async () => result.code;
-    },
+    transforms: [
+      async function (content) {
+        let { type, page } = this;
+        let result = await postcss([
+          postcssPresetEnv({browsers: ">0.2% and not dead"}),
+          cssnano({ preset: 'default'})
+        ]).process(content, { from: page.inputPath, to: null });
+        return result.css;
+      },
+    ],
   });
 
   eleventyConfig.addTransform("htmlmin", function (content) {
