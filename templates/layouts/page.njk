@@ -4,10 +4,6 @@ layout: base.njk
 
 {% include "components/breadcrumbs/breadcrumbs.njk" %}
 
-{%- css %}
-  {% include "../../src/assets/prism-tomorrow.min.css" %}
-{% endcss %}
-
 <main id="top">
   <h1 class="title">{{ title }}</h1>
   {{ content | safe }}
