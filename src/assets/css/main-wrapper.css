@@ -1,7 +1,5 @@
 .main-wrapper {
-  align-content: space-between;
   padding: 1em;
-  display: grid;
 }
 
 @media only screen and (width >= 400px) {
