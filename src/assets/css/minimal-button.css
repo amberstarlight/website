@@ -16,7 +16,7 @@
   &:hover {
     background-color: rgb(var(--accent));
     color: rgb(var(--background));
-    text-decoration:none;
+    text-decoration: none;
   }
 
   text-decoration: none;

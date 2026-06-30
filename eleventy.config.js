@@ -60,8 +60,8 @@ export default function (eleventyConfig) {
       async function (content) {
         let { type, page } = this;
         let result = await postcss([
-          postcssPresetEnv({browsers: ">0.2% and not dead"}),
-          cssnano({ preset: 'default'})
+          postcssPresetEnv({ browsers: ">0.2% and not dead" }),
+          cssnano({ preset: "default" }),
         ]).process(content, { from: page.inputPath, to: null });
         return result.css;
       },
