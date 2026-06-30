@@ -14,9 +14,11 @@
 .pagination-list > li {
   text-align: center;
   border: 1px solid rgb(var(--accent));
-  min-width: 2em;
-  height: 2em;
+  height: 2.5em;
+  width: 2.5em;
   margin: 0.5em;
+  display: grid;
+  place-content: center;
 }
 
 .pagination-list > li > a {
