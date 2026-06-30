@@ -1,4 +1,4 @@
 <section class="note">
-  <a href="{{ note.url }}"><h2>{% postedTime note.date %}</h2></a>
+  <h2><a href="{{ note.url }}">{% postedTime note.date %}</a></h2>
   {{ note.content | safe }}
 </section>

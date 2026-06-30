@@ -7,17 +7,19 @@
     "@11ty/eleventy-plugin-rss": "3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
     "canvas": "3.2.3",
-    "csso": "5.0.5",
+    "cssnano": "8.0.2",
     "gray-matter": "4.0.3",
     "html-minifier": "4.0.0",
     "markdown-it": "14.1.1",
     "markdown-it-image-figures": "2.1.1",
-    "prettier": "3.8.3",
-    "terser": "5.46.1"
+    "postcss": "8.5.15",
+    "postcss-nested": "7.0.2",
+    "postcss-preset-env": "11.3.1",
+    "prettier": "3.8.3"
   },
   "scripts": {
-    "serve": "rm -rf build/ && npx @11ty/eleventy --serve",
-    "build": "rm -rf build/ && npx @11ty/eleventy",
+    "serve": "rm -rf build/ && npx --yes @11ty/eleventy --serve",
+    "build": "rm -rf build/ && npx --yes @11ty/eleventy",
     "draw": "node util/buildImage.js"
   },
   "dependenciesMeta": {

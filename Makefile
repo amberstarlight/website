@@ -2,15 +2,15 @@ SHELL = /bin/bash
 FONT_DIR = ./src/assets/fonts
 BUILD = .tmp
 
-.PHONY: build
+.PHONY: build clean deploy deps serve
+default: build
+
 build: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn build
 
-.PHONY: deps
 deps:
 	yarn install --immutable
 
-.PHONY: serve
 serve: deps $(FONT_DIR)/Lilex-*.woff*
 	GIT_SHA=$$(git rev-parse HEAD) yarn serve
 
@@ -26,7 +26,8 @@ $(BUILD)/Lilex.zip:
 	mkdir -p $(BUILD)
 	wget --quiet "https://github.com/mishamyrt/Lilex/releases/latest/download/Lilex.zip" -O $(BUILD)/Lilex.zip
 
-.PHONY: clean
+# TODO: make a deploy script!
+
 clean:
 	rm -rf $(FONT_DIR) $(BUILD)
 	yarn cache clean

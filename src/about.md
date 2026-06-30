@@ -1,6 +1,6 @@
 ---
 layout: page.njk
-title: About
+title: About Me
 ---
 
 Hi! I'm Amber ([she/her](https://en.pronouns.page/she)), I'm {{

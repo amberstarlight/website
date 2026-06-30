@@ -2,16 +2,17 @@
 layout: page.njk
 ---
 
+<blockquote>
+  <p>This is a <a href="https://nownownow.com/about">now page</a>, which I'll update to give you an overview of what I'm
+  doing <i>now</i>. Inspired by <a href="https://sive.rs/nowff">Derek Sivers</a>!</p>
+</blockquote>
+
 <section>
   <h3>Updated: {% niceDate page.date %}</h3>
   <small>This is an older update from the <a href="/now/archive">archive</a>.</small>
-  <blockquote>
-    <p>This is a <a href="https://nownownow.com/about">now page</a>, which I'll update to give you an overview of what I'm
-  doing <i>now</i>. Inspired by <a href="https://sive.rs/nowff">Derek Sivers</a>!</p>
-</blockquote>
 </section>
 
-<section>{{ content | safe }}</section>
+<article>{{ content | safe }}</article>
 
 <nav>
   <h3>Read older updates from the archive:</h3>

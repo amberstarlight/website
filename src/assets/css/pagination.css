@@ -1,0 +1,36 @@
+.pagination-list {
+  grid-auto-flow: column;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+}
+
+.pagination-item {
+  text-align: center;
+  border: 1px solid rgb(var(--accent));
+  height: 2.5em;
+  width: 2.5em;
+  margin: 0.5em;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+
+  &:hover:not(.disabled) {
+    color: rgb(var(--background));
+    background-color: rgb(var(--accent));
+  }
+
+  &.disabled {
+    color: rgb(var(--disabled));
+    border: 1px solid rgb(var(--disabled));
+    cursor: not-allowed;
+  }
+}
+
+[aria-current="page"] {
+  & a {
+    background-color: rgb(var(--accent));
+    color: rgb(var(--background));
+  }
+}

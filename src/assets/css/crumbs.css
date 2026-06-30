@@ -1,0 +1,31 @@
+.crumbs {
+  display: inline;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.crumb {
+  display: inline;
+}
+
+.crumb-last {
+  font-weight: bold;
+}
+
+.crumbs > li:not(:last-child):after {
+  content: " / ";
+}
+
+.back {
+  display: none;
+}
+
+@media only screen and (width <= 400px) {
+  .crumbs {
+    display: none;
+  }
+
+  .back {
+    display: inline;
+  }
+}

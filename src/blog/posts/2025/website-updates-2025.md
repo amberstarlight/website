@@ -83,6 +83,6 @@ simplicity as I think it becomes more maintainable.
 [3]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup
 [4]: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top
 [5]: https://caniuse.com/?search=scroll-margin-top
-[6]: https://github.com/amberstarlight/website/blob/main/Makefile
+[6]: https://codeberg.org/amberstarlight/website/src/branch/main/Makefile
 [7]: https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
 [8]: https://keepachangelog.com/en/1.1.0/

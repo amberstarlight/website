@@ -107,7 +107,7 @@ header to specific files, which I'd recommend using for all projects.
 
 [0]: https://www.zigbee2mqtt.io/
 [1]: https://spdx.dev/learn/handling-license-info/
-[2]: https://github.com/amberstarlight/starlight/commit/6eece984ad4739a6a32539cf336c8ace39b29795
+[2]: https://codeberg.org/amberstarlight/starlight/commit/6eece984ad4739a6a32539cf336c8ace39b29795
 [3]: https://matija.suklje.name/how-and-why-to-properly-write-copyright-statements-in-your-code
 [4]: https://github.com/Lucas-C/pre-commit-hooks?tab=readme-ov-file#insert-license
-[5]: https://github.com/amberstarlight/starlight
+[5]: https://codeberg.org/amberstarlight/starlight
