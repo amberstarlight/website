@@ -1,0 +1,17 @@
+.post > header {
+  margin-bottom: 2em;
+}
+
+/* asterism dinkus */
+.post > hr {
+  border: 0;
+  margin: 0 auto;
+  text-align: center;
+
+  &::before {
+    content: "***";
+    color: rgb(var(--accent));
+    font-size: var(--text-xlarge);
+    text-align: center;
+  }
+}

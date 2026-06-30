@@ -1,4 +1,15 @@
 .note {
   border-bottom: 1px solid rgb(var(--accent));
   padding-bottom: 4em;
+  display: grid;
+  gap: 1em;
+  min-width: 0;
+
+  & ol {
+    min-width: 0;
+  }
 }
+
+/* Credit to Rick Strahl for the `min-width: 0` fix
+ * https://weblog.west-wind.com/posts/2016/feb/15/flexbox-containers-pre-tags-and-managing-overflow
+ */
