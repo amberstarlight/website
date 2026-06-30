@@ -9,7 +9,9 @@
   font-size: var(--text-small);
   margin: 1em 0;
   padding: 0.5em 1em;
-  transition: all 0.3s linear;
+  transition:
+    background-color 0.3s linear,
+    color 0.3s linear;
 
   &:hover {
     background-color: rgb(var(--accent));
