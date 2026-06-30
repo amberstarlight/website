@@ -3,22 +3,48 @@ TODO: when we have a larger number of pages, we don't want to show all of
 them. Over this number of pages, display a [...] list item.
 #}
 
-<nav class="pagination">
+<nav>
   <ul class="pagination-list">
-    <li class="text">
-      <a href="{{ pagination.href.previous }}" aria-label="Previous" {% if pagination.pageNumber == 0 %}class="disabled"{% endif %}>
+    <li>
+      {% if not pagination.href.previous %}
+      <div
+        aria-label="Previous - Disabled"
+        class="pagination-item disabled"
+      >
+        <span aria-hidden="true">&lt;</span>
+      </div>
+      {% else %}
+      <a
+        href="{{ pagination.href.previous }}"
+        aria-label="Previous"
+        class="pagination-item {% if pagination.pageNumber == 0 %}disabled{% endif %}"
+      >
         <span aria-hidden="true">&lt;</span>
       </a>
+      {% endif %}
     </li>
     {%- for pageEntry in pagination.pages %}
     <li {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>
-      <a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}" class="pagination-item">{{ loop.index }}</a>
     </li>
     {%- endfor %}
-    <li class="text">
-      <a href="{{ pagination.href.next }}" aria-label="Next" {% if not pagination.href.next %}class="disabled"{% endif %}>
+    <li>
+      {% if not pagination.href.next %}
+      <div
+        aria-label="Next - Disabled"
+        class="pagination-item disabled"
+      >
+        <span aria-hidden="true">&gt;</span>
+      </div>
+      {% else %}
+      <a
+        href="{{ pagination.href.next }}"
+        aria-label="Next"
+        class="pagination-item {% if not pagination.href.next %}disabled{% endif %}"
+      >
         <span aria-hidden="true">&gt;</span>
       </a>
+      {% endif %}
     </li>
   </ul>
 </nav>
