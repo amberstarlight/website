@@ -112,14 +112,14 @@ footer {
     monospace;
   font-size: var(--text-small);
   display: grid;
-}
 
-footer div:last-child {
-  text-align: right;
-}
+  & div:last-child {
+    text-align: right;
+  }
 
-footer img {
-  border-radius: 10%;
+  img {
+    border-radius: 10%;
+  }
 }
 
 @media only screen and (width <= 900px) {
@@ -127,11 +127,11 @@ footer img {
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  }
 
-  footer div:last-child {
-    text-align: center;
-    font-size: var(--text-xsmall);
+    & div:last-child {
+      text-align: center;
+      font-size: var(--text-xsmall);
+    }
   }
 }
 
@@ -166,29 +166,31 @@ figure {
   width: fit-content;
   margin: 0 auto 2em;
   padding: 1em;
+
+  & a {
+    line-height: 0;
+  }
+
+  & img {
+    border-radius: 4px;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  & figcaption {
+    text-align: center;
+    margin-top: 0.5em;
+    font-style: oblique;
+  }
 }
 
-figure a {
-  line-height: 0;
-}
-
-figure img {
-  border-radius: 4px;
-  width: 100%;
-  min-height: 100%;
-}
-
-figure figcaption {
-  text-align: center;
-  margin-top: 0.5em;
-  font-style: oblique;
-}
-
-p img {
-  float: right;
-  border-radius: 4px;
-  max-width: 30%;
-  margin: 1em 0 1em 1em;
+p {
+  & img {
+    float: right;
+    border-radius: 4px;
+    max-width: 30%;
+    margin: 1em 0 1em 1em;
+  }
 }
 
 hr.accent {

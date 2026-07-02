@@ -2,10 +2,9 @@
   color: rgb(var(--text));
   background-color: rgb(var(--text));
   transition: all 0.3s linear;
-}
 
-.spoiler:hover,
-.spoiler:focus {
-  color: rgb(var(--text));
-  background: inherit;
+  &:hover, &:focus {
+    color: rgb(var(--text));
+    background: inherit;
+  }
 }
