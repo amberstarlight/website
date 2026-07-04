@@ -15,12 +15,15 @@
     "postcss": "8.5.15",
     "postcss-nested": "7.0.2",
     "postcss-preset-env": "11.3.1",
-    "prettier": "3.8.3"
+    "prettier": "3.8.3",
+    "stylelint": "17.14.0",
+    "stylelint-config-standard": "40.0.0"
   },
   "scripts": {
     "serve": "rm -rf build/ && npx --yes @11ty/eleventy --serve",
     "build": "rm -rf build/ && npx --yes @11ty/eleventy",
-    "draw": "node util/buildImage.js"
+    "draw": "node util/buildImage.js",
+    "stylelint": "stylelint \"src/assets/css/*.css\""
   },
   "dependenciesMeta": {
     "canvas": {
