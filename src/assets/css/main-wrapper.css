@@ -18,7 +18,7 @@
 
 @media only screen and (width >= 1024px) {
   .main-wrapper {
-    box-shadow: 0.625em 0.625em rgba(var(--text), 0.25);
-    margin: 3em 3em 6em 3em;
+    box-shadow: 0.625em 0.625em rgb(var(--text), 0.25);
+    margin: 3em 3em 6em;
   }
 }

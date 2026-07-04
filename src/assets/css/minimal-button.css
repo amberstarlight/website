@@ -3,9 +3,7 @@
   border: 1px solid rgb(var(--accent));
   color: rgb(var(--accent));
   cursor: pointer;
-  font-family:
-    Lilex Medium,
-    monospace;
+  font-family: "Lilex Medium", monospace;
   font-size: var(--text-small);
   margin: 1em 0;
   padding: 0.5em 1em;

@@ -7,7 +7,9 @@ html {
 
 /* don't use smooth scroll if the user prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  scroll-behavior: auto;
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @supports (scrollbar-gutter: stable) {
@@ -45,9 +47,7 @@ body {
   max-width: 64em;
   margin: 0 auto;
   padding: 0;
-  font-family:
-    Lilex Regular,
-    monospace;
+  font-family: "Lilex Regular", monospace;
 }
 
 article,
@@ -78,9 +78,7 @@ blockquote p {
 }
 
 code {
-  font-family:
-    Lilex Medium,
-    monospace;
+  font-family: "Lilex Medium", monospace;
 }
 
 p > code,
@@ -90,7 +88,7 @@ td > code,
 s > code {
   background: rgb(var(--accent));
   color: rgb(var(--background));
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   box-decoration-break: clone;
   padding: 0.2em 0.3em;
   font-size: var(--text-small);
@@ -107,9 +105,7 @@ footer {
   align-items: center;
   margin-top: 8em;
   padding-top: 2em;
-  font-family:
-    Lilex Medium,
-    monospace;
+  font-family: "Lilex Medium", monospace;
   font-size: var(--text-small);
   display: grid;
 
@@ -143,9 +139,7 @@ h5,
 h6 {
   margin: 0.5em 0;
   line-height: calc(1em + 1rem);
-  font-family:
-    Lilex Medium,
-    monospace;
+  font-family: "Lilex Medium", monospace;
 }
 
 h1 {
@@ -168,7 +162,7 @@ figure {
   padding: 1em;
 
   & a {
-    line-height: 0;
+    /* line-height: 0; */
   }
 
   & img {
@@ -198,13 +192,8 @@ hr.accent {
   border-bottom: 1px solid rgb(var(--accent));
 }
 
-article {
-  & ol > * + *,
-  ul > * + * {
-    margin-top: 1em;
-  }
-}
-
+ol > * + *,
+ul > * + *,
 li > * + * {
   margin-top: 1em;
 }

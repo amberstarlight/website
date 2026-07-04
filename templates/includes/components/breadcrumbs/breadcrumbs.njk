@@ -3,10 +3,10 @@
   <ul class="crumbs">
     {% for crumb in breadcrumbs %}
       {% if loop.last %}
-        <li class="crumb crumb-last">{{ crumb.name }}</li>
+        <li>{{ crumb.name }}</li>
       {% else %}
         {% set backUrl = crumb.url %}
-        <li class="crumb"><a class="crumb-link" href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+        <li><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>

@@ -26,9 +26,7 @@
 @media only screen and (width <= 768px) {
   .post-info {
     display: block;
-  }
 
-  .post-info {
     &:not(:first-of-type) {
       border-top: 1px solid rgb(var(--accent));
       padding-top: 1em;
