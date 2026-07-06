@@ -1,4 +1,5 @@
 {% set backUrl = "" %}
+{% set backName = "" %}
 <nav class="sticky">
   <ul class="crumbs">
     {% for crumb in breadcrumbs %}
@@ -6,10 +7,11 @@
         <li>{{ crumb.name }}</li>
       {% else %}
         {% set backUrl = crumb.url %}
+        {% set backName = crumb.name %}
         <li><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
-  <a href="{{ backUrl }}" class="back">go back</a>
+  <a href="{{ backUrl }}" class="back">back to {{ backName }}</a>
   <a href="{{ page.url }}#top" class="minimal-button">top &uarr;</a>
 </nav>
