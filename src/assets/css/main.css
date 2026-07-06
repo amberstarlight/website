@@ -48,6 +48,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: "Lilex Regular", monospace;
+  word-break: break-word;
 }
 
 article,

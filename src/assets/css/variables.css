@@ -20,10 +20,10 @@
   }
 }
 
-@media only screen and (width <= 300px) {
+@media only screen and (width <= 450px) {
   :root {
-    --text-large: 1.5em;
+    --text-large: 1.25em;
     --text-xlarge: 1.75em;
-    --text-xxlarge: 2em;
+    --text-xxlarge: 2.25em;
   }
 }
