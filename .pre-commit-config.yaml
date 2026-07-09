@@ -33,3 +33,11 @@ repos:
           - --use-current-year
           - --comment-style
           - //
+
+  - repo: local
+    hooks:
+      - id: stylelint
+        name: stylelint
+        language: unsupported
+        entry: yarn stylelint
+        types: [css]
