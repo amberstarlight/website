@@ -8,11 +8,13 @@ layout: page.njk
 </blockquote>
 
 <section>
-  <h3>Updated: {% niceDate page.date %}</h3>
+  <h3>Updated: {% niceDate page.fileSlug %}</h3>
   <small>This is an older update from the <a href="/now/archive">archive</a>.</small>
 </section>
 
 <article>{{ content | safe }}</article>
+
+<hr class="asterism-dinkus"/>
 
 <nav>
   <h3>Read older updates from the archive:</h3>

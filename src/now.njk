@@ -4,4 +4,7 @@ title: Now
 ---
 
 {% set page = collections.now | reverse | first %}
+
+<h3>Updated: {% niceDate page.date %}</h3>
+
 {{ page.templateContent | safe }}

@@ -3,6 +3,16 @@ layout: plain.njk
 title: amber.vision
 ---
 
+{%- from "components/postInfo/macro.njk" import postInfo -%}
+
+{#
+  Grab the newest item in the Now collection and feed that date
+  into the postInfo macro
+#}
+
+{% set isNowDate = collections.now.slice().reverse()[0].date %}
+{% set latestPosts = collections.post.concat(collections.now) | sort(true, true, 'date') %}
+
 <header class="splash">
   <h1>{{ title }}</h1>
   <nav class="home">
@@ -19,10 +29,8 @@ title: amber.vision
 <p>Welcome to my website. The newest entries from my blog and my now page can be
 found below, or you can read more in the links above.<p>
 
-{%- from "components/postInfo/macro.njk" import postInfo -%}
-{% set latestPosts = collections.post.concat(collections.now) | sort(true, true, 'date') %}
 {% for post in latestPosts.slice(0, 3) %}
-  {{ postInfo(post) }}
+  {{ postInfo(post, isNowDate) }}
 {% endfor %}
 
 <p>Read more on <a href="/blog">my blog</a>.</p>

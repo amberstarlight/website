@@ -17,3 +17,16 @@
     }
   }
 }
+
+.asterism-dinkus {
+  border: 0;
+  margin: 0 auto;
+  text-align: center;
+
+  &::before {
+    content: "***";
+    color: rgb(var(--accent));
+    font-size: var(--text-xlarge);
+    text-align: center;
+  }
+}
