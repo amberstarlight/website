@@ -16,13 +16,8 @@ title: amber.vision
   </nav>
 </header>
 
-<p>
-  I'm Amber, sometimes <i>amberstarlight</i>, always she/her; a software and
-  operations engineer by day and 'everything hobbyist' by night, this is my
-  personal web zone - go ahead and click around.
-</p>
-
-<p>Latest writings:</p>
+<p>Welcome to my website. The newest entries from my blog and my now page can be
+found below, or you can read more in the links above.<p>
 
 {%- from "components/postInfo/macro.njk" import postInfo -%}
 {% set latestPosts = collections.post.concat(collections.now) | sort(true, true, 'date') %}
@@ -30,4 +25,4 @@ title: amber.vision
   {{ postInfo(post) }}
 {% endfor %}
 
-<p>Read more on the <a href="/blog">blog</a>.</p>
+<p>Read more on <a href="/blog">my blog</a>.</p>

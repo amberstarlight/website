@@ -8,10 +8,11 @@ pagination:
   reverse: true
 permalink: "notes/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 eleventyComputed:
-  title: "Notes {% if pagination.pageNumber > 0 %} page {{ pagination.pageNumber + 1}}{% endif %}"
+  title: "My Notes{% if pagination.pageNumber > 0 %} (page {{ pagination.pageNumber + 1}}){% endif %}"
 ---
 
-Anything that isn't big enough to get it's own spot in the blog.
+<p>Here you can find unstructured thoughts, interesting tidbits, and things from
+the cutting room floor of my blog.</p>
 
 {% for note in notes %}
 {%- from "components/note/macro.njk" import formattedNote -%}
