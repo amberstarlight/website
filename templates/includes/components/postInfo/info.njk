@@ -3,12 +3,12 @@
 {% set wordCount = fixedContent | wordcount %}
 
 {#
-  Compare the date of the post to the date of the newest Now page,
+  Compare the date of the post to the date and title of the newest Now page,
   and change the URL to go to the Now slash page if it's the same
 #}
 
 {% set postUrl = post.url %}
-{% if post.date === isNowDate %}
+{% if post.date === isNowDate and post.data.title === "Now" %}
   {% set postUrl = "/now" %}
 {% endif %}
 
@@ -25,6 +25,6 @@
   <div class="text">
     <h2><a href="{{ postUrl }}">{{ post.data.title }}</a></h2>
     <h3 class="subtitle">{{ post.data.subtitle }}</h3>
-    <p>{{ post.content | striptags | truncate(200) | safe }}<a href="{{ post.url }}"><i>Read more</i><a></p>
+    <p>{{ post.content | striptags | truncate(200) | safe }}<a href="{{ postUrl }}"><i>Read more</i><a></p>
   </div>
 </section>
